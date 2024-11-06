@@ -1,0 +1,13 @@
+<h3>Ubuntu</h3>
+<pre>wget -r -k -E -l 10 -p -np -w 1 -e robots=off &lt;URL&gt;</pre>
+<ul>
+  <li><strong>-r</strong>: Recursively download</li>
+  <li><strong>-k</strong>: Convert links for offline use</li>
+  <li><strong>-E</strong>: Save HTML files with proper extensions</li>
+  <li><strong>-l 10</strong>: Limit recursion depth to 10 levels</li>
+  <li><strong>-p</strong>: Download all necessary files for full page display</li>
+  <li><strong>-np</strong>: Don't ascend to parent directories</li>
+  <li><strong>-w 1</strong>: Wait 1 second between downloads</li>
+  <li><strong>-e robots=off</strong>: Ignore <code>robots.txt</code> restrictions</li>
+  <li><strong>&lt;URL&gt;</strong>: Target URL for download</li>
+</ul>
