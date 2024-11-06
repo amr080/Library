@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFT API</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+              <nav>
+                  <div class="logo">
+                      <a href="https://xft.framer.website/">
+                          <img src="logo.png" alt="XFT Logo">
+                      </a>
+                  </div>
+                  <ul>
+                      <li><a href="https://xft.framer.website/">Home</a></li>
+                      <li><a href="https://xabout.replit.app/">About</a></li>
+                      <li><a href="https://xproducts.replit.app/">Products</a></li>
+                      <li class="get-started"><a href="https://forms.gle/DN21tcCnGAab7Qfa6">Get Started</a></li>
+                  </ul>
+              </nav>
+    </header>
+    
+    <main class="content-wrapper">
+        <section id="api-nav">
+            <p><a href="index.html">API 1</a> • <a href="api2.html">API 2</a> • <a href="api3.html">API 3</a> • <a href="api4.html">API 4</a> • <a href="api5.html">API 5</a> • <a href="api6.html">API 6</a> • <a href="api7.html">API 7</a> • <a href="api8.html">API 8</a> • <a href="https://x-ledger.replit.app/">Live Server</a> • <a href="websockets.html">Websockets</a> • <a href="tech.html">Tech</a> • <a href="flows.html">Flows</a> • <a href="flows2.html">Flows 2</a> • <a href="assets.html">Assets</a></p>
+        </section>
+        <section id="api-1">
+            <h2>API Overview</h2>
+            
+            <button class="accordion">Authentication</button>
+            <div class="panel">
+                <h3>Access Tokens</h3>
+                <ul>
+                    <li><code>POST /api/auth/token</code>: Obtain access tokens for API usage.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Users & Accounts Management</button>
+            <div class="panel">
+                <h3>Users</h3>
+                <ul>
+                    <li><code>GET /api/users</code>: Get all users.</li>
+                    <li><code>POST /api/users</code>: Create a user.</li>
+                    <li><code>GET /api/users/:id</code>: Get a user by ID.</li>
+                    <li><code>DELETE /api/users/:id</code>: Offboard a user.</li>
+                    <li><code>POST /api/users/:id</code>: Change user data.</li>
+                    <li><code>EVENT /api/users/events</code>: Users events.</li>
+                </ul>
+                <h3>User Identifiers</h3>
+                <ul>
+                    <li><code>GET /api/users/:id/identifiers</code>: Get user identifiers.</li>
+                    <li><code>POST /api/users/:id/identifiers</code>: Create a user identifier.</li>
+                    <li><code>GET /api/users/:id/identifiers/:identifierId</code>: Get a user identifier by ID.</li>
+                    <li><code>PATCH /api/users/:id/identifiers/:identifierId</code>: Update a user identifier by ID.</li>
+                </ul>
+                <h3>User Checks</h3>
+                <ul>
+                    <li><code>GET /api/users/:id/checks</code>: Get checks for a user.</li>
+                    <li><code>POST /api/users/:id/checks</code>: Create a new check for a user.</li>
+                    <li><code>GET /api/users/:id/checks/:checkId</code>: Get a user check by ID.</li>
+                    <li><code>EVENT /api/users/:id/checks/events</code>: User checks events.</li>
+                </ul>
+                <h3>Accounts</h3>
+                <ul>
+                    <li><code>GET /api/users/:id/accounts</code>: Get user accounts.</li>
+                    <li><code>GET /api/accounts/:id</code>: Get account by ID.</li>
+                    <li><code>DELETE /api/accounts/:id</code>: Close account by ID.</li>
+                    <li><code>PATCH /api/accounts/:id</code>: Update account by ID.</li>
+                    <li><code>GET /api/accounts</code>: Get accounts.</li>
+                    <li><code>POST /api/accounts</code>: Create an account.</li>
+                    <li><code>EVENT /api/accounts/events</code>: Account events.</li>
+                </ul>
+                <h3>Account Groups</h3>
+                <ul>
+                    <li><code>GET /api/users/:id/account-groups</code>: Get user account groups.</li>
+                    <li><code>GET /api/account-groups/:id</code>: Get an account group by ID.</li>
+                    <li><code>DELETE /api/account-groups/:id</code>: Close an account group by ID.</li>
+                    <li><code>GET /api/account-groups</code>: Get account groups.</li>
+                    <li><code>POST /api/account-groups</code>: Create an account group.</li>
+                    <li><code>EVENT /api/account-groups/events</code>: Account group events.</li>
+                </ul>
+                <h3>Taxes</h3>
+                <ul>
+                    <li><code>GET /api/users/:id/taxes</code>: Retrieve tax residencies.</li>
+                    <li><code>POST /api/users/:id/taxes</code>: Update tax residencies.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Instruments & Price Data</button>
+            <div class="panel">
+                <h3>Instruments</h3>
+                <ul>
+                    <li><code>GET /api/instruments</code>: List instruments.</li>
+                    <li><code>GET /api/instruments/:id</code>: Get instrument.</li>
+                    <li><code>EVENT /api/instruments/events</code>: Instruments events.</li>
+                </ul>
+                <h3>Price Data</h3>
+                <ul>
+                    <li><code>GET /api/instruments/:id/venues</code>: Get instrument venues.</li>
+                    <li><code>GET /api/instruments/:id/price</code>: Get instrument latest price.</li>
+                    <li><code>GET /api/instruments/:id/ohlc</code>: Get instrument OHLC prices.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Orders</button>
+            <div class="panel">
+                <ul>
+                    <li><code>GET /api/accounts/:id/orders</code>: Get orders for an account by ID.</li>
+                    <li><code>POST /api/orders</code>: Place an order.</li>
+                    <li><code>GET /api/orders/:id</code>: Get an order by ID.</li>
+                    <li><code>DELETE /api/orders/:id</code>: Cancel an order by ID.</li>
+                    <li><code>GET /api/orders/:id/executions</code>: Get an order execution by ID.</li>
+                    <li><code>EVENT /api/orders/events</code>: Orders events.</li>
+                    <li><code>EVENT /api/orders/executions/events</code>: Executions events.</li>
+                    <li><code>EVENT /api/orders/cancellations/events</code>: Order Cancellations events.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Investment Solutions</button>
+            <div class="panel">
+                <h3>Portfolios</h3>
+                <ul>
+                    <li><code>GET /api/portfolios/allocations</code>: List portfolios allocations.</li>
+                    <li><code>POST /api/portfolios/allocations</code>: Create portfolios allocation.</li>
+                    <li><code>GET /api/portfolios/allocations/:id</code>: Retrieve portfolios allocation.</li>
+                    <li><code>PUT /api/portfolios/allocations/:id</code>: Update portfolios allocation.</li>
+                    <li><code>GET /api/portfolios/configurations</code>: List portfolios configurations.</li>
+                    <li><code>POST /api/portfolios/configurations</code>: Create portfolios configuration.</li>
+                    <li><code>GET /api/portfolios/configurations/:id</code>: Retrieve portfolios configuration.</li>
+                    <li><code>PATCH /api/portfolios/configurations/:id</code>: Update portfolios configuration.</li>
+                    <li><code>GET /api/portfolios/orders</code>: List portfolios orders.</li>
+                    <li><code>POST /api/portfolios/orders</code>: Create portfolios order.</li>
+                    <li><code>GET /api/portfolios/orders/:id</code>: Retrieve portfolios order.</li>
+                    <li><code>DELETE /api/portfolios/orders/:id</code>: Cancel portfolios order.</li>
+                    <li><code>GET /api/portfolios/allocation-accounts</code>: List portfolios allocation accounts.</li>
+                    <li><code>EVENT /api/portfolios/orders/events</code>: Portfolios orders events.</li>
+                    <li><code>EVENT /api/portfolios/rebalancing/events</code>: Portfolio rebalancing execution orders events.</li>
+                    <li><code>EVENT /api/portfolios/allocations/events</code>: Portfolios allocations events.</li>
+                </ul>
+                <h3>Portfolios Rebalancing</h3>
+                <ul>
+                    <li><code>POST /api/portfolios/rebalancing</code>: Trigger portfolio rebalancing.</li>
+                    <li><code>GET /api/portfolios/rebalancing/:id</code>: Retrieve portfolios rebalancing execution.</li>
+                    <li><code>GET /api/portfolios/rebalancing/:id/orders</code>: List portfolio rebalancing execution orders.</li>
+                </ul>
+                <h3>Savings Plans</h3>
+                <ul>
+                    <li><code>GET /api/savings-plans</code>: List savings plans.</li>
+                    <li><code>POST /api/savings-plans</code>: Create savings plan.</li>
+                    <li><code>GET /api/savings-plans/:id</code>: Retrieve a savings plan.</li>
+                    <li><code>DELETE /api/savings-plans/:id</code>: Delete a savings plan.</li>
+                    <li><code>GET /api/savings-plans/executions</code>: List savings plan executions.</li>
+                    <li><code>GET /api/savings-plans/executions/:id</code>: Retrieve savings plan execution.</li>
+                    <li><code>DELETE /api/savings-plans/executions/:id</code>: Delete savings plan execution.</li>
+                    <li><code>EVENT /api/savings-plans/events</code>: Savings plan events.</li>
+                    <li><code>EVENT /api/savings-plans/executions/events</code>: Savings plan execution events.</li>
+                </ul>
+                <h3>Liquidations</h3>
+                <ul>
+                    <li><code>GET /api/liquidations</code>: List accounts liquidations.</li>
+                    <li><code>POST /api/liquidations</code>: Create account liquidation request.</li>
+                    <li><code>GET /api/liquidations/:id</code>: Retrieve account liquidation.</li>
+                    <li><code>DELETE /api/liquidations/:id</code>: Cancel account liquidation.</li>
+                    <li><code>EVENT /api/liquidations/events</code>: Account liquidation events.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Payments</button>
+            <div class="panel">
+                <h3>Payments</h3>
+                <ul>
+                    <li><code>GET /api/payments/direct-debits</code>: List direct debits.</li>
+                    <li><code>POST /api/payments/direct-debits</code>: Trigger a direct debit.</li>
+                    <li><code>GET /api/payments/direct-debits/:id</code>: Retrieve a direct debit.</li>
+                    <li><code>GET /api/payments/top-ups</code>: List top-ups.</li>
+                    <li><code>POST /api/payments/top-ups</code>: Create a top-up.</li>
+                    <li><code>GET /api/payments/top-ups/:id</code>: Get a top-up by ID.</li>
+                    <li><code>DELETE /api/payments/top-ups/:id</code>: Cancel a top-up by ID.</li>
+                    <li><code>POST /api/payments/withdrawals</code>: Trigger a withdrawal.</li>
+                    <li><code>GET /api/payments/withdrawals/:id</code>: Retrieve withdrawal.</li>
+                    <li><code>DELETE /api/payments/withdrawals/:id</code>: Cancel withdrawal by ID.</li>
+                    <li><code>GET /api/payments/withdrawals</code>: List withdrawals.</li>
+                    <li><code>EVENT /api/payments/direct-debits/events</code>: Direct Debit events.</li>
+                    <li><code>EVENT /api/payments/top-ups/events</code>: Top-up events.</li>
+                    <li><code>EVENT /api/payments/withdrawals/events</code>: Withdrawals events.</li>
+                </ul>
+                <h3>Reference Accounts</h3>
+                <ul>
+                    <li><code>GET /api/reference-accounts</code>: Get reference accounts of a user.</li>
+                    <li><code>POST /api/reference-accounts</code>: Create a reference account.</li>
+                    <li><code>GET /api/reference-accounts/:id</code>: Get a reference account by ID.</li>
+                    <li><code>DELETE /api/reference-accounts/:id</code>: Delete a reference account by ID.</li>
+                </ul>
+                <h3>Mandates</h3>
+                <ul>
+                    <li><code>GET /api/mandates</code>: List mandates.</li>
+                    <li><code>POST /api/mandates</code>: Create a mandate.</li>
+                    <li><code>GET /api/mandates/:id</code>: Retrieve a direct debit mandate.</li>
+                    <li><code>DELETE /api/mandates/:id</code>: Delete mandate.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Balances</button>
+            <div class="panel">
+                <h3>Cash Balances</h3>
+                <ul>
+                    <li><code>GET /api/account-groups/:id/cash-balances</code>: Retrieve an account group's cash balance.</li>
+                    <li><code>EVENT /api/cash-balances/events</code>: Cash Balance events.</li>
+                </ul>
+                <h3>Positions</h3>
+                <ul>
+                    <li><code>GET /api/positions</code>: List positions.</li>
+                    <li><code>GET /api/positions/:id</code>: Retrieve position.</li>
+                    <li><code>EVENT /api/positions/events</code>: Positions events.</li>
+                </ul>
+                <h3>Valuations</h3>
+                <ul>
+                    <li><code>GET /api/accounts/:id/valuations</code>: Get current valuation for an account.</li>
+                    <li><code>GET /api/accounts/:id/valuations/history</code>: List valuation history for an account.</li>
+                    <li><code>EVENT /api/valuations/events</code>: Account valuation events.</li>
+                    <li><code>EVENT /api/valuations/intraday-events</code>: Intraday account valuation events.</li>
+                </ul>
+                <h3>Returns</h3>
+                <ul>
+                    <li><code>GET /api/accounts/:id/returns</code>: List account returns.</li>
+                    <li><code>EVENT /api/returns/events</code>: Account returns event.</li>
+                </ul>
+                <h3>Virtual Cash Balances</h3>
+                <ul>
+                    <li><code>POST /api/virtual-cash/increase</code>: Trigger a virtual cash increase.</li>
+                    <li><code>POST /api/virtual-cash/decrease</code>: Trigger a virtual cash decrease.</li>
+                    <li><code>DELETE /api/virtual-cash/decrease/:id</code>: Cancel virtual cash decrease by ID.</li>
+                    <li><code>EVENT /api/virtual-cash/increase/events</code>: Virtual cash increase events.</li>
+                    <li><code>EVENT /api/virtual-cash/decrease/events</code>: Virtual cash decrease events.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Fees</button>
+            <div class="panel">
+                <h3>Fees</h3>
+                <ul>
+                    <li><code>GET /api/fees/collections</code>: Get fee collections.</li>
+                    <li><code>POST /api/fees/collections</code>: Create a fee collection.</li>
+                    <li><code>GET /api/fees/collections/:id</code>: Get a fee collection by ID.</li>
+                    <li><code>EVENT /api/fees/collections/events</code>: Fee collection events.</li>
+                </ul>
+                <h3>Fees Configurations</h3>
+                <ul>
+                    <li><code>POST /api/fees/configurations</code>: Create a fee configuration.</li>
+                    <li><code>GET /api/fees/configurations/:id</code>: Get fee configuration.</li>
+                    <li><code>PATCH /api/fees/configurations/:id</code>: Update fee configuration.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Reporting</button>
+            <div class="panel">
+                <h3>Reports</h3>
+                <ul>
+                    <li><code>GET /api/reports</code>: List user reports.</li>
+                    <li><code>POST /api/reports</code>: Create a user report.</li>
+                    <li><code>GET /api/reports/:id</code>: Retrieve a user report.</li>
+                    <li><code>EVENT /api/reports/events</code>: User reports events.</li>
+                </ul>
+                <h3>Treasury Reports</h3>
+                <ul>
+                    <li><code>EVENT /api/treasury-reports/events</code>: Treasury reports events.</li>
+                </ul>
+                <h3>Transactions</h3>
+                <ul>
+                    <li><code>GET /api/transactions/cash</code>: List cash transactions.</li>
+                    <li><code>GET /api/transactions/securities</code>: List securities transactions.</li>
+                    <li><code>EVENT /api/transactions/cash/events</code>: Cash transactions events.</li>
+                    <li><code>EVENT /api/transactions/securities/events</code>: Security transactions events.</li>
+                </ul>
+                <h3>Files</h3>
+                <ul>
+                    <li><code>GET /api/files/:id/metadata</code>: Retrieve a file metadata.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Webhooks</button>
+            <div class="panel">
+                <h3>Webhooks</h3>
+                <ul>
+                    <li><code>GET /api/webhooks/signing-keys</code>: Get signing keys.</li>
+                    <li><code>GET /api/webhooks</code>: List all webhooks.</li>
+                    <li><code>POST /api/webhooks</code>: Create a webhook subscription.</li>
+                    <li><code>GET /api/webhooks/:id</code>: Retrieve a webhook subscription.</li>
+                    <li><code>DELETE /api/webhooks/:id</code>: Delete a webhook subscription.</li>
+                    <li><code>PATCH /api/webhooks/:id</code>: Update a webhook subscription.</li>
+                    <li><code>POST /api/webhooks/test</code>: Test a webhook.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Tests</button>
+            <div class="panel">
+                <h3>Tests</h3>
+                <ul>
+                    <li><code>POST /api/tests/bank-transaction</code>: Trigger a bank transaction for testing.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+          <div class="footer-content">
+              <div class="footer-section about-company">
+                  <p class="footer-title large-title">X Financial Technologies</p>
+                  <p>Our mission is to further enable over a billion people to access finance services, by bridging the gap between traditional and decentralized finance. We're engineering the enabling technologies for a single, integrated, and universal financial access layer.</p>
+                  <p>Blog • LinkedIn • Github</p>
+                  <p class="copyright">&copy; 2024 X Financial Technologies. All rights reserved.</p>
+
+              </div>
+
+              <div class="footer-links">
+                  <div class="footer-column">
+                    <div class="footer-section links company">
+                          <p class="footer-title">Company</p>
+                          <a href="https://xabout.replit.app/">About</a>
+                          <a href="#">Team</a>
+                          <a href="https://xft-oracles.vercel.app/">Oracles</a>
+                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz6iy8AxjnxgMQNiesB9uqyxRi2hqWyqOipLKicF-8P83ziQ/viewform">Careers</a>
+                          <a href="#">Investor Relations</a>
+                      </div>
+                    <div class="footer-section links markets">
+
+                        <p class="footer-title">Markets</p>
+                        <a href="#">Private Equity</a>
+                        <a href="#">Real Estate</a>
+                        <a href="#">Metals</a>
+                        <a href="#">CFDs</a>
+                        <a href="#">Stablecoins</a>
+                        <a href="#">Fixed Income</a>
+                    </div>
+                  </div>
+
+                  <div class="footer-column">
+                      <div class="footer-section links products">
+                          <p class="footer-title">Products</p>
+                          <a href="https://xproducts.replit.app/">XFT Chain</a>
+                          <a href="https://xproducts.replit.app/">xBrowser</a>
+                          <a href="https://xproducts.replit.app/">xCard</a>
+                          <a href="https://xproducts.replit.app/">API Interface</a>
+                      </div>
+                      <div class="footer-section links use-cases">
+                          <p class="footer-title">Use Cases</p>
+                          <a href="#">Tokenization & Issuance</a>
+                          <a href="#">Payments</a>
+                          <a href="#">Clearing & Settlement</a>
+                          <a href="#">Lifecycle Management</a>
+                      </div>
+                      <div class="footer-section links customers">
+                          <p class="footer-title">Customers</p>
+                          <a href="#">Regulators</a>
+                          <a href="#">Neobanks</a>
+                          <a href="#">Exchanges</a>
+                          <a href="#">Lending Desks</a>
+                          <a href="#">Retail Traders</a>
+                          <a href="#">Fund Managers</a>
+                      </div>
+                  </div>
+
+                  <div class="footer-column">
+                    <div class="footer-section links resources">
+                        <p class="footer-title">Resources</p>
+                        <a href="https://github.com/X-Financial-Technologies/Library">Education</a>
+                        <a href="#">Blog</a>
+                        <a href="https://github.com/X-Financial-Technologies">Developers</a>
+                        <a href="https://www.youtube.com/@xft-reed">Demos</a>
+                        <a href="#">Whitepaper</a>
+                        <a href="#">Case Studies</a>
+                        <a href="mailto:alex@alexandros-securities.com">Contact</a>
+                    </div>
+
+                  </div>
+              </div>
+          </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>

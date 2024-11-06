@@ -1,0 +1,180 @@
+<h2>Stablecoin</h2>
+
+<ul>
+  <li>GET /customers</li>
+  <li>POST /customers</li>
+  <li>GET /customers/{id}</li>
+  <li>PUT /customers/{id}</li>
+  <li>DELETE /customers/{id}</li>
+  <li>GET /customers/{id}/tos-url</li>
+  <li>GET /customers/{id}/kyc-link</li>
+  <li>GET /customers/transfers</li>
+  <li>POST /customers/tos-url/new</li>
+  <li>GET /external-accounts</li>
+  <li>POST /external-accounts</li>
+  <li>GET /external-accounts/{id}</li>
+  <li>PUT /external-accounts/{id}</li>
+  <li>DELETE /external-accounts/{id}</li>
+  <li>GET /transfers</li>
+  <li>POST /transfers</li>
+  <li>GET /transfers/{id}</li>
+  <li>DELETE /transfers/{id}</li>
+  <li>GET /prefunded-accounts</li>
+  <li>GET /prefunded-accounts/{id}</li>
+  <li>GET /prefunded-accounts/{id}/funding-history</li>
+  <li>POST /liquidation-addresses</li>
+  <li>GET /liquidation-addresses/customer/{customer_id}</li>
+  <li>GET /liquidation-addresses/{id}</li>
+  <li>PUT /liquidation-addresses/{id}</li>
+  <li>GET /liquidation-addresses/{id}/drain-history</li>
+  <li>GET /liquidation-addresses/{id}/balance</li>
+  <li>GET /fees</li>
+  <li>POST /fees</li>
+  <li>GET /fees/external-account</li>
+  <li>POST /fees/external-account</li>
+  <li>POST /plaid/link-token</li>
+  <li>POST /plaid/exchange</li>
+  <li>POST /virtual-accounts</li>
+  <li>GET /virtual-accounts</li>
+  <li>GET /virtual-accounts/{id}</li>
+  <li>PUT /virtual-accounts/{id}</li>
+  <li>POST /virtual-accounts/{id}/deactivate</li>
+  <li>POST /virtual-accounts/{id}/reactivate</li>
+  <li>GET /virtual-accounts/activity</li>
+  <li>GET /virtual-accounts/activity/all-customers</li>
+  <li>POST /static-memos</li>
+  <li>GET /static-memos</li>
+  <li>GET /static-memos/{id}</li>
+  <li>PUT /static-memos/{id}</li>
+  <li>GET /static-memos/activity</li>
+  <li>GET /static-memos/activity/all-customers</li>
+  <li>GET /webhooks</li>
+  <li>POST /webhooks</li>
+  <li>PUT /webhooks</li>
+  <li>DELETE /webhooks</li>
+  <li>GET /webhooks/upcoming-events</li>
+  <li>GET /webhooks/logs</li>
+  <li>POST /webhooks/send-event</li>
+  <li>GET /lists/occupation-codes</li>
+  <li>GET /lists/countries</li>
+  <li>POST /kyc-links</li>
+  <li>GET /kyc-links</li>
+  <li>GET /kyc-links/{id}/status</li>
+  <li>GET /exchange-rates</li>
+</ul>
+
+<h3>v2</h3>
+<ul>
+  <li><strong>Customers</strong></li>
+  <ul>
+    <li>GET /customers</li>
+    <li>POST /customers</li>
+    <li>GET /customers/{id}</li>
+    <li>PUT /customers/{id}</li>
+    <li>DELETE /customers/{id}</li>
+    <li>GET /customers/{id}/tos-url</li>
+    <li>GET /customers/{id}/kyc-link</li>
+    <li>GET /customers/transfers</li>
+    <li>POST /customers/tos-url/new</li>
+  </ul>
+
+  <li><strong>External Accounts</strong></li>
+  <ul>
+    <li>GET /external-accounts</li>
+    <li>POST /external-accounts</li>
+    <li>GET /external-accounts/{id}</li>
+    <li>PUT /external-accounts/{id}</li>
+    <li>DELETE /external-accounts/{id}</li>
+  </ul>
+
+  <li><strong>Transfers</strong></li>
+  <ul>
+    <li>GET /transfers</li>
+    <li>POST /transfers</li>
+    <li>GET /transfers/{id}</li>
+    <li>DELETE /transfers/{id}</li>
+  </ul>
+
+  <li><strong>Prefunded Accounts</strong></li>
+  <ul>
+    <li>GET /prefunded-accounts</li>
+    <li>GET /prefunded-accounts/{id}</li>
+    <li>GET /prefunded-accounts/{id}/funding-history</li>
+  </ul>
+
+  <li><strong>Liquidation Addresses</strong></li>
+  <ul>
+    <li>POST /liquidation-addresses</li>
+    <li>GET /liquidation-addresses/customer/{customer_id}</li>
+    <li>GET /liquidation-addresses/{id}</li>
+    <li>PUT /liquidation-addresses/{id}</li>
+    <li>GET /liquidation-addresses/{id}/drain-history</li>
+    <li>GET /liquidation-addresses/{id}/balance</li>
+  </ul>
+
+  <li><strong>Developers</strong></li>
+  <ul>
+    <li>GET /fees</li>
+    <li>POST /fees</li>
+    <li>GET /fees/external-account</li>
+    <li>POST /fees/external-account</li>
+  </ul>
+
+  <li><strong>Plaid</strong></li>
+  <ul>
+    <li>POST /plaid/link-token</li>
+    <li>POST /plaid/exchange</li>
+  </ul>
+
+  <li><strong>Virtual Accounts</strong></li>
+  <ul>
+    <li>POST /virtual-accounts</li>
+    <li>GET /virtual-accounts</li>
+    <li>GET /virtual-accounts/{id}</li>
+    <li>PUT /virtual-accounts/{id}</li>
+    <li>POST /virtual-accounts/{id}/deactivate</li>
+    <li>POST /virtual-accounts/{id}/reactivate</li>
+    <li>GET /virtual-accounts/activity</li>
+    <li>GET /virtual-accounts/activity/all-customers</li>
+  </ul>
+
+  <li><strong>Static Memos</strong></li>
+  <ul>
+    <li>POST /static-memos</li>
+    <li>GET /static-memos</li>
+    <li>GET /static-memos/{id}</li>
+    <li>PUT /static-memos/{id}</li>
+    <li>GET /static-memos/activity</li>
+    <li>GET /static-memos/activity/all-customers</li>
+  </ul>
+
+  <li><strong>Webhooks</strong></li>
+  <ul>
+    <li>GET /webhooks</li>
+    <li>POST /webhooks</li>
+    <li>PUT /webhooks</li>
+    <li>DELETE /webhooks</li>
+    <li>GET /webhooks/upcoming-events</li>
+    <li>GET /webhooks/logs</li>
+    <li>POST /webhooks/send-event</li>
+  </ul>
+
+  <li><strong>Lists</strong></li>
+  <ul>
+    <li>GET /lists/occupation-codes</li>
+    <li>GET /lists/countries</li>
+  </ul>
+
+  <li><strong>KYC Links</strong></li>
+  <ul>
+    <li>POST /kyc-links</li>
+    <li>GET /kyc-links</li>
+    <li>GET /kyc-links/{id}/status</li>
+  </ul>
+
+  <li><strong>Exchange Rates</strong></li>
+  <ul>
+    <li>GET /exchange-rates</li>
+  </ul>
+
+</ul>

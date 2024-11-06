@@ -1,0 +1,311 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+.image {
+    width: 35%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+
+.x2-image {
+    width: 50%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+
+
+.xp-image {
+    width: 90%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+
+
+header {
+  background-color: #fff;
+  padding: 5px;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 20px;  /* Button Spacing */
+  text-decoration: none;
+  color: #000;
+  font-weight: 700; /* Heavier font weight */
+}
+
+nav ul li.get-started {
+  margin-left: 10px; /* Add margin to the right of the "Get Started" button */
+}
+
+
+.logo {
+  margin-right: 20px;
+}
+.logo img {
+  max-width: 75px;
+  height: auto;
+}
+
+nav ul li.get-started a {
+  background-color: #000066;
+  color: #fff;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li.get-started a:hover {
+  background-color: #000080;
+}
+
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+  margin-top: 40px;
+  color: #000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Adds space between about and link flex items */
+}
+
+/* controls links section */
+.about-company {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+
+/* controls links section */
+.footer-links {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 33%;
+  padding: 10px;
+}
+
+.footer-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-title.large-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.footer-title {
+  font-size: 1.0em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-company,
+  .footer-links {
+      flex-basis: 100%;
+      text-align: center;
+  }
+
+  .footer-column {
+      flex-basis: 100%;
+      text-align: center;
+  }
+
+  .footer-section {
+      text-align: center;
+  }
+}
+
+
+/* New CSS */
+
+.content-wrapper {
+  margin: 20px;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul ul {
+  margin-left: 20px;
+}
+
+ul ul li {
+  list-style-type: disc;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+}
+
+/* Add styles for accordion functionality */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.6s ease-out;
+}
+
+.accordion:hover,
+.accordion.active {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.panel.show {
+    display: block;
+}
+
+
+.panel ul, .panel h3 {
+    font-size: 12px; /* Smaller font size for content inside panel */
+}
+
+/* New endpoint links */
+#api-nav a {
+  color: black;
+}
+
+.small-nav {
+    margin-bottom: 0px; /* Adjust this value for the desired spacing between the two <p> elements */
+}
+
+.small-nav2 {
+  margin-top: 0px;
+}
+
+/* Flow styling */
+
+.flow-container {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.flow-image {
+  flex: 1;
+  text-align: center;
+}
+
+.flow-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flow-description {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.flow-description h2 {
+  margin-top: 0;
+}
+
+.flow-description ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Flow2 styling */
+
+.flow2-container {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.flow2-image {
+  flex: 2; /* Increase image column width */
+  text-align: center;
+}
+
+.flow2-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flow2-description {
+  flex: 1; /* Decrease description column width */
+  padding: 0 20px;
+}
+
+.flow2-description h2 {
+  margin-top: 0;
+}
+
+.flow2-description ol {
+  margin: 0;
+  padding-left: 20px;
+}
