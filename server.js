@@ -2,6 +2,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
 const app = express();
 
 app.use(express.static('.'));
@@ -45,5 +46,27 @@ app.get('/api/files/*', (req, res) => {
       res.status(500).json({ error: err.message });
   }
 });
+
+
+app.use('/:folder', (req, res, next) => {
+    const folderPath = req.params.folder;
+    if (fs.existsSync(`./${folderPath}/index.js`)) {
+        // Set up folder-specific static files
+        app.use(express.static(`./${folderPath}/public`));
+        
+        // Handle Python script execution
+        app.get(`/${folderPath}/run_code`, (req, res) => {
+            const scriptName = req.query.script;
+            const scriptPath = path.join(__dirname, folderPath, 'src', scriptName);
+            
+            exec(`python ${scriptPath}`, (error, stdout, stderr) => {
+                if (error) return res.status(500).send({ error: error.message });
+                res.send({ output: stdout });
+            });
+        });
+    }
+    next();
+});
+
 
 app.listen(3000);
