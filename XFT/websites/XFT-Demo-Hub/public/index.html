@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XFT - Demo Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<main class="content-wrapper">
+
+  <h3>XFT Demo Hub</h3>
+
+
+  
+  <div class="two-column-container">
+    <div class="column">
+
+      <!-- Dropdown to select script -->
+      <label for="scriptSelect">Choose demo:</label>
+      <select id="scriptSelect">
+
+        <option value="usdx.py">USDX</option>
+        <option value="rusdx.py">rUSDX</option>
+        <option value="distributions.py">Distributions</option>
+        <option value="customers.py">Customers</option>
+        <option value="xft.py">XFT</option>
+        <!-- Add more options as you add scripts -->
+      </select>
+
+      <button id="runButton">Run</button>
+      <pre id="output"></pre>
+    </div>
+
+    <div class="column">
+      <section id="demo-directory">
+        <ul>
+          <li>1. <strong>USDX:</strong> minting, daily yield</li>
+          <li>2. <strong>rUSDX:</strong> minting, daily yield</li>
+          <li>3. <strong>Distributions: </strong> accumulating vs. rebasing</li>
+          <li>4. <strong>Customers:</strong> Franklin Templeton, Visa</li>
+        </ul>
+      </section>
+      <button class="accordion2">Depreciated</button>
+        <div class="panel">
+          <ul>
+            <li>1. <strong>XFT:</strong> USDX/rUSDX minting, yield, customers, redemption, balance tracking</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</main>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>
