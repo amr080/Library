@@ -1,0 +1,834 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Terms of Use & Privacy Policy - Kinexys | J.P. Morgan
+
+</title>
+    <meta name="description"
+        content="Terms and conditions (terms of use) and privacy policy related to usage of the Kinexys website on J.P. Morgan, and any related platforms, applications or services.
+
+
+" />
+    <meta property="og:site_name" content="Kinexys by J.P. Morgan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://jpmorgan.com/kinexys/images/logo-kinexys-dark.png" />
+    <meta property="og:title" content="Terms of Use & Privacy Policy - Kinexys | J.P. Morgan
+" />
+    <meta property="og:description"
+        content="Terms and conditions (terms of use) and privacy policy related to usage of the Kinexys website on J.P. Morgan, and any related platforms, applications or services.
+
+" />
+    <meta property="og:url" content="https://www.jpmorgan.com/kinexys/terms-of-use" />
+ 
+ 
+
+<link rel="icon" type="image/png" href="images/icons/favicon.png">
+<link rel="icon" type="image/x-icon" href="https://www.jpmorgan.com/kinexys/favicon.ico">
+<link rel="apple-touch-icon" href="images/icons/favicon.png">
+
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/bootstrap5.min.css" type="text/css"/>
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/css/kinexys-style.css" type="text/css"/>
+        <script type="text/javascript" src="https://www.jpmorgan.com/resources/ed45a54e286a84c8e31096667248b9b34c6ac69210a0e"  ></script><script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/bootstrap5.bundle.js"></script>
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/jquery-3.7.0.min.js"></script>
+        
+        <!-- preload the GSAP libs -->
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/gsap.min.js"></script>
+	<script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/ScrollTrigger.min.js"></script>
+    
+        
+        <!-- reporting script -->
+        <script src="https://www.chase.com/apps/chase/clientlibs/foundation/scripts/Reporting.js"></script>
+        
+        	
+<script type='text/plain' class='optanon-category-C0009' src="https://assets.adobedtm.com/b968b9f97b30/438e9bff0544/launch-87d10d1d9c68.min.js" async></script>
+       <!-- OneTrust Cookies Consent Notice start for www.jpmorgan.com/onyx/index -->
+       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="b4f87c65-fd43-4ea0-a6fb-a63d8d88a124" ></script>
+       <script type="text/javascript">
+               function OptanonWrapper() { }
+       </script>
+       <!-- OneTrust Cookies Consent Notice end for www.jpmorgan.com/onyx/index -->
+
+
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick.css" />
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick-theme.css" />
+<script type="text/javascript" src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/slick.js"></script> 
+
+<style>
+
+:root {
+--bs-body-font-family: Amplitude;
+--bs-body-font-size: 16px;
+--bs-body-font-weight: 300;
+--bs-body-line-height: 1.5;
+--bs-body-color: #31373d;
+--bs-breadcrumb-divider: '>';
+--bs-breadcrumb-divider-color: #fff;
+    --bs-breadcrumb-item-padding-x: 0.5rem;
+    --bs-breadcrumb-item-active-color: #fff;
+    --bs-breadcrumb-margin-bottom: 0;
+}
+
+.breadcrumb-container {
+ font-size: 14px;
+ font-weight: 500;
+ letter-spacing: -0.14px;
+ border: 1px solid #434754;
+background: #434754;
+column-gap: 10px;
+padding: 10px;
+}
+
+.breadcrumb {
+margin-bottom: 0;
+color: #ffffff;
+}
+
+.breadcrumb-item.active, .breadcrumb-item a {
+color: #ffffff
+}
+
+.breadcrumb-divider {
+color: #ffffff;
+}
+
+
+.section-bck-jet-white-glow {
+
+    
+    background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%, #101A23 105.16%), 
+         url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  66% 10%  / 220% 180% no-repeat  #101820;
+	background-blend-mode: normal, normal, lighten, soft-light;
+    color: white;
+}
+
+
+.section-bck-white-glow2 {
+
+background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 79.73%);
+}
+
+.section-bck-white-glow-container2 {
+background: linear-gradient(180deg, #FFF 8.47%, rgba(255, 255, 255, 0.00) 46.22%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%);
+}
+
+.section-bck-white-glow-prog-pay {
+background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0.00) 33.12%), linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(90deg, #F5F7F8 0%, #E2E4E5 100%);
+}
+.section-bck-white-glow {
+
+background: url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg") 66% 66% / 182.5% 122.686% no-repeat, linear-gradient(180deg, #FFF -3.01%, rgba(255, 255, 255, 0.00) 46.22%);
+}
+
+.section-bck-marble-glow-container {
+background: 
+
+url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg") 66% 66% / 182.5% 122.686% no-repeat,
+
+linear-gradient(0deg, #F5F7F8 0%, rgba(245, 247, 248, 0.00) 45.04%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 72.13%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%);
+}
+
+
+.hero-default {
+background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%,
+		 #101A23 105.16%), url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  center  / 160% 141.393% no-repeat  #101820;
+		 
+/*	background-blend-mode: normal, normal, lighten, soft-light; */
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #31373d;
+}
+
+.section-bck-jet-lines {
+background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%), 
+    url('https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg')  center / 160% 221.393% no-repeat  #101820;
+	background-blend-mode: normal, normal, soft-light;
+}
+
+.hero-col {
+
+min-height: 300px;
+
+padding: 4%;
+
+}
+
+
+
+/* hero video  */
+
+.section-hero .video-js .vjs-control-bar {
+    display: none;
+}
+.section-hero .video-js {
+    pointer-events: none;
+}
+.section-hero .hero__bg-video-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top: 20px;
+    outline: none;
+}
+.section-hero.hero__bg-video-button svg {
+    width: 100%;
+    height: 100%;
+}
+.section-hero .js-play-button {
+    display: none;
+}
+
+.section-hero .video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+    padding-top: 75%;
+  }
+  
+.overlay-hero-video {
+    width: 100%;
+    height: 100%;
+    background: #1a221e;
+}
+
+.video-container-overlay {
+ /*   background: linear-gradient(90deg, #101820 33.91%, rgba(16, 24, 32, 0.33) 113.82%), linear-gradient(180deg, rgba(16, 24, 32, 0.00) 25.92%, #101820 81.03%); */
+     background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%);
+    z-index: 0;
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+    min-width: 102%;
+    min-height: 102%;
+    width: 102%;
+    height: 102%;
+}
+
+
+
+
+
+/* card stack here  */
+
+
+
+.card-stack-wrap {
+
+display: flex;
+padding: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 30px;
+flex: 1 0 0;
+height: 400px;
+
+border: 1px solid  #E2E4E5;
+background: rgba(255, 255, 255, 0.60);
+backdrop-filter: blur(17px);
+}
+
+/*
+.card-stack-wrap2 {
+  position: absolute;
+  width: 100%;
+  }
+  
+  */
+  
+  
+.card-stack-title {
+
+color:  #31373D;
+
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+
+
+
+.hide, .sucess-message {
+    display: none;
+}
+
+
+
+.bg-white {
+background-color: #ffffff;
+color: #31373d;
+}
+
+
+
+
+
+
+/*  overlay glass cards */
+
+.cards-overlay .card {
+display: flex;
+
+padding: 60px;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+color: #ffffff;
+border: 1px solid #434754;
+background: rgba(67, 71, 84, 0.10);
+border-radius: 0;
+}
+
+.cards-overlay-white .card {
+border: 1px solid #E2E4E5;
+background: rgba(245, 247, 248, 0.10);
+backdrop-filter: blur(17px);
+
+}
+
+.cards-overlay .card-group {
+backdrop-filter: blur(12px);
+}
+
+.cards-overlay .card-title {
+color: #ffffff;
+font-size: 28px;
+font-weight: 500;
+
+}
+
+.cards-overlay .card-text {
+color: #ffffff;
+font-size: 16px;
+line-height: 1.6;
+font-weight: 500;
+}
+
+.cards-overlay .card-footer {
+border: none;
+}
+
+.cards-overlay .card-footer a {
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2.25px;
+font-size: 14px;
+}
+
+
+.cards-overlay .card-tag {
+    color: #7ECDBA;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+}
+
+
+.cards-overlay-white .card-text,
+.cards-overlay-white .card-title {
+color: #31373d;
+}
+
+.cards-overlay-white .card .card-img-top  {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    align-self: center;
+}
+
+
+
+
+.cards-overlay-white .card .card-img-top img {
+    margin: 0 auto;
+    height: 190px;
+     width: 190px;
+     
+     object-fit: contain;
+}
+
+.cards-overlay-white.cards-sm-img .card .card-img-top  {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 70px;
+    align-self: flex-start;
+}
+
+.cards-overlay-white.cards-sm-img .card .card-img-top img {
+    margin:0 auto 0 0;
+    height: 70px;
+    width: 70px;
+     
+     object-fit: contain;
+}
+
+
+.hero-lockup {
+color: #31373d;
+}
+
+.hero-wrap-white {
+background: #ffffff;
+color: #31373d;
+}
+
+
+#contactForm input {
+border: none;
+border-bottom: 1px solid #31373D;
+border-radius: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .slide-wrap,
+    .cards-overlay .card {
+    padding: 10px;
+    }
+    
+    .hero-default-white {
+    min-height: 300px;
+    }
+    
+    .card-footer {
+    font-size: 12px;
+    }
+
+}
+
+
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="vy6ftilipcfnwzzl3jvq-f-d388ab2fb-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1425113","ak.ai":parseInt("872957",10),"ak.ol":"0","ak.cr":26,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"f31443a","ak.r":40939,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"174.60.89.0","ak.cport":52206,"ak.gh":"104.120.138.229","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1730927211","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==un/hHvEEiykW9jsCg45oqHjNPsrX5StSsiXSYPeTnYawc1ruDI4Uds4TjlUT0jc3+bsc9zCRlr+/9Fr1SuuBypARhl5J98lX9ZNE/X+zev6F2REL748dleR92oo2fredqSlYDLXsuuy0TKR9lwPBP9+5rf41Wy0DhYAgUPtwqI3kTJ0cFfk/fnMHQDrYPpDZx8or3w7GUzbBRUwd/GLaQZK4M08hjEAA2jGbDCjYtt4gPjAG3e/28PiQaaFiGwUx5gsX8iaALCUR40gfGpgL/Y558ZNpSRgwOozT+3jflnElMB4/QlRTfODJa9sWf9oG+RI5EqxIt9JWSdP7jzBiB6bwig1AnRtxvwXseRoMkUDJwPr9GBewh1hzklq40jnuH9w0ptSzcvoCv3AE1Y3ldOJCcvCJYZEK6UQ5oUUcuxg=","ak.pv":"11","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+
+<script>
+
+ let headerVideo2;
+            videojs("videoHero").ready(function () {
+             headerVideo2 = this;
+                console.log('header video');
+            });
+            let playBtn = $("#heroPlay");
+            let pauseBtn = $("#heroPause");
+    //         let video2 = $("#videoHero");
+            pauseBtn.on('click', function () {
+                console.log("pause botton pressed");
+        //        video2.pause();
+        $(this).hide();
+                playBtn.fadeIn('fast');
+                headerVideo2.pause();
+            });
+            playBtn.on('click', function () {
+                console.log("play botton pressed");
+                //    video2.play();
+                headerVideo2.play();
+                $(this).hide();
+                pauseBtn.fadeIn('fast');
+            });
+            
+            </script>
+
+
+ <!--  // common  nav  // -->
+ 
+<nav  id="kinexys-navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+    <a href="https://www.jpmorgan.com/kinexys"><div class="navbar-brand"></div> </a>
+  <button id="kinexysNavbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
+
+  <span class="navbar-toggler-text"> <span class="navbar-toggler-text-close">Menu <i class="fas fa-bars "></i></span> <span class="navbar-toggler-text-open">Close -</span> </span> </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto   align-items-lg-center">
+        
+        
+        <li class="nav-item dropdown dropdown-mega position-static">
+            <a class="nav-link dropdown-toggle" href="terms-of-use#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions</a>
+            <div class="dropdown-menu shadow">
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    <a class="menu-title" href="digital-assets">Digital Assets</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <a class="menu-title" href="digital-payments/index.html">Digital Payments</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    <a class="menu-title" href="labs">Blockchain Labs</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                      <a class="menu-title" href="liink.htm">Liink</a>
+                      <div class="menu-text ">
+                        <p>Exchange financial information simply and securely using Liink, the world’s first bank-led, peer-to-peer network for data sharing between institutions and fintechs.</p>
+                        <p class="menu-subtitle"><a href="liink/confirm.htm" class="primary link">Confirm</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                        <p class="menu-subtitle"><a href="liink/route-logic.htm" class="primary link">Route Logic</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                        <p class="menu-subtitle"><a href="liink/checkmatch.htm" class="primary link">CheckMatch</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+    
+      <li class="nav-item "> <a class="nav-link" href="terms-of-use#"  >Resources</a> </li>
+        <li class="nav-item "> <a class="nav-link" href="about.htm"  >About Kinexys</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="contact.htm">Contact</a> </li>
+        
+
+    </ul>
+    
+    <span class="navbar-text  ps-xl-5 ms-xl-5"><a class="navbar-text" href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a></span>
+  </div>
+  </div>
+</nav>
+
+<!--  // end common nav // -->
+
+
+
+
+<div class="breadcrumb-container crumbs-marble">
+<div  class="container">
+<div class="row">
+<div class="col-12">
+<nav   aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://www.jpmorgan.com/kinexys">Kinexys</a></li>
+    
+    <li  class="breadcrumb-item active" aria-current="page">Terms of Use and Privacy Policy</li>
+  </ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section-hero">
+<div class="hero-wrap-dark">
+<div  class="hero-default">
+
+<!--  trying video bck  -->
+
+
+<video class="video-js vjs-fill hero-bck-video" controls="" data-account="3855502852001" data-application-id="" data-embed="default"
+    data-player="default" data-video-id="6364080700112" id="videoHero" autoplay loop muted
+    style="position: absolute; top: -100px; right: 0px; bottom: 0px; left: 0px; width: 106%; height: 106%;"> </video>
+<div class="hero__bg-video-button-wrap">
+  <button class="hero__bg-video-button js-play-button" id="heroPlay">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Play Button</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-" transform="translate(-1710.000000, -398.000000)">
+        <g id="Big-Play-Button" transform="translate(1710.000000, 398.000000)">
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-27" stroke="#fff"></path>
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-272" stroke="#fff"></path>
+          <polygon id="Triangle" fill="#ffffff"
+                                transform="translate(49.334580, 46.629244) rotate(90.000000) translate(-49.334580, -46.629244) "
+                                points="49.3345802 34.9702503 61.1183059 58.2882369 37.5508544 58.2882369"></polygon>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+  <button class="hero__bg-video-button js-pause-button" id="heroPause">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Pause Button</title>
+    <g id="Page-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-2" transform="translate(-1816.000000, -398.000000)">
+        <g id="Big-Play-Button9" transform="translate(1816.000000, 398.000000)">
+          <g id="Group-4">
+            <path
+                                    d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                    id="Rectangle-279" stroke="#fff"></path>
+            <rect id="Rectangle" fill="#ffffff" x="37" y="32" width="8.22149849" height="28.6179579"> </rect>
+            <rect id="Rectangle99" fill="#ffffff" x="48" y="32" width="8.22149849" height="28.6179579"> </rect>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+</div>
+<div class="video-container-overlay"> </div>
+<script src="https://players.brightcove.net/3855502852001/default_default/index.min.js"></script> 
+
+
+<!--  trying video bck, commenting out  -->
+
+
+
+
+
+<div style="position: relative;" class="container">
+<div class="row">
+<div class="col-12 col-lg-8 col-xl-8 d-flex justify-content-center">
+<div class="hero-col white">
+<h1 class="page-title">
+Kinexys Website Terms of Use and Privacy Policy</h1>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--  trying video bck  -->
+
+
+
+
+<!--  trying video bck, commenting out  -->
+
+
+
+
+
+<div  class="container padding-top75">
+<div class="row">
+<div class="col-12">
+<div class="">
+
+<p>These terms and conditions (“Agreement”) relate to your use of the Kinexys website, and any related platforms, applications or services (“Website”). This Agreement is a legal agreement between you and JPMorgan Chase Bank, N.A., provider of the Website. As used herein, the terms “us”, “we”, “our”, “Kinexys”, JPM or “JPMorgan” mean JPMorgan Chase Bank, N.A. This Agreement shall apply to any person (referred to herein as “you”, “your” or “user”) who visits, accesses or uses any part or feature of the Website.</p><p>
+  Please read this Agreement carefully. By accessing or using the Website, you acknowledge and agree to be bound by the terms of this Agreement. The Agreement is subject to change without notice, from time to time in our sole discretion. We will notify you of amendments to this Agreement by posting an updated version of this Agreement on the Website, or by other appropriate means. You are responsible for being familiar with the current version of this Agreement posted on the Website during each session. If, now or at any time in the future, you do not agree with this Agreement, please immediately discontinue access to and use of this Website.</p><p>
+  Notwithstanding any other provision of this Agreement, we reserve the right to change, suspend, remove, or disable access to the Website or any content or other materials comprising a part of the Website at any time without notice, and you acknowledge and agree that in no event will JPMorgan have any liability for such actions. JPMorgan may also impose limits on the use of or access to certain features or portions of the Website, without notice or liability. You should not rely on continued access to the Website for any purpose, and if, for any reason (regulatory or otherwise), you need to keep records of any communications or transaction information transmitted via the Website (“Communications”), you are responsible for downloading records of such Communications that you are a party to any time you use the Website.</p><p>
+  You are strictly prohibited from unauthorized use of this Website, including but not limited to unauthorized access to our systems, misuse of passwords, or misuse of any information or data posted to this Website.</p><p>
+  Use of this Website may be monitored, tracked and recorded. Anyone using this Website expressly consents to such monitoring, tracking and recording.</p><p>
+  Although Communications will generally only be accessible by parties to such Communications, you acknowledge and agree that JPMorgan, as provider of the Website, may access (or may allow its third party service providers to access) any Communications, so long as such access is reasonably necessary for site maintenance, management, internal purposes or regulatory compliance.</p>
+<p class="emphasis-text">Third Party Service Providers</p>
+  <p>You acknowledge and agree that this Website may be hosted, serviced, maintained, or administered by one or more of our third party service providers. You further acknowledge and agree that such third party service provides may monitor, track or record your access to the Website, view, and store or retain data, including Communications, or provide support services related to the Website.</p>
+<p class="emphasis-text">Copyright Notices</p>
+<p>
+  Any works of authorship contained in this Website, including but not limited to all site design, text, and images, are owned, except as otherwise expressly stated, by JPMorgan Chase &amp; Co. or one of its subsidiaries. Except as otherwise expressly stated herein, they may not be copied, transmitted, displayed, performed, distributed (for compensation or otherwise), licensed, altered, framed, stored for subsequent use, or otherwise used in whole or in part in any manner without prior written consent, except to the extent permitted by the Copyright Act of 1976 (17 U.S.C. § 107), as amended, and then, only with notices of the owner’s proprietary rights. You may download or export records of Communications made via the Website that you are a party to.</p>
+<p class="emphasis-text">Trademark Notices</p>
+<p>
+  “Interbank Information Network,” “IIN,” “Liink”, “JPMorgan,” “JPMorgan Chase,” and the JPMorgan Chase logo are trademarks of JPMorgan. JPMorgan is a wholly-owned subsidiary of JPMorgan Chase &amp; Co. Other featured words or symbols, used to identify the source of goods and services, may be the trademarks of their respective owners in the United States and/or other countries.</p>
+<p class="emphasis-text">Website Content and Materials</p><p>
+  The information on this Website is for informational purposes only. It is believed to be reliable, but we do not warrant its completeness, timeliness or accuracy. User accesses, uses, and relies upon such content at user’s own risk</p><p>
+  Some of our other websites, or pages within this Website, may contain supplemental terms and conditions, or additional disclosures and disclaimers, which are in addition to this Agreement. In the event of a conflict, any supplemental terms and conditions or additional disclosures and disclaimers will govern for those sections or pages.</p><p>
+  You agree that (i) you will not engage in the use of, or any activities related to, this Website that are contrary to applicable law, regulation or the terms of any agreements you have with us, and (ii) you will establish commercially reasonable security procedures and controls to limit access to your password or other identifying information to authorized individuals. You agree that you will not use any robot, spider, other automated means or automatic device or manual process to monitor or copy our web pages, data or the content contained herein for any unauthorized purpose and without our prior express written permission.</p><p>
+  WE OR OUR SUPPLIERS OR THIRD PARTY SERVICE PROVIDERS MAY DISCONTINUE OR MAKE CHANGES TO THE INFORMATION, PRODUCTS OR SERVICES DESCRIBED HEREIN OR ACCESSED VIA THE WEBSITE HEREIN AT ANY TIME WITHOUT PRIOR NOTICE TO YOU AND WITHOUT ANY LIABILITY TO YOU. WE DO NOT UNDERTAKE ANY OBLIGATION OR RESPONSIBILITY TO UPDATE OR AMEND ANY INFORMATION ON THIS WEBSITE. WE RESERVE THE RIGHT TO TERMINATE ANY OR ALL WEBSITE OFFERINGS OR TRANSMISSIONS WITHOUT PRIOR NOTICE TO YOU.</p>
+<p class="emphasis-text">Privacy and User Data</p><p>
+  JPMorgan is committed to safeguarding the privacy and security of the personal information it collects as follows:</p><p>
+  Any log in details and activity (e.g., full name, email address, work address, security questions, user name and password, and other information you input into the Website) are collected by JPMorgan.</p><p>
+  JPMorgan may use, retain and disclose this information to (i) provide services or responses to your communications to JPMorgan; (ii) comply with any applicable legislation requiring JPMorgan to obtain, verify, and record information that identifies each entity with which it establishes a merchant relationship; (iii) to resolve compliance related inquiries; (iv) as required or permitted by law.</p><p>
+  You hereby represent and warrant that you have all requisite legal and corporate authority to provide, submit, input or upload any and all information, documentation or data that you provide, submit, input or upload onto or in connection with the Website (“User Data”) to JPMorgan.</p><p>
+  For further details about our Privacy Policy click here: J.P. Morgan Privacy Policy.</p>
+<p class="emphasis-text">Potential Disruption of Service</p><p>
+  You shall be responsible for obtaining and maintaining all telephone, computer hardware, software, and other equipment needed to access and use this Website. You shall also be responsible at all times for maintaining current and effective anti-virus and anti-spyware software. Access to this Website may from time to time be unavailable, delayed, limited or slowed due to, among other things:</p><p>
+  hardware failure, including among other things, failures of computers (including your own computer), servers, networks, telecommunication lines and connections, and other electronic and mechanical equipment;</p><p>
+  software failure, including among other things, bugs, errors, viruses, configuration problems, incompatibility of systems, utilities or applications, the operation of firewalls or screening programs, unreadable codes, or irregularities within particular documents or other content;</p><p>
+  overload of system capacities;</p><p>
+  damage caused by severe weather, earthquakes, wars, insurrection, riots, terrorism, civil commotion, act of God, accident, fire, water damage, explosion, mechanical breakdown or natural disasters;</p><p>
+  interruption (whether partial or total) of power supplies or other utility or service;</p><p>
+  strike or other stoppage (whether partial or total) of labor;</p><p>
+  governmental or regulatory restrictions, exchange rulings, court or tribunal orders or other human intervention; or</p><p>
+  any other cause (whether similar or dissimilar to any of the foregoing) whatsoever beyond our control.</p><p>
+  If access to this Website is unavailable, delayed or limited, or if this Website does not operate quickly and efficiently, you may be unable to make, view, or respond to Communications. If your operations are dependent on Communications, and such Communications are disrupted or delayed, you may suffer losses. JPMorgan will not be liable for any such loss. You acknowledge that there are certain security, corruption, transmission error, and access availability risks associated with using the Internet. You further acknowledge that you have made an independent assessment of the adequacy of the Internet in connection with the use of the Website. You assume all risks associated with the operation, performance and security of the Website and the use of open networks, and JPM disclaims all such risks. </p><p>
+  Links to Other Sites</p><p>
+  We may from time to time provide links to unaffiliated websites on this Website, however, we have no control over the content on such unaffiliated websites. If you choose to link to a website we do not control, we make no warranties, either express or implied, concerning your use of or inability to use such website, the content of such website, including the accuracy, completeness, reliability, or suitability thereof for any particular purpose, nor do we warrant that such website or content is free from any claims of copyright, trademark, or other infringement of the rights of third parties or that such website or content is devoid of viruses or other contamination, notwithstanding the fact that we may recommend or direct you to certain unaffiliated websites. We do not guarantee the authenticity, validity, or completeness of documents or information on the Internet. Links to unaffiliated websites do not imply any endorsement of or responsibility for any information, data, opinions, ideas, products, or services offered at such websites, or any representation regarding the content at such websites and we expressly disclaim any such endorsement or representation. In addition, these third party websites may have a privacy policy or security practices different from, and potentially offering a lesser standard of protection than, this Website.</p><p>
+  LIMITATION OF LIABILITY</p><p>
+  BECAUSE OF THE POSSIBILITY OF HUMAN AND MECHANICAL ERROR AS WELL AS OTHER FACTORS, THE WEBSITE (INCLUDING ALL INFORMATION, DATA, MATERIALS AND COMMUNICATIONS CONTAINED ON THE WEBSITE) IS PROVIDED “AS IS” AND “AS AVAILABLE.” WE, OUR AFFILIATES, AND ANY THIRD PARTY SERVICE PROVIDERS:</p><p>
+  BECAUSE OF THE POSSIBILITY OF HUMAN AND MECHANICAL ERROR AS WELL AS OTHER FACTORS, THE WEBSITE (INCLUDING ALL INFORMATION, DATA, MATERIALS AND COMMUNICATIONS CONTAINED ON THE WEBSITE) IS PROVIDED “AS IS” AND “AS AVAILABLE.” WE, OUR AFFILIATES, AND ANY THIRD PARTY SERVICE PROVIDERS:</p><p>
+  DISCLAIM ALL WARRANTIES AND REPRESENTATIONS OF ANY KIND WITH REGARD TO THE WEBSITE, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT OF THIRD PARTY RIGHTS, FREEDOM FROM VIRUSES OR OTHER HARMFUL CODE, OR FITNESS FOR A PARTICULAR PURPOSE;</p><p>
+  DO NOT WARRANT THE ACCURACY, ADEQUACY, OR COMPLETENESS OF THE INFORMATION, DATA AND MATERIALS CONTAINED ON THE WEBSITE AND EXPRESSLY DISCLAIM LIABILITY FOR ERRORS OR OMISSIONS IN THE MATERIALS, DATA AND INFORMATION; AND</p><p>
+  WILL NOT BE LIABLE FOR ANY DELAY, DIFFICULTY IN USE, COMPUTER VIRUSES, MALICIOUS CODE OR OTHER DEFECT IN THIS WEBSITE, ANY INCOMPATIBILITY BETWEEN THE WEBSITE AND ANY OTHER SYSTEM OR THE USER’S FILES OR THE USER’S BROWSER OR OTHER SITE ACCESSING PROGRAM, OR ANY OTHER PROBLEMS EXPERIENCED BY THE USER DUE TO CAUSES BEYOND OUR CONTROL</p><p>
+  NO LICENSE TO THE USER IS IMPLIED IN THIS AGREEMENT. NOTHING HEREIN SHALL BE CONSTRUED AS LIMITING OR REDUCING OUR RESPONSIBILITIES AND OBLIGATIONS TO CLIENTS OR REGULATORS IN ACCORDANCE WITH APPLICABLE LAWS AND REGULATIONS.</p><p>
+  TO THE MAXIMUM EXTENT PERMITTED BY LAW, UNDER NO CIRCUMSTANCES WILL WE BE LIABLE FOR ANY LOST PROFITS, LOST OPPORTUNITY OR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES ARISING OUT OF ANY USE OF OR INABILITY TO USE THE WEBSITE OR ANY PORTION THEREOF, REGARDLESS OF WHETHER WE HAVE BEEN APPRISED OF THE LIKELIHOOD OF SUCH DAMAGES OCCURRING AND REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR OTHERWISE.</p>
+<p class="emphasis-text">Enforceability and Governing Law</p><p>
+  In the event any of the terms or provisions of this Agreement shall be held to be unenforceable, the remaining terms and provisions shall be unimpaired and the unenforceable term or provision shall be replaced by such enforceable term or provision as comes closest to the intention underlying the unenforceable term or provision. This Agreement shall be subject to any other agreements you have entered into with JPMorgan Chase. The user’s access to and use of the Website, and the terms of this disclaimer are governed by the laws of the State of New York.</p><p>
+  Any action against JPMorgan Chase arising from or relating to your access to and use of the Website and the provisions of this Agreement must be brought by you in state or federal court located in the State of New York, County of New York. You consent to the jurisdiction and venue of the state and federal courts located within the State of New York, County of New York, for the adjudication of all claims by JPMorgan Chase against you arising from or relating to your access to and use of the Website and the provisions of this Agreement.</p>
+
+
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<footer>
+
+<div class="container">
+<div class="row py-5">
+    <div class="col-6  col-lg-7 ">
+    <div class="row ">
+    <div class="col-12 col-lg-4 p-3">
+        <a href="content-hub.htm">Content Hub</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="about.htm">About Kinexys</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="terms-of-use">Terms of Use and Privacy Policy</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="contact.htm">Contact</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="cookies">Cookies Policy</a>
+        </div>
+        </div>
+        
+        </div>
+    
+    
+    
+   
+    
+   
+    
+    
+    <div class="col-6  col-lg-5 text-end py-3">
+        
+        
+        
+        <a href="index.htm"><img loading="lazy" class="logo-footer" src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/logo-kinexys-light.png" alt="Kinexys logo"></a>
+            
+        </div>
+        
+    </div>
+    
+    <div class="row py-5">
+    <div class="col-12 col-lg-7 small">
+    <sup>1</sup> Transfers on the network are completed on a 24/7/365 and same day basis. Moving funds to and from the network from traditional Demand Deposit Accounts on legacy systems to Blockchain Deposit Accounts has a three- hour downtime over the weekend (3-6 p.m. EST every Saturday.) Enhancement is under development.
+    
+    <br><br>
+    
+    <sup>2</sup> JPMC proprietary data 2024
+    
+    </div>
+    
+    <div class="col-12  col-lg-5 text-end py-3">
+    Copyright &copy 2024 JPMorgan Chase &amp; Co.<br>
+All rights reserved.
+    </div>
+
+
+</div>
+</div>
+</footer>
+
+
+
+<script>
+
+ $(document).ready(function () {
+      //  backToTop();
+//        sliderGlass();
+  //      animateScroll();
+    
+
+
+    });
+    
+
+
+                    </script>
+                    
+<script>
+
+   $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 1200) {
+            $('#back-to-top-button').fadeIn();
+        } else {
+            $('#back-to-top-button').fadeOut('fast');
+        };
+            if (height > 100) {
+            
+                $('#kinexys-navbar').addClass("active");
+        }  ;
+        
+        
+         if (height < 40) {
+            
+                $('#kinexys-navbar').removeClass("active");
+        }
+    });
+
+</script>
+
+<script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/parsley.min.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/jpmc-captcha.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/DropDownMenu.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/contact.js"></script>
+
+<script>
+      $(function () {
+          new jpmc.utils.Captcha();
+      });
+
+
+    </script>
+    
+    
+
+</body>
+</html>

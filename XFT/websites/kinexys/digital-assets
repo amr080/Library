@@ -1,0 +1,1803 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinexys Digital Assets | J.P. Morgan
+</title>
+    <meta name="description"
+        content="Unlock greater utility of your assets through the flexibility and power of tokenization with Kinexys Digital Assets.
+" />
+    <meta property="og:site_name" content="Kinexys by J.P. Morgan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://jpmorgan.com/kinexys/images/logo-kinexys-dark.png" />
+    <meta property="og:title" content="Kinexys Digital Assets | J.P. Morgan
+" />
+    <meta property="og:description"
+        content="Unlock greater utility of your assets through the flexibility and power of tokenization with Kinexys Digital Assets.
+
+
+" />
+    <meta property="og:url" content="https://jpmorgan.com/kinexys/digital-assets" />
+ 
+
+<link rel="icon" type="image/png" href="images/icons/favicon.png">
+<link rel="icon" type="image/x-icon" href="https://www.jpmorgan.com/kinexys/favicon.ico">
+<link rel="apple-touch-icon" href="images/icons/favicon.png">
+
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/bootstrap5.min.css" type="text/css"/>
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/css/kinexys-style.css" type="text/css"/>
+        <script type="text/javascript" src="https://www.jpmorgan.com/resources/ed45a54e286a84c8e31096667248b9b34c6ac69210a0e"  ></script><script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/bootstrap5.bundle.js"></script>
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/jquery-3.7.0.min.js"></script>
+        
+        <!-- preload the GSAP libs -->
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/gsap.min.js"></script>
+	<script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/ScrollTrigger.min.js"></script>
+    
+        
+        <!-- reporting script -->
+        <script src="https://www.chase.com/apps/chase/clientlibs/foundation/scripts/Reporting.js"></script>
+        
+        	
+<script type="text/plain" class="optanon-category-C0009" src="https://assets.adobedtm.com/b968b9f97b30/438e9bff0544/launch-87d10d1d9c68.min.js" async></script>
+       <!-- OneTrust Cookies Consent Notice start for www.jpmorgan.com/onyx/index -->
+       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="b4f87c65-fd43-4ea0-a6fb-a63d8d88a124" ></script>
+       <script type="text/javascript">
+               function OptanonWrapper() { }
+       </script>
+       <!-- OneTrust Cookies Consent Notice end for www.jpmorgan.com/onyx/index -->
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick.css" />
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick-theme.css" />
+<script type="text/javascript" src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/slick.js"></script>
+
+<style>
+
+:root {
+--bs-body-font-family: Amplitude;
+--bs-body-font-size: 16px;
+--bs-body-font-weight: 300;
+--bs-body-line-height: 1.5;
+--bs-body-color: #31373d;
+}
+
+
+
+
+
+
+
+/*  is this needed?  */
+        
+        
+        
+
+
+    .video__wrapper {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        position: relative;
+        overflow: hidden;
+        margin: 1em auto 0;
+        max-width: 900px;
+    }
+
+    .hero-txt-2 {
+        width: 100%;
+        background: #31363D;
+        border-style: solid;
+        border-width: 0 1px 50px 0;
+        border-color: transparent transparent #31363D transparent;
+        line-height: 0px;
+        _border-color: #000000 #000000 #00477b #000000;
+        
+        position: absolute;
+
+        left: 0;
+        padding: 8% 5%;
+        bottom: 0;
+        color: white;
+        transition: all .6s ease-out;
+        -webkit-transition: all .6s ease;
+        -moz-transition: all .6s ease;
+        -o-transition: all .6s ease;
+        z-index: 2;
+    }
+
+    .play-button-mobile {
+        display: none;
+    }
+
+    .video__info {
+        display: flex;
+        z-index: 4;
+        bottom: 6%;
+        justify-content: center;
+        position: absolute;
+        /** height: 270px; **/
+        width: 100%;
+        color: #ffffff;
+        padding: 8em 0 0;
+        left: -30px;
+        margin-bottom: 1em;
+
+    }
+
+    .video__info-mobile {
+        display: none;
+    }
+
+    .play__button {
+        padding-left: 2em;
+        cursor: pointer;
+    }
+
+    .video__text {
+        padding: 0 2em;
+        width: 75%;
+        text-align: left;
+    }
+
+    h4.video__title,
+    .video__title {
+        font-size: 1.5em;
+        font-family: Amplitude;
+        text-align: left;
+        color: #ffffff;
+        line-height: 1;
+        padding: 0;
+        text-transform: none;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+    }
+
+    .video__text .video__description {
+        font-size: 1.16em;
+        display: block;
+        font-family: Amplitude;
+
+        overflow: hidden;
+        color: #ffffff;
+        line-height: 1;
+    }
+
+    .video__text .video__description-mobile {
+
+        color: #000000;
+
+    }
+
+    .video-js {
+        padding-bottom: 56.25%;
+        width: 100%;
+        /**
+        height: 0;
+        **/
+    }
+    
+    
+    /*  delete above, use ids? */
+    
+    .section-bck-marble-glow-container3 {
+    background: url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg") 66% 66% / 182.5% 122.686% no-repeat,
+
+linear-gradient(0deg, #F5F7F8 0%, rgba(245, 247, 248, 0.00) 45.04%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 72.13%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%), #E1E3E4;
+    }
+    
+    
+    
+.section-gradient-to-white {
+
+background: url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  50% 30%  / -99.722% 124.807% no-repeat, linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0.00) 53.78%), linear-gradient(90deg, rgba(245, 247, 248, 0.70) 0%, rgba(226, 228, 229, 0.70) 100%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%);
+
+}
+
+.section-bck-jet-white-glow {
+
+    background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%, #101A23 105.16%), 
+         url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  50% 30%  / 220% 180% no-repeat  #101820;
+	background-blend-mode: normal, normal, lighten, soft-light;
+    color: white;
+}
+
+
+
+
+.hero-default {
+background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%,
+		 #101A23 105.16%), url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  center  / 160% 141.393% no-repeat  #101820;
+	background-blend-mode: normal, normal, lighten, soft-light;
+    position: relative;
+    overflow: hidden;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-bck-jet-lines {
+background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%), 
+    url('https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg')  center / 120% 121.393% no-repeat  #101820;
+	background-blend-mode: normal, normal, soft-light;
+}
+
+.hero-col {
+
+min-height: 500px;
+display: flex;
+width: 100%;
+padding: 10%;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+}
+
+
+
+/* hero video  */
+
+.section-hero .video-js .vjs-control-bar {
+    display: none;
+}
+.section-hero .video-js {
+    pointer-events: none;
+}
+.section-hero .hero__bg-video-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top: 20px;
+    outline: none;
+}
+.section-hero.hero__bg-video-button svg {
+    width: 100%;
+    height: 100%;
+}
+.section-hero .js-play-button {
+    display: none;
+}
+
+.section-hero .video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+    padding-top: 75%;
+  }
+  
+.overlay-hero-video {
+    width: 100%;
+    height: 100%;
+    background: #1a221e;
+}
+
+.video-container-overlay {
+ /*   background: linear-gradient(90deg, #101820 33.91%, rgba(16, 24, 32, 0.33) 113.82%), linear-gradient(180deg, rgba(16, 24, 32, 0.00) 25.92%, #101820 81.03%); */
+     background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%);
+    z-index: 0;
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+    min-width: 102%;
+    min-height: 102%;
+    width: 102%;
+    height: 102%;
+}
+
+
+
+
+
+/* video here  */
+
+#jet-links-bar {
+margin-top: -50px;
+}
+
+#video .bc-player-default_default .vjs-big-play-button {
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/play.svg');
+            background-repeat: no-repeat;
+            background-size: 64px;
+            background-position: 50% calc(50% - 10px);
+            border: none !important;
+            box-shadow: none !important;
+        }
+    
+ #video       .bc-player-default_default .vjs-big-play-button:before,
+        .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+            content: "";
+            display: none;
+        }
+    
+  #video      .bc-player-default_default .vjs-big-play-button:hover {
+            background-color: transparent !important;
+            opacity: .7;
+        }
+        
+        
+    
+    
+    
+
+/* card stack here  */
+
+
+
+.card-stack-wrap {
+
+display: flex;
+padding: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 30px;
+flex: 1 0 0;
+height: 400px;
+
+border: 1px solid  #E2E4E5;
+background: rgba(255, 255, 255, 0.60);
+backdrop-filter: blur(17px);
+-webkit-backdrop-filter: blur(17px);
+}
+
+/*
+.card-stack-wrap2 {
+  position: absolute;
+  width: 100%;
+  }
+  
+  */
+  
+  
+.card-stack-title {
+
+color:  #31373D;
+
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+
+
+
+        
+
+
+
+
+/*  overlay glass cards */
+
+.cards-overlay .card {
+display: flex;
+
+padding: 60px;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+color: #ffffff;
+border: 1px solid #434754;
+background: rgba(67, 71, 84, 0.10);
+border-radius: 0;
+}
+
+.cards-overlay .card-group {
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+}
+
+.cards-overlay .card-title {
+color: #ffffff;
+font-size: 28px;
+font-weight: 500;
+margin-bottom: 30px;
+}
+
+.cards-overlay .card-text {
+color: #ffffff;
+font-size: 16px;
+line-height: 1.6;
+font-weight: 500;
+}
+
+.cards-overlay .card-footer {
+border: none;
+}
+
+.cards-overlay .card-footer a {
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2.25px;
+font-size: 14px;
+}
+
+
+.cards-overlay .card-tag {
+    color: #7ECDBA;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+}
+
+ .cards-overlay.cards-overlay-green .card-title-green {
+color: #008259;
+}
+
+.cards-overlay.cards-overlay-green .card-text {
+color: #31373d;
+}
+
+
+/**   Slider   **/
+
+/*
+.slider-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+*/
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+    margin: 0;
+    display: flex!important;
+}
+.slide-wrap {
+    margin: 0;
+    
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+   
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+color: #ffffff;
+
+border-radius: 0;
+padding: 60px;
+
+
+border: 1px solid #E2E4E5;
+background: rgba(245, 247, 248, 0.10);
+backdrop-filter: blur(17px);
+-webkit-backdrop-filter: blur(17px);
+}
+.slide-wrap p {
+    padding: 10px;
+    margin: 0;
+}
+.slick-slide .slide-image {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    align-self: center;
+}
+.slick-slide .slide-image img {
+    margin: 0 auto;
+    height: 190px;
+     width: 190px;
+     
+     object-fit: contain;
+}
+.slick-slide .slide-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: normal;
+    font-style: normal;
+    padding: 0px 20px;
+    min-height: 64px;
+    align-self: stretch;
+    color: #f;
+}
+#glass-slider .slick-slide .slide-text {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 20px 20px;
+    color: #ffffff;
+}
+
+#glass-slider  .slick-list{padding:0 20% 20px 0 !important;}
+
+
+.enhance-link {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px 20px;
+    color: #ffffff;
+    margin-top: auto;
+    
+}
+
+
+
+
+
+.slider-arrows-container {
+    margin: 10px 40px 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.slider-arrows {
+    font-family: "Font Awesome 5 Pro";
+    border-radius: 50% 50%;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    margin-right: 12px;
+}
+.slider-arrows-red .slider-arrows {
+    color: #A50034;
+    border-color: #A50034;
+    ;
+}
+.slider-arrows:after {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+.slider-arrows:hover {
+    background: #101820;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.slider-arrows-container .slick-arrow-prev::after {
+    content: '\f104';
+}
+.slider-arrows-container .slick-arrow-next::after {
+    content: '\f105';
+}
+
+
+.slider-dots-container-updated .slick-dots, #related-insights-slider .slick-dots {
+    bottom: -80px;
+    z-index: 5;
+}
+.slider-dots-container-updated .slick-dots button, #related-insights-slider .slick-dots button {
+    /**  font-size: 0;
+      width: 12px;
+      height: 12px; **/
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    padding: 4px;
+    z-index: 5;
+}
+.slider-dots-container-updated .slick-active button, #related-insights-slider .slick-active button {
+    background-color: rgba(49,55,61, .4);
+    border-color: #ffffff;
+    font-size: 0;
+}
+
+
+.slider-dots-container-updated  .slick-dots button:before {
+        color: #ffffff;
+        font-size: 3px;
+    }
+    
+    .slider-dots-container-updated  .slick-dots button:hover {
+        color: #101820;
+        background-color: #E26E00;
+        
+    }
+
+@media only screen and (max-width: 992px) {
+
+    .slide-wrap,
+    .cards-overlay .card {
+    padding: 10px;
+    }
+    
+    .slide-wrap {
+    padding: 10px;
+    }
+    
+    .card-footer {
+    font-size: 12px;
+    }
+
+}
+
+
+
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="vy6ftilipcfnwzzl3jsq-f-c51284381-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1425113","ak.ai":parseInt("872957",10),"ak.ol":"0","ak.cr":25,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"f313646","ak.r":40939,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"174.60.89.0","ak.cport":52206,"ak.gh":"104.120.138.229","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1730927205","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==4cUGZLvZddBZUIIVdgxwj6nozSs5a7rtFki4DdpmXKg6AWHR7pZaRwo8EmenqSydjkXysnt402VZxoT566q3kN4SdEsUe9QfzAtrAciat85tft8qxnRcnB5XqxCZHuKahSriIJ/1FyER6BW0U1LQBoVCdxUL+cNX4+BaJiManlAjtvej1fLpT7qBfFNO8F0yIo1Sn+JAMwrR93hNIiIAhCJeIelfvbWjypvVhnXHA80Wv7a3rG5euW8F1EZ+M/KJmDfhOBIx0hwJQHd0HzZbdwWW+/r30GZ5DTXAZ+CenRvgurTxQ2cUwEQo957YjQeT7/6E57sj3o3PcbP5IxSTnqG7N+7shIcAcNWseVTCTJdjErAFSmvMsccnxaeG9jT0kzT+s4vC3lB8r9AuouGI2JcLxKsz8G/ro58525xf914=","ak.pv":"11","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+
+
+
+
+ <!--  // common  nav  // -->
+ 
+<nav  id="kinexys-navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+    <a href="https://www.jpmorgan.com/kinexys"><div class="navbar-brand"></div> </a>
+  <button id="kinexysNavbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
+
+  <span class="navbar-toggler-text"> <span class="navbar-toggler-text-close">Menu <i class="fas fa-bars "></i></span> <span class="navbar-toggler-text-open">Close -</span> </span> </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto   align-items-lg-center">
+        
+        
+        <li class="nav-item dropdown dropdown-mega position-static">
+            <a class="nav-link dropdown-toggle" href="digital-assets#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions</a>
+            <div class="dropdown-menu shadow">
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    
+                    
+                    
+                     <a class="menu-title" href="digital-assets">Digital Assets</a>
+                      <div class="menu-text ">
+                        Unlock the power of tokenization
+                      </div>
+                    
+                    
+                    <p class="menu-subtitle"><a href="https://www.jpmorgan.com/kinexys/digital-assets/digital-financing" class="primary link">Digital Financing</a></p>
+                        <p class="d-none d-lg-block">Automate and customize your payment processes seamlessly.</p>
+                        
+                    <p class="menu-subtitle"><a href="https://www.jpmorgan.com/kinexys/digital-assets/tokenized-collateral-network" class="primary link">Tokenized Collateral Network</a></p>
+                        <p class="d-none d-lg-block">Tokenize, move and use asset  as collateral</p>
+                    <p class="menu-subtitle"><a href="https://www.jpmorgan.com/kinexys/digital-assets/digital-debt-service" class="primary link">Digital Debt Service</a></p>
+                        <p class="d-none d-lg-block">Built for the future of debt issuance, investment and lifecycle management</p>
+                       </div> 
+                        
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <a class="menu-title" href="digital-payments/index.html">Digital Payments</a>
+                      <div class="menu-text ">
+                        Fuel programmable, near real-time, multicurrency payments
+                      </div>
+					  <p class="menu-subtitle"><a href="digital-payments/programmable-payments" class="primary link">Programmable Payments</a></p>
+                        <p class="d-none d-lg-block">Automate and customize your payment processes seamlessly.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    <a class="menu-title" href="labs"> Labs</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                      <a class="menu-title" href="liink.htm">Liink</a>
+                      <div class="menu-text ">
+                        <p>Exchange payment-related financial information simply and securely using Liink, one of the world’s first bank-led, peer-to-peer networks for data sharing between institutions and fintechs.</p>
+                        <p class="menu-subtitle"><a href="liink/confirm.htm" class="primary link">Confirm</a></p>
+                        <p class="d-none d-lg-block">Optimize your payments security and efficiency by validating account information.</p>
+                        <p class="menu-subtitle"><a href="liink/route-logic.htm" class="primary link">Route Logic</a></p>
+                       <p class="d-none d-lg-block">Enhance your client experience on cross-currency payments with Route Logic and improve foreign exchange execution with near real-time convertibility intelligence validation.</p>
+                        <p class="menu-subtitle"><a href="liink/checkmatch.htm" class="primary link">CheckMatch</a></p>
+                        <p class="d-none d-lg-block">Streamline your payments management by digitizing paper check conveyance and expediting check information transmission, helping to cut costs and processing times.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+    
+     <!-- <li class="nav-item "> <a class="nav-link" href="#"  >Resources</a> </li> -->
+        <li class="nav-item "> <a class="nav-link" href="about.htm"  >About Kinexys</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="contact.htm">Contact</a> </li>
+        
+
+    </ul>
+    
+    <span class="navbar-text  ps-xl-5 ms-xl-5"><a class="navbar-text" href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a></span>
+  </div>
+  </div>
+</nav>
+
+<!--  // end common nav // -->
+
+
+
+<div class="section-hero">
+<div class="hero-wrap-dark">
+<div  class="hero-default">
+
+<!--  trying video bck  -->
+
+
+<video class="video-js vjs-fill hero-bck-video" controls="" data-account="3855502852001" data-application-id="" data-embed="default"
+    data-player="default" data-video-id="6364080700112" id="videoHero" autoplay loop muted
+    style="position: absolute; top: -100px; right: 0px; bottom: 0px; left: 0px; width: 106%; height: 106%;"> </video>
+<div class="hero__bg-video-button-wrap">
+  <button class="hero__bg-video-button js-play-button" id="heroPlay">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Play Button</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-" transform="translate(-1710.000000, -398.000000)">
+        <g id="Big-Play-Button" transform="translate(1710.000000, 398.000000)">
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-27" stroke="#fff"></path>
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-272" stroke="#fff"></path>
+          <polygon id="Triangle" fill="#ffffff"
+                                transform="translate(49.334580, 46.629244) rotate(90.000000) translate(-49.334580, -46.629244) "
+                                points="49.3345802 34.9702503 61.1183059 58.2882369 37.5508544 58.2882369"></polygon>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+  <button class="hero__bg-video-button js-pause-button" id="heroPause">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Pause Button</title>
+    <g id="Page-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-2" transform="translate(-1816.000000, -398.000000)">
+        <g id="Big-Play-Button9" transform="translate(1816.000000, 398.000000)">
+          <g id="Group-4">
+            <path
+                                    d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                    id="Rectangle-279" stroke="#fff"></path>
+            <rect id="Rectangle" fill="#ffffff" x="37" y="32" width="8.22149849" height="28.6179579"> </rect>
+            <rect id="Rectangle99" fill="#ffffff" x="48" y="32" width="8.22149849" height="28.6179579"> </rect>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+</div>
+<div class="video-container-overlay"> </div>
+<script src="https://players.brightcove.net/3855502852001/default_default/index.min.js"></script> 
+
+
+<!--  trying video bck, commenting out  -->
+
+
+
+
+
+<div style="position: relative;" class="container">
+<div class="row">
+<div class="col-12 col-lg-7 ">
+<div class="hero-col white">
+<div class="hero-lockup white">KINEXYS DIGITAL ASSETS</div>
+<h1 class="page-title">
+Unlock the power of tokenization</h1>
+
+
+</div>
+
+
+</div>
+
+<div class="col-12 col-lg-5">
+<div class="hero-col white">
+<div class="hero-lockup-top-margin"></div>
+
+<div class="hero-text ">Gain access to the full utility and value of your financial assets with Kinexys Digital Assets.</div>
+
+<a class="primary-button-dark button-kinexys" href="contact.htm">Get in touch</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<section id="jet-links-bar" class="bck-jet sticky">
+<div class="container">
+    <div   class="row  d-none d-lg-flex align-items-center px-5">
+      <div class="col-12 col-md-10 col-xl-7  h-100">
+        <div class="links-row d-flex  gap-5  justify-content-start align-items-center">
+        <div class="col "><a href="digital-assets#how-it-works" data-titleLink="What’s the impact?">How it works</a></div>
+          <div class="col "><a href="digital-assets#use-cases" data-titleLink="Starting now">Use cases</a></div>
+          
+        
+          <div class="col "><a href="digital-assets#solutions" data-titleLink="What’s next?">Related solutions</a></div>
+          
+        </div>
+      </div>
+      <div class="col-12 col-md-2 col-xl-5 d-flex justify-content-end  "><div class="jet-links-bar-link"><a class="primary link card-link white " 
+                    aria-label="GET IN TOUCH" href="contact.htm">Connect with us</a></div>
+                    </div>
+                    </div> 
+  </div>
+  </section>
+
+
+
+<section id="how-it-works" class="bck-jet font-white">
+<div class="container section--bck-jet jet-video-section section-padding-100">
+<div class="row">
+<div class="col-12 pe-5 py-5 col-lg-6">
+
+    
+     
+     <div style="max-width: 1920px; position: relative;">
+                <div style="padding-top: 56.25%;">
+        
+        
+          <video id="main-vid-kinexsys" class="video-js  vjs-fill" data-account="3855502852001" data-player="default" data-embed="default"
+            controls="" data-video-id="6364235821112" data-playlist-id="" data-application-id="" style="top:0; position:absolute; max-height: 1080px;" >
+           
+        
+          </video>
+        
+          <script src="https://players.brightcove.net/3855502852001/default_default/index.min.js"></script>
+        
+        
+                </div>
+               
+            </div>
+            
+                       
+  <style>
+  video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+    padding-top: 56.25%;
+  }
+  </style>
+               
+            
+             <div  class="row d-none ">
+               
+                        
+                        <div class="accessibility__buttons">
+                        
+                        <div id="small-video-trans-button" class="accessibility__button-container">
+                                 <button aria-label="Transcript Button" class="ada__button" id="">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.39844 1H3.79844C3.42713 1 3.07104 1.1475 2.80849 1.41005C2.54594 1.6726 2.39844 2.0287 2.39844 2.4V13.6C2.39844 13.9713 2.54594 14.3274 2.80849 14.5899C3.07104 14.8525 3.42713 15 3.79844 15H12.1984C12.5697 15 12.9258 14.8525 13.1884 14.5899C13.4509 14.3274 13.5984 13.9713 13.5984 13.6V5.2L9.39844 1Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9.39844 1V5.2H13.5984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M10.7985 8.69995H5.19849" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M10.7985 11.5H5.19849" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.59849 5.90002H5.89849H5.19849" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                                    VIEW TRANSCRIPT
+                                </button>  
+                            
+            
+                            </div>
+                            
+                            <div id="" class="accessibility__button-container">
+
+                
+                                <div id="small-video-ada-button"  class="accessibility__button-ada  form-check form-switch">
+                                    <input type="checkbox" class="form-check-input" id="flexSwitchCheckDefault">
+                                     <label class="form-check-label" for="flexSwitchCheckDefault">AUDIO DESCRIPTION</label> 
+                                </div> 
+
+
+                            </div>
+
+                         </div>
+                         
+                    
+                    
+                    
+                    
+                    
+                      
+                        <div id="smallVideo__transcript" class="transcript" >
+                                        
+                          
+<p>
+It is so good to be back here in Miami for the race this year and for offering the fans a very special experience. 
+This year, we've expanded the partnership, and we have enabled biometrics at every location within the merchandise store. We have also expanded our partnership that allows consumers to buy products online, enabling our full omnichannel experience. </p><p>
+J.P. Morgan Payments was super vital in helping us create a first in class experience with the creation of our e-commerce site. We've been given this beautiful platform to access fans all over the world. We're excited about these new advancements that we continue to develop with them as our partner. </p><p>
+[MUSIC PLAYING] </p><p>
+Have you ever done anything like this before? <br>
+No, I'm excited about it. <br>
+OK, well, let's do it. </p><p>
+The future boutique is a demo experience simulating what retail and commerce will look like in the future. 
+</p><p>
+Look at that. </p><p>
+Cheers. </p><p>
+Cheers. </p><p>
+It's a fantastic showcase of the products, the integration, the solutions, the speed of how fast our products can recognize your face, how quickly it processes the payment. 
+Pay with a smile. Yes, always. </p><p>
+I've seen people coming in and just seeing them smile all the way from buying a drink, getting sweets, getting a personalized hat. It's the ultimate personalized shopping experience. 
+Omnichannel really helps turn you from a spectator into a fan. It creates unique experiences. All of this is just made for you. </p><p>
+We want to power those J.P. Morgan Payments and solve business challenges, help those businesses grow, and make the fans at the end really happy and excited and energized about what they just went through. </p><p>
+How can I go back to normal shopping now? <br>
+[LAUGHS] </p><p>
+[MUSIC PLAYING] 
+
+</p>
+
+
+
+<p><strong>End</strong></p>
+
+        
+                        </div>
+                    </div>
+                
+            
+        
+</div>
+
+
+<div class="col-12 col-lg-6  d-flex justify-content-start ps-lg-4 align-items-center">
+<h2 class="section-header">Supercharge today's financial systems. 
+<span class="emerald">Fast-forward with Kinexys.</span></h2>
+</div>
+</div>
+</div>
+
+</section>
+
+<div id="use-cases" class="section-bck-jet-white-glow font-white">
+<section class="  ">
+<div class="container  ">
+<div class="row padding-top75">
+<div class="col-12 col-lg-9 offset-md-1  d-flex justify-content-start p-lg-5 align-items-center">
+<h2 class="section-header">Now financial institutions, asset managers and fintechs can unlock untapped utility for their financial assets with our next-level tokenization platform, Kinexys Digital Assets.
+</h2>
+</div>
+</div>
+
+<div class="row">
+          
+          
+          <div class="col-12 col-lg-6 p-3">
+          
+          
+<h2 class="section-header-large white mb-5">
+Move, settle and service your financial assets faster</h2>
+
+          </div>
+          
+          <div class="col-12 col-lg-6 p-3">
+     
+
+<div class="emphasis-text white my-5">Here’s how you can leverage the power of blockchain and asset tokenization technology to fuel your business.
+          </div>
+       
+      </div>
+      
+</div>
+</div>
+
+
+
+<section class="section ">
+<div id="glass-slider" class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-11 offset-md-1">
+            <div class="slider-container">
+                <div id=" " class="slider-illustrate">
+                    <div class="h-100">
+                        <div class="slide-wrap">
+                            <div class="slide-image p-lg-5 "><img loading="lazy"  alt=""
+                                    src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/icons/icon-assets.svg">
+                            </div>
+                            <div class="slide-title">Assets</div>
+                            <div class="slide-text">Increase the utility and mobility of financial assets to boost your liquidity and stay optimally invested in markets.</div>
+                           
+                        </div>
+                    </div>
+                    <div class=" h-100">
+                        <div class="slide-wrap">
+                            <div class="slide-image  p-lg-5  "> <img loading="lazy"  alt=""
+                                    src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/icons/icon-cash-on-chain.svg">
+                            </div>
+                            <div class="slide-title">Cash on-chain</div>
+                            <div class="slide-text">Near-instant and atomic transactions settlement using Kinexys Digital Payments, a cash on-chain value rail.</div>
+                        </div>
+                    </div>
+                    <div class="h-100">
+                        <div class="slide-wrap">
+                            <div class="slide-image   p-lg-5 "><img loading="lazy" alt=""
+                                    src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/icons/icon-network-participants.svg">
+                            </div>
+                            <div class="slide-title">Network participants</div>
+                            <div class="slide-text">Join an ecosystem of vetted institutional participants processing billions of dollars in transactions across applications.</div>
+                        </div>
+                    </div>
+    
+                    
+                <div class="h-100">
+                  <div class="slide-wrap">
+                    <div class="slide-image   p-lg-5 "><img alt=""  loading="lazy" 
+                                src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/icons/icon-network-infrastructure.svg"> </div>
+                    <div class="slide-title">Blockchain infrastructure</div>
+                    <div class="slide-text">Take advantage of our institutional-grade infrastructure that provides participant controls, blockchain components and integrations with existing financial infrastructures globally.</div>
+                  </div>
+                </div>
+
+                
+
+                
+                  
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="updated-2024-slider2" class="row">
+        <div class="col-12 col-lg-6 offset-lg-1 d-flex">
+        
+        
+            <div id="slider-text-arrows">
+
+            <div class="slider-arrows-container slider-arrows-container-updated arrows-container-updated">
+                <div class="sliderStatusBottom"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+</section>
+
+  </div>
+  
+  
+  
+  
+  
+  <section class="section bck-white">
+    <div class="container px-5">
+     
+        <div class="row">
+          <div class="col-12 col-lg-4 p-lg-5">
+            <div class="bigText bigTextQuartz mb-4">220<span class="bigTextInfo font-dark">million+</span></div>
+            <p class="bigTextBody">Inquiries processed by Liink<sup>2</sup></p>
+          </div>
+          
+          <div class="col-12 col-lg-4 p-lg-5">
+            <div class="bigText bigTextQuartz mb-4">1<span class="bigTextInfo font-dark">million+</span></div>
+            <p class="bigTextBody">Inquiries processed by Route Logic<sup>2</sup></p>
+          </div>
+          
+          <div class="col-12 col-lg-4 p-lg-5">
+            <div class="bigText bigTextQuartz mb-4">90%<span class="bigTextInfo font-dark" style="line-height: 1;">cost<br>reduction</span></div>
+            <p class="bigTextBody">Estimated to reduce up to 90% of traditional check delivery costs with CheckMatch<sup>3</sup></p>
+          </div>
+       
+      </div>
+      
+  
+
+    </div>
+    </section>
+  
+    
+    <div class="section-bck-white-glow-container">
+    <section  class="section section-bck-white-glow">
+    <div class="section-bck-white-glow2">
+<div class="container  py-5">
+
+
+<div class="row">
+<div class="col-12 col-lg-7">
+<div class="card-stack-image pb-5">
+<img loading="lazy"  alt="" class="mb-5"       src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/icons/icon-fuel-future.svg">
+<div class="section-header-large section-header-56">
+Fuel your future with benefits like these
+</div>
+<div class="emphasis-text">Kinexys Digital Assets brings your financial assets on-chain, increasing asset utilization and mobility.</div>
+
+</div>
+
+</div>
+
+<div class="col-12 col-lg-4 offset-lg-1 ">
+
+
+
+
+
+
+<div class="card-stack-wrap">
+<div class="card-stack-title">
+<span class="dark-green">Boost
+</span>
+   your liquidity through tokenization</div>
+ <p>Unlock the value of your financial assets and stay optimally invested in markets by bringing low liquidity assets on-chain, enabling fast transaction settlement and intraday financing.</p>
+
+</div>
+
+
+
+<div class="card-stack-wrap card-stack-wrap2">
+<div class="card-stack-title">
+<span class="dark-green">Near-instant and atomic
+</span>   transaction settlements with programmability</div>
+<p>Execute near-instantaneous and atomic delivery versus payment exchange of your assets using blockchain deposit accounts.
+</p>
+
+</div>
+
+<div class="card-stack-wrap card-stack-wrap2">
+<div class="card-stack-title">
+<span class="dark-green">Maximize 
+</span>
+ economies of scale and network effects</div>
+<p>Scale your business with less manual processes and operating costs by leveraging our secure platform that provides access to a network of vetted institutions.  
+</p>
+
+</div>
+
+
+<div class="card-stack-wrap card-stack-wrap2">
+<div class="card-stack-title">
+<span class="dark-green">Built 
+</span>
+  for tomorrow, today</div>
+<p>Take advantage of a platform built on nearly a decade of blockchain research and development expertise, with potential future interoperability6 and the changing digital asset landscape in mind, backed by  J.P. Morgan.  
+</p>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+</div> 
+    
+
+  
+  
+  
+  
+  
+  <section id="" class="section-bck-marble-glow-container3">
+
+<div class="container ">
+     
+        <div class="row padding-top75">
+          
+          
+          <div class="col-12 col-lg-10 offset-lg-1">
+          
+          
+<h2 class="section-header">
+Discover solutions that empower financial movement</h2>
+
+          </div>
+          
+         
+       
+      </div>
+      
+     
+          
+         <div class="row cards-overlay cards-overlay-green">
+<div class="col-12  d-flex col-lg-8 offset-lg-2">
+
+<div class="card-group ">
+  <div class="card">
+    
+    <div class="card-body">
+    
+      <div class="card-title card-title-green">Digital Financing</div>
+      <p class="card-text">Execute and settle repo transactions in minutes, using tokenized assets to raise capital or earn interest.</p>
+    </div>
+    <div class="card-footer">
+    <a class="primary link " href="https://www.jpmorgan.com/kinexys/digital-assets/digital-financing">Learn more</a>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-body">
+    
+      <div class="card-title card-title-green">Tokenized Collateral Network</div>
+      <p class="card-text">Tokenize, move and use assets as collateral.
+</p>
+    </div>
+    <div class="card-footer">
+      <a class="primary link " href="https://www.jpmorgan.com/kinexys/digital-assets/tokenized-collateral-network">Learn more</a>
+    </div>
+  </div>
+  
+  
+  </div>
+  </div>
+  </div>
+  
+  <div class="row cards-overlay cards-overlay-green">
+<div class="col-12  d-flex col-lg-8 offset-lg-2">
+
+
+  <div class="card-group ">
+ 
+  <div class="card">
+    
+    <div class="card-body">
+    
+      <div class="card-title card-title-green">Digital Debt Service</div>
+      <p class="card-text">Join an ecosystem built for digital debt.</p>
+    </div>
+    <div class="card-footer">
+    <a class="primary link " href="https://www.jpmorgan.com/kinexys/digital-assets/digital-debt-service">Learn more</a>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-body">
+    
+      <div class="card-title card-title-green">Build customized applications</div>
+      <p class="card-text">Work with us to build applications tailored to your needs.<sup>4</sup>
+</p>
+    </div>
+    <div class="card-footer">
+      <a class="primary link " href="contact.htm">Learn more</a>
+    </div>
+  </div>
+  
+  
+  
+  </div>
+  
+  </div>
+  </div>
+  
+ 
+    </div>
+      
+      
+      </section>
+  
+  
+  
+  
+ <section class="section section-gradient-to-white">
+ <div class="container">
+ <div class="row">
+ <div class="col-12 col-lg-8 offset-lg-2 d-flex flex-column gap-30">
+ <h2 class="section-header">Explore privacy and identity solutions for your digital assets</h2>
+ <p class="emphasis-text">Cryptographic on-chain privacy and Web3 digital identity solutions can pave the way for a significant acceleration in tokenized assets adoption by shielding transaction details, adding efficiencies to compliance and protecting confidential identity data.
+<br><br>
+See how Kinexys is investigating these technologies to build the next era of digital asset solutions.
+</p>
+
+ <a href="content-hub.htm" class="primary link  mt-5">Tell me more</a>
+   
+   </div>
+   </div>
+   </div>
+   </section>
+
+    
+    
+    
+    <script>
+    
+function sliderGlass() {
+
+           
+         
+
+    var $status = $('.sliderStatusBottom');
+        var $slickElement = $('.slider-illustrate');
+
+        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $status.text(i + '/' + slick.slideCount);
+        });
+
+    $slickElement.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            arrows: true,
+
+            cssEase: 'linear',
+            appendArrows: $('.slider-arrows-container'), // Class For Arrows Buttons
+            prevArrow: '<button title="previous"  class="slider-arrows-text slider-arrows slick-arrow-prev slick-prev-1 me-0"></button>',
+            nextArrow: '<button title="next"  class="slider-arrows-text slider-arrows slick-arrow-next slick-next-1"></button>',
+            appendDots: $status,
+
+            responsive: [
+                {
+                    breakpoint: 1124,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+        .on("setPosition", function () {
+            resizeSlider();
+        });
+
+    $(window).on("resize", function (e) {
+        resizeSlider();
+    });
+
+    var slickHeight = $(".slick-track").outerHeight();
+
+    var slideHeight = $(".slick-track").find(".slick-slide").outerHeight();
+
+    function resizeSlider() {
+        $(".slick-track")
+            .find(".slick-slide .slide-wrap")
+            .css("height", slickHeight + "px");
+    }
+
+
+      
+
+
+    };
+    
+    
+      function animateScroll() {
+    
+    
+    let mm = gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+mm.add("(min-width: 993px)", () => {
+    
+
+//const cards  = document.querySelectorAll('.card-stack-wrap2');
+//const header  = document.querySelector('.section-bck-white-glow');
+//const animation = gsap.timeline()
+
+gsap.registerPlugin(ScrollTrigger);
+
+// const sectionHeight = document.querySelector("#colored-cards").scrollHeight;
+let cards = gsap.utils.toArray(".card-stack-wrap");
+let stickDistance = 0; // extra distance to have things stick after the last card pins (pixels)
+// create a ScrollTrigger that's solely for the purpose of figuring out when the LAST card's center hits the center of the viewport so we can use that to calculate the end positions of the other card ScrollTriggers
+let lastCardST = ScrollTrigger.create({
+      trigger: cards[cards.length-1],
+      start: "center center"
+    });
+
+cards.forEach((card, i) => {
+  ScrollTrigger.create({
+    trigger: card,
+    start: "center center",
+    end: () => lastCardST.start + stickDistance,
+    pin: true,
+    anticipatePin: 0.5,
+    pinSpacing: false
+//    markers: true
+  });
+});
+
+const stackImage = document.querySelector(".card-stack-image");
+console.log(stackImage.offsetTop);
+
+ScrollTrigger.create({
+  trigger: stackImage,
+  start:  "center center",
+      end: '+=800',
+//  end: lastCardST.start - 200,
+  pin: true,
+  anticipatePin: 0.5,
+  pinSpacing: false,
+//  markers: { indent: 300 },
+  id: "stackImage2"
+});
+
+
+ });
+    
+    
+    
+    
+    
+    
+    }
+                    </script>
+    
+    
+    
+    
+    
+
+<section id="insights" class="section section-bck-white-grad">
+<div class="container p-lg-5">
+     
+        <div class="row">
+          
+          
+          <div class="col-12 col-lg-6 p-3">
+          <div class="lockup mb-4">Insights</div>
+          
+<h2 class="section-header mb-5">
+Want to see how you can supercharge your financial systems?</h2>
+
+          </div>
+          
+          <div class="col-12 col-lg-6 p-3">
+     
+
+<div class="emphasis-text  my-5">Check out our Content Hub to find out the latest news on our solutions, offerings and more.</div>
+            <a href="content-hub.htm" class="primary link  mt-5">Tell me more</a>
+          </div>
+       
+      </div>
+    </div>
+</section>
+
+<div id="solutions" class="section-bck-jet-lines font-white">
+<section class="  ">
+<div class="container  ">
+<div class="row">
+<div class="col-12 col-lg-8  d-flex justify-content-start p-lg-5 align-items-center">
+<h2 class="section-header">
+Related solutions</h2>
+</div>
+</div>
+</div>
+
+<div class="container  py-5">
+
+
+<div class="row">
+<div class="col-12  d-flex justify-content-center p-0 cards-overlay align-items-center">
+
+<div class="card-group ">
+ 
+ 
+  <div class="card">
+    
+    <div class="card-body">
+    <div class="card-tag">Kinexys</div>
+      <div class="card-title">Digital Payments</div>
+      <p class="card-text">Automate and facilitate transactions 24/7<sup>1</sup>, in near real time and across borders, with our next-generation deposit ledger and payment rail.</p>
+    </div>
+    <div class="card-footer">
+      <a class="primary link white" href="digital-payments/index.html">Learn more</a>
+    </div>
+  </div>
+  
+
+  
+  
+  <div class="card">
+    
+    <div class="card-body">
+    <div class="card-tag">Kinexys</div>
+      <div class="card-title">Liink</div>
+      <p class="card-text">Exchange payment-related financial information simply and securely using Liink, one of the world’s first bank-led, peer-to-peer networks for data sharing between institutions and fintechs.
+</p>
+    </div>
+    <div class="card-footer">
+      <a class="primary link white" href="liink.htm">Learn more</a>
+    </div>
+  </div>
+  
+   <div class="card">
+    
+    <div class="card-body">
+    <div class="card-tag">Kinexys</div>
+      <div class="card-title">Labs</div>
+      <p class="card-text">Tap into our industry-leading knowledge and proof-of-concepts in blockchain to turn your vision into business value.
+</p>
+    </div>
+    <div class="card-footer">
+      <a class="primary link white" href="labs">Learn more</a>
+    </div>
+  </div>
+  
+  </div>
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+
+
+
+
+  </div>
+  
+  
+
+<footer>
+
+<div class="container">
+<div class="row py-5">
+    <div class="col-12  col-lg-7 ">
+    <div class="row ">
+    <div class="col-12 col-lg-4 p-3">
+        <a href="content-hub.htm">Content Hub</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="about.htm">About Kinexys</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="terms-of-use">Terms of Use and Privacy Policy</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="contact.htm">Contact</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="cookies">Cookies Policy</a>
+        </div>
+        </div>
+        
+        </div>
+    
+    
+    
+   
+    
+   
+    
+    
+    <div class="col-12  col-lg-5 text-end py-3">
+        
+        
+        
+        <a href="index.htm"><img loading="lazy" class="logo-footer" src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/logo-kinexys-light.png" alt="Kinexys logo"></a>
+            
+        </div>
+        
+    </div>
+    
+    <div class="row py-5">
+    <div class="col-12 col-lg-7 small">
+    <sup>1</sup> Transfers on the network are completed on a 24/7/365 and same day basis. Moving funds to and from the network from traditional Demand Deposit Accounts on legacy systems to Blockchain Deposit Accounts has a three- hour downtime over the weekend (3-6 p.m. EST every Saturday. Enhancement is under development.
+    
+    <br><br>
+    
+    <sup>2</sup> JPMC proprietary data 2024
+    
+    </div>
+    
+    <div class="col-12  col-lg-5 text-end py-3">
+    Copyright &copy 2024 JPMorgan Chase &amp; Co.<br>
+All rights reserved.
+    </div>
+
+
+</div>
+</div>
+</footer>
+
+
+<script>
+
+ $(document).ready(function () {
+        sliderGlass();
+        toggleHeaderVideoPlay();
+        animateScroll();
+    
+
+
+    });
+
+function toggleHeaderVideoPlay() {
+
+            let headerVideo2;
+
+            videojs("videoHero").ready(function () {
+             headerVideo2 = this;
+                console.log('header video');
+            });
+
+
+
+
+            let playBtn = $("#heroPlay");
+            let pauseBtn = $("#heroPause");
+    //         let video2 = $("#videoHero");
+
+            pauseBtn.on('click', function () {
+                console.log("pause botton pressed");
+        //        video2.pause();
+        $(this).hide();
+                
+                
+                playBtn.fadeIn('fast');
+                headerVideo2.pause();
+            });
+
+
+            playBtn.on('click', function () {
+                console.log("play botton pressed");
+                //    video2.play();
+                headerVideo2.play();
+                $(this).hide();
+                pauseBtn.fadeIn('fast');
+
+            });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+           //video in first section         
+    var smallVideo;
+
+
+    videojs("main-vid-kinexsys").ready(function () {
+        smallVideo = this;
+        smallVideo.on("play", function () {
+
+        })
+    }); 
+
+
+
+        $(document).on('change', '.form-check-input', function (e) {
+
+        let test = $(this).is(':checked');
+
+        console.log(test);
+
+        if (test === true){
+
+            smallVideo.catalog.getVideo(6356438503112, function (error, video) {
+            // Load the video object into the player
+                smallVideo.catalog.load(video);
+            })
+        } 
+
+
+        else {
+            console.log("button toggle off"); 
+            smallVideo.catalog.getVideo(6356438124112, function (error, video) {
+            // Load the video object into the player
+                smallVideo.catalog.load(video);
+            })
+        }
+
+
+        });
+
+                    
+                    
+                     $('#small-video-trans-button').on('click', function () {
+        console.log('ada button clicked');
+
+
+        $("#smallVideo__transcript").slideToggle("slow", function () {
+            // Animation complete.
+        });
+
+
+    });
+                    </script>
+                    
+<script>
+
+   $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 1200) {
+            $('#back-to-top-button').fadeIn();
+        } else {
+            $('#back-to-top-button').fadeOut('fast');
+        };
+            if (height > 100) {
+            
+                $('#kinexys-navbar').addClass("active");
+        }  ;
+        
+        
+         if (height < 40) {
+            
+                $('#kinexys-navbar').removeClass("active");
+        }
+    });
+
+</script>
+
+</body>
+
+
+
+</html>

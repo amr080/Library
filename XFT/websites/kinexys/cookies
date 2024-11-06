@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Policy - Kinexys | J.P. Morgan
+</title>
+    <meta name="description"
+        content="This Cookies Policy explains how session cookies and persistent cookies are used on the Kinexys website and across the J.P. Morgan domain.
+
+" />
+    <meta property="og:site_name" content="Kinexys by J.P. Morgan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://jpmorgan.com/kinexys/images/logo-kinexys-dark.png" />
+    <meta property="og:title" content="Cookies Policy - Kinexys | J.P. Morgan
+
+" />
+    <meta property="og:description"
+        content="This Cookies Policy explains how session cookies and persistent cookies are used on the Kinexys website and across the J.P. Morgan domain.
+" />
+    <meta property="og:url" content="https://www.jpmorgan.com/kinexys/cookies" />
+ 
+ 
+
+<link rel="icon" type="image/png" href="images/icons/favicon.png">
+<link rel="icon" type="image/x-icon" href="https://www.jpmorgan.com/kinexys/favicon.ico">
+<link rel="apple-touch-icon" href="images/icons/favicon.png">
+
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/bootstrap5.min.css" type="text/css"/>
+<link rel="stylesheet" href="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/css/kinexys-style.css" type="text/css"/>
+        <script type="text/javascript" src="https://www.jpmorgan.com/resources/ed45a54e286a84c8e31096667248b9b34c6ac69210a0e"  ></script><script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/bootstrap5.bundle.js"></script>
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/jquery-3.7.0.min.js"></script>
+        
+        <!-- preload the GSAP libs -->
+        <script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/gsap.min.js"></script>
+	<script src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/gsap/ScrollTrigger.min.js"></script>
+    
+        
+        <!-- reporting script -->
+        <script src="https://www.chase.com/apps/chase/clientlibs/foundation/scripts/Reporting.js"></script>
+        
+        	
+<script type='text/plain' class='optanon-category-C0009' src="https://assets.adobedtm.com/b968b9f97b30/438e9bff0544/launch-87d10d1d9c68.min.js" async></script>
+       <!-- OneTrust Cookies Consent Notice start for www.jpmorgan.com/onyx/index -->
+       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="b4f87c65-fd43-4ea0-a6fb-a63d8d88a124" ></script>
+       <script type="text/javascript">
+               function OptanonWrapper() { }
+       </script>
+       <!-- OneTrust Cookies Consent Notice end for www.jpmorgan.com/onyx/index -->
+
+
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick.css" />
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/css/slick-theme.css" />
+<script type="text/javascript" src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/code/shared/scripts/slick.js"></script> 
+
+<style>
+
+:root {
+--bs-body-font-family: Amplitude;
+--bs-body-font-size: 16px;
+--bs-body-font-weight: 300;
+--bs-body-line-height: 1.5;
+--bs-body-color: #31373d;
+--bs-breadcrumb-divider: '>';
+--bs-breadcrumb-divider-color: #fff;
+    --bs-breadcrumb-item-padding-x: 0.5rem;
+    --bs-breadcrumb-item-active-color: #fff;
+    --bs-breadcrumb-margin-bottom: 0;
+}
+
+.breadcrumb-container {
+ font-size: 14px;
+ font-weight: 500;
+ letter-spacing: -0.14px;
+ border: 1px solid #434754;
+background: #434754;
+column-gap: 10px;
+padding: 10px;
+}
+
+.breadcrumb {
+margin-bottom: 0;
+color: #ffffff;
+}
+
+.breadcrumb-item.active, .breadcrumb-item a {
+color: #ffffff
+}
+
+.breadcrumb-divider {
+color: #ffffff;
+}
+
+
+.section-bck-jet-white-glow {
+
+    
+    background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%, #101A23 105.16%), 
+         url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  66% 10%  / 220% 180% no-repeat  #101820;
+	background-blend-mode: normal, normal, lighten, soft-light;
+    color: white;
+}
+
+
+.section-bck-white-glow2 {
+
+background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 79.73%);
+}
+
+.section-bck-white-glow-container2 {
+background: linear-gradient(180deg, #FFF 8.47%, rgba(255, 255, 255, 0.00) 46.22%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%);
+}
+
+.section-bck-white-glow-prog-pay {
+background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0.00) 33.12%), linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(90deg, #F5F7F8 0%, #E2E4E5 100%);
+}
+.section-bck-white-glow {
+
+background: url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg") 66% 66% / 182.5% 122.686% no-repeat, linear-gradient(180deg, #FFF -3.01%, rgba(255, 255, 255, 0.00) 46.22%);
+}
+
+.section-bck-marble-glow-container {
+background: 
+
+url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg") 66% 66% / 182.5% 122.686% no-repeat,
+
+linear-gradient(0deg, #F5F7F8 0%, rgba(245, 247, 248, 0.00) 45.04%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 72.13%), linear-gradient(53deg, #C4C5CC 19%, #E1E3E4 36%, #F4F6F7 53%, #E1E3E4 65%, #C4C5CC 89%);
+}
+
+
+.hero-default {
+background: linear-gradient(0deg, rgba(16, 24, 32, 0.00) 80.09%, #101820 100%),  
+		linear-gradient(0deg, #101820 0%, rgba(16, 24, 32, 0.00) 33.12%), 
+		linear-gradient(69deg, #0E1821 8.77%, #242C34 29.98%, #2D343B 36.73%, #111B23 63.71%, #30373E 85.88%,
+		 #101A23 105.16%), url("https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg")  center  / 160% 141.393% no-repeat  #101820;
+		 
+/*	background-blend-mode: normal, normal, lighten, soft-light; */
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #31373d;
+}
+
+.section-bck-jet-lines {
+background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%), 
+    url('https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/waveform-light.svg')  center / 160% 221.393% no-repeat  #101820;
+	background-blend-mode: normal, normal, soft-light;
+}
+
+.hero-col {
+
+min-height: 300px;
+
+padding: 4%;
+
+}
+
+
+
+/* hero video  */
+
+.section-hero .video-js .vjs-control-bar {
+    display: none;
+}
+.section-hero .video-js {
+    pointer-events: none;
+}
+.section-hero .hero__bg-video-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top: 20px;
+    outline: none;
+}
+.section-hero.hero__bg-video-button svg {
+    width: 100%;
+    height: 100%;
+}
+.section-hero .js-play-button {
+    display: none;
+}
+
+.section-hero .video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+    padding-top: 75%;
+  }
+  
+.overlay-hero-video {
+    width: 100%;
+    height: 100%;
+    background: #1a221e;
+}
+
+.video-container-overlay {
+ /*   background: linear-gradient(90deg, #101820 33.91%, rgba(16, 24, 32, 0.33) 113.82%), linear-gradient(180deg, rgba(16, 24, 32, 0.00) 25.92%, #101820 81.03%); */
+     background: linear-gradient(77deg, rgba(14, 24, 33, 0.40) 7.32%, rgba(36, 44, 52, 0.40) 30.59%, rgba(45, 52, 59, 0.40) 37.99%, rgba(17, 27, 35, 0.40) 67.61%, rgba(48, 55, 62, 0.40) 91.94%, rgba(16, 26, 35, 0.40) 113.1%), 
+	linear-gradient(311deg, rgba(16, 24, 32, 0.00) 40.58%, rgba(16, 24, 32, 0.84) 70.53%, #101820 86.07%);
+    z-index: 0;
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+    min-width: 102%;
+    min-height: 102%;
+    width: 102%;
+    height: 102%;
+}
+
+
+
+
+
+/* card stack here  */
+
+
+
+.card-stack-wrap {
+
+display: flex;
+padding: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 30px;
+flex: 1 0 0;
+height: 400px;
+
+border: 1px solid  #E2E4E5;
+background: rgba(255, 255, 255, 0.60);
+backdrop-filter: blur(17px);
+}
+
+/*
+.card-stack-wrap2 {
+  position: absolute;
+  width: 100%;
+  }
+  
+  */
+  
+  
+.card-stack-title {
+
+color:  #31373D;
+
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+
+
+
+.hide, .sucess-message {
+    display: none;
+}
+
+
+
+.bg-white {
+background-color: #ffffff;
+color: #31373d;
+}
+
+
+
+
+
+
+/*  overlay glass cards */
+
+.cards-overlay .card {
+display: flex;
+
+padding: 60px;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+color: #ffffff;
+border: 1px solid #434754;
+background: rgba(67, 71, 84, 0.10);
+border-radius: 0;
+}
+
+.cards-overlay-white .card {
+border: 1px solid #E2E4E5;
+background: rgba(245, 247, 248, 0.10);
+backdrop-filter: blur(17px);
+
+}
+
+.cards-overlay .card-group {
+backdrop-filter: blur(12px);
+}
+
+.cards-overlay .card-title {
+color: #ffffff;
+font-size: 28px;
+font-weight: 500;
+
+}
+
+.cards-overlay .card-text {
+color: #ffffff;
+font-size: 16px;
+line-height: 1.6;
+font-weight: 500;
+}
+
+.cards-overlay .card-footer {
+border: none;
+}
+
+.cards-overlay .card-footer a {
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2.25px;
+font-size: 14px;
+}
+
+
+.cards-overlay .card-tag {
+    color: #7ECDBA;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+}
+
+
+.cards-overlay-white .card-text,
+.cards-overlay-white .card-title {
+color: #31373d;
+}
+
+.cards-overlay-white .card .card-img-top  {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    align-self: center;
+}
+
+
+
+
+.cards-overlay-white .card .card-img-top img {
+    margin: 0 auto;
+    height: 190px;
+     width: 190px;
+     
+     object-fit: contain;
+}
+
+.cards-overlay-white.cards-sm-img .card .card-img-top  {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 70px;
+    align-self: flex-start;
+}
+
+.cards-overlay-white.cards-sm-img .card .card-img-top img {
+    margin:0 auto 0 0;
+    height: 70px;
+    width: 70px;
+     
+     object-fit: contain;
+}
+
+
+.hero-lockup {
+color: #31373d;
+}
+
+.hero-wrap-white {
+background: #ffffff;
+color: #31373d;
+}
+
+
+#contactForm input {
+border: none;
+border-bottom: 1px solid #31373D;
+border-radius: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .slide-wrap,
+    .cards-overlay .card {
+    padding: 10px;
+    }
+    
+    .hero-default-white {
+    min-height: 300px;
+    }
+    
+    .card-footer {
+    font-size: 12px;
+    }
+
+}
+
+
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"HXMH8-FZWG4-FU2NA-EVH9D-4EKAJ";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="vy6ftilipcfnwzzl3jwa-f-8fadf47c4-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1425113","ak.ai":parseInt("872957",10),"ak.ol":"0","ak.cr":26,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"f314551","ak.r":40939,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"174.60.89.0","ak.cport":52206,"ak.gh":"104.120.138.229","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1730927212","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==BecTiLQmq8/5ShibXWk4ahTUWbGG7JT5ThUp7zCJeFb5a414H0E4UiILCe77PJ9xUXqilTT0nLN+/BU2CKwltb+hDCpO2h4e5bEAWcBssVci+fVB1Sf8K9pCEhKGKM5w9EtcLdZZ58zbIyyDXwunvDVmpQkIRwoPKXKEfGxzAZ+u/229OpM0LMaPe8CNhbc8lCr1aJWqabyvesT7po1T+7jSqyiNOeu1ytpSU6Xartf0eDE8Xej5QONyYYByouWzGclJrgkE4zhtcfbhs7Kq+o3v//vC0YrDH4WoeVOUfiAWT9lwCVjOHUJ50Tc9jjjwD8IrSPknRFbBuXioe2EC+P7PCVmC86uDFDPcKbFY7vlUyWg/Z1s/PxmT19H7tHghNKzBOsHrwf2IoZ6aKJP2JyDRoWrYGg0ZCrLLJR8ZY8E=","ak.pv":"11","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+
+<script>
+
+ let headerVideo2;
+            videojs("videoHero").ready(function () {
+             headerVideo2 = this;
+                console.log('header video');
+            });
+            let playBtn = $("#heroPlay");
+            let pauseBtn = $("#heroPause");
+    //         let video2 = $("#videoHero");
+            pauseBtn.on('click', function () {
+                console.log("pause botton pressed");
+        //        video2.pause();
+        $(this).hide();
+                playBtn.fadeIn('fast');
+                headerVideo2.pause();
+            });
+            playBtn.on('click', function () {
+                console.log("play botton pressed");
+                //    video2.play();
+                headerVideo2.play();
+                $(this).hide();
+                pauseBtn.fadeIn('fast');
+            });
+            
+            </script>
+
+
+ <!--  // common  nav  // -->
+ 
+<nav  id="kinexys-navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+    <a href="https://www.jpmorgan.com/kinexys"><div class="navbar-brand"></div> </a>
+  <button id="kinexysNavbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
+
+  <span class="navbar-toggler-text"> <span class="navbar-toggler-text-close">Menu <i class="fas fa-bars "></i></span> <span class="navbar-toggler-text-open">Close -</span> </span> </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto   align-items-lg-center">
+        
+        
+        <li class="nav-item dropdown dropdown-mega position-static">
+            <a class="nav-link dropdown-toggle" href="cookies#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions</a>
+            <div class="dropdown-menu shadow">
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    <a class="menu-title" href="digital-assets">Digital Assets</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <a class="menu-title" href="digital-payments/index.html">Digital Payments</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                    <a class="menu-title" href="labs">Blockchain Labs</a>
+                      <div class="menu-text ">
+                        Unlock greater utility of your assets through the flexibility and power of tokenization.
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                      <a class="menu-title" href="liink.htm">Liink</a>
+                      <div class="menu-text ">
+                        <p>Exchange financial information simply and securely using Liink, the world’s first bank-led, peer-to-peer network for data sharing between institutions and fintechs.</p>
+                        <p class="menu-subtitle"><a href="liink/confirm.htm" class="primary link">Confirm</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                        <p class="menu-subtitle"><a href="liink/route-logic.htm" class="primary link">Route Logic</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                        <p class="menu-subtitle"><a href="liink/checkmatch.htm" class="primary link">CheckMatch</a></p>
+                        <p>Short descriptive sentence that helps give just enough context</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+    
+      <li class="nav-item "> <a class="nav-link" href="cookies#"  >Resources</a> </li>
+        <li class="nav-item "> <a class="nav-link" href="about.htm"  >About Kinexys</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="contact.htm">Contact</a> </li>
+        
+
+    </ul>
+    
+    <span class="navbar-text  ps-xl-5 ms-xl-5"><a class="navbar-text" href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a></span>
+  </div>
+  </div>
+</nav>
+
+<!--  // end common nav // -->
+
+
+
+
+<div class="breadcrumb-container crumbs-marble">
+<div  class="container">
+<div class="row">
+<div class="col-12">
+<nav   aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://www.jpmorgan.com/kinexys">Kinexys</a></li>
+    
+    <li  class="breadcrumb-item active" aria-current="page">Cookies Policy</li>
+  </ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section-hero">
+<div class="hero-wrap-dark">
+<div  class="hero-default">
+
+<!--  trying video bck  -->
+
+
+<video class="video-js vjs-fill hero-bck-video" controls="" data-account="3855502852001" data-application-id="" data-embed="default"
+    data-player="default" data-video-id="6364080700112" id="videoHero" autoplay loop muted
+    style="position: absolute; top: -100px; right: 0px; bottom: 0px; left: 0px; width: 106%; height: 106%;"> </video>
+<div class="hero__bg-video-button-wrap">
+  <button class="hero__bg-video-button js-play-button" id="heroPlay">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Play Button</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-" transform="translate(-1710.000000, -398.000000)">
+        <g id="Big-Play-Button" transform="translate(1710.000000, 398.000000)">
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-27" stroke="#fff"></path>
+          <path
+                                d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                id="Rectangle-272" stroke="#fff"></path>
+          <polygon id="Triangle" fill="#ffffff"
+                                transform="translate(49.334580, 46.629244) rotate(90.000000) translate(-49.334580, -46.629244) "
+                                points="49.3345802 34.9702503 61.1183059 58.2882369 37.5508544 58.2882369"></polygon>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+  <button class="hero__bg-video-button js-pause-button" id="heroPause">
+  <svg viewBox="0 0 91 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Background Video Pause Button</title>
+    <g id="Page-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="-2" transform="translate(-1816.000000, -398.000000)">
+        <g id="Big-Play-Button9" transform="translate(1816.000000, 398.000000)">
+          <g id="Group-4">
+            <path
+                                    d="M0.705888087,0.600943665 L0.705888087,87.4219321 L90.4837046,87.4219321 L90.4837046,0.600943665 L0.705888087,0.600943665 Z"
+                                    id="Rectangle-279" stroke="#fff"></path>
+            <rect id="Rectangle" fill="#ffffff" x="37" y="32" width="8.22149849" height="28.6179579"> </rect>
+            <rect id="Rectangle99" fill="#ffffff" x="48" y="32" width="8.22149849" height="28.6179579"> </rect>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  </button>
+</div>
+<div class="video-container-overlay"> </div>
+<script src="https://players.brightcove.net/3855502852001/default_default/index.min.js"></script> 
+
+
+<!--  trying video bck, commenting out  -->
+
+
+
+
+
+<div style="position: relative;" class="container">
+<div class="row">
+<div class="col-12 col-lg-8 col-xl-8 d-flex justify-content-center">
+<div class="hero-col white">
+<h1 class="page-title">
+Cookies Policy</h1>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--  trying video bck  -->
+
+
+
+
+<!--  trying video bck, commenting out  -->
+
+
+
+
+
+<div  class="container padding-top75">
+<div class="row">
+<div class="col-12">
+<div class="">
+
+
+
+  
+  
+  <p><strong>IMPORTANT NOTICE: PLEASE READ CAREFULLY BEFORE USING THE WEBSITE:</strong> This Cookies Policy (“Policy”) explains how cookies are used on the Website. The Policy may be amended from time to time. If we amend this Policy, we will use appropriate means to inform you, such as by posting the revised policy on this page with a new “Last Updated” date. By using this Website you agree to the placement of cookies on your computer in accordance with the terms of this Policy. If you do not wish to accept cookies from this Website, please either disable cookies or refrain from using the Website.<br><br>
+  A cookie is a text-only string of information that a website transfers to the cookie file of the browser on your computer's hard disk so that a website can recognize returning visitors and remember certain information about visitors. This can include which pages have been visited, choices made from menus, specific information entered into forms, and the time and date of visits.</p>
+  <p class="emphasis-text"><strong>There are two main types of cookies:</strong></p>
+  <ul>
+  <li>
+  Session cookies: these are temporary cookies that expire at the end of a browser session; that is, when you leave the site. Session cookies allow the website to recognize you as you navigate between pages during a single browser session and allow you to use the website efficiently.</li><li>
+  Persistent cookies: in contrast to session cookies, persistent cookies are stored on your equipment between browsing sessions until expiry or deletion. They therefore enable the website to &quot;recognize&quot; you on your return, remember your preferences, and tailor services to you.</li></ul>
+  <p>
+  We currently utilize session cookies to capture the session ID which is used to manage session time-outs and ensure only one session is active at any given time.</p>
+  <p>
+  We do not use cookies to collect or store personal information, such as names or email addresses. If this changes in the future, we will ensure that all personal information collected by us is kept and treated in accordance with our privacy policy. A link to this policy is available at www.jpmorgan.com/privacy.</p>
+  <p>
+  Please note that if this Website provides any links to other websites, the operators of those websites will use cookies in accordance with their own cookies policies, which may differ from this Policy.</p>
+  <p>
+Most browsers are initially set to accept cookies. However, you have the ability to disable cookies if you wish, generally by changing your internet software browsing settings. It may also be possible to configure your browser settings to enable acceptance of specific cookies or to notify you each time a new cookie is about to be stored on your computer enabling you to decide whether to accept or reject the cookie. To manage your use of cookies there are various resources available to you, for example, the “Help” section on your browser may assist you. You can also disable or delete the stored data used by technology similar to cookies, such as Local Shared Objects or Flash cookies, by managing your browser’s “add-on settings” or by visiting the website of its manufacturer. If you disable cookies, it may mean that you experience reduced Website functionality.</p>
+
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<footer>
+
+<div class="container">
+<div class="row py-5">
+    <div class="col-6  col-lg-7 ">
+    <div class="row ">
+    <div class="col-12 col-lg-4 p-3">
+        <a href="content-hub.htm">Content Hub</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="about.htm">About Kinexys</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+        <a href="terms-of-use">Terms of Use and Privacy Policy</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="https://www.jpmorgan.com/payments">J.P.&nbsp;Morgan Payments</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="contact.htm">Contact</a>
+        </div>
+        <div class="col-12 col-lg-4 p-3"><a href="cookies">Cookies Policy</a>
+        </div>
+        </div>
+        
+        </div>
+    
+    
+    
+   
+    
+   
+    
+    
+    <div class="col-6  col-lg-5 text-end py-3">
+        
+        
+        
+        <a href="index.htm"><img loading="lazy" class="logo-footer" src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/images/logo-kinexys-light.png" alt="Kinexys logo"></a>
+            
+        </div>
+        
+    </div>
+    
+    <div class="row py-5">
+    <div class="col-12 col-lg-7 small">
+    
+    
+    </div>
+    
+    <div class="col-12  col-lg-5 text-end py-3">
+    Copyright &copy 2024 JPMorgan Chase &amp; Co.<br>
+All rights reserved.
+    </div>
+
+
+</div>
+</div>
+</footer>
+
+
+
+<script>
+
+ $(document).ready(function () {
+      //  backToTop();
+//        sliderGlass();
+  //      animateScroll();
+    
+
+
+    });
+    
+
+
+                    </script>
+                    
+<script>
+
+   $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 1200) {
+            $('#back-to-top-button').fadeIn();
+        } else {
+            $('#back-to-top-button').fadeOut('fast');
+        };
+            if (height > 100) {
+            
+                $('#kinexys-navbar').addClass("active");
+        }  ;
+        
+        
+         if (height < 40) {
+            
+                $('#kinexys-navbar').removeClass("active");
+        }
+    });
+
+</script>
+
+<script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/parsley.min.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/jpmc-captcha.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/DropDownMenu.js"></script>
+    <script src="https://www.jpmorgan.com/content/dam/jpm/static_sites/kinexys/js/contact.js"></script>
+
+<script>
+      $(function () {
+          new jpmc.utils.Captcha();
+      });
+
+
+    </script>
+    
+    
+
+</body>
+</html>
