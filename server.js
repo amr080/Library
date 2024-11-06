@@ -14,7 +14,8 @@ const excludedItems = [
    '.git',
    '.gitignore',
    'package.json',
-   'package-lock.json'
+   'package-lock.json',
+   '.nixpacks',
 ];
 
 function getDirectoryContents(dirPath) {
