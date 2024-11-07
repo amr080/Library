@@ -1,0 +1,1816 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 maximum-scale=1.6, user-scalable=1"/>
+        <meta name="keywords" content="Board of Governors of the Federal Reserve System, Federal Reserve Board of Governors, Federal Reserve Board, Federal Reserve" />
+        <meta name="description" content="The Federal Reserve Board of Governors in Washington DC." />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems"/>    
+        <meta property="og:image" content="https://www.federalreserve.gov/images/social-media/social-default-image-opengraph.jpg" />
+        <meta property="og:image:alt" content="Board of Governors of the Federal Reserve System" />
+        <meta property="og:description" content="The Federal Reserve Board of Governors in Washington DC."/>
+        <meta property="og:url" content="https://www.federalreserve.gov/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-20240816.html" />
+        <meta name="twitter:card" content="summary" />    
+        <meta name="twitter:title" content="Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems" />
+        <meta name="twitter:image" content="https://www.federalreserve.gov/images/social-media/social-default-image-twitter.jpg" />
+        <meta name="twitter:image:alt" content="Board of Governors of the Federal Reserve System" />
+        <meta name="twitter:description" content="The Federal Reserve Board of Governors in Washington DC." /> 
+        
+        <meta name="citation_author" content="Laila Aboulaiz" />
+        <meta name="citation_author" content="Bunmi Akintade" />
+        <meta name="citation_author" content="Hamzah Daud" />
+        <meta name="citation_author" content="Monique Lansey" />
+        <meta name="citation_author" content="Megan Rodden" />
+        <meta name="citation_author" content="Lucas Sawyer" />
+        <meta name="citation_author" content="Matthew Yip" />
+        <meta name="citation_title" content="Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems" />
+        <meta name="citation_publication_date" content="08-16-2024" />
+        <title>The Fed - Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems</title>
+        
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="/css/bluesteel-theme.css" rel="stylesheet" type="text/css">
+        <script src="/js/modernizr-latest.js" type="text/javascript"></script>
+        <script src="/js/grunticon.loader.js"></script>
+        <script>
+            grunticon(["/css/icons.data.svg.css", "/css/icons.data.png.css", "/css/icons.fallback.css"]);
+        </script>
+        <noscript>
+            <link href="/css/icons.fallback.css" rel="stylesheet">
+        </noscript>                
+        <script src="/js/angular.min.js" type="text/javascript"></script>
+        <script src="/js/app.js" type="text/javascript"></script>
+        
+        <!-- For Linear Gradients in IE9 or greater -->
+        <!--[if gte IE 9]>
+            <style type="text/css">
+              .gradient {
+                 filter: none;
+              }
+            </style>
+        <![endif]-->
+
+ 
+        <style type="text/css">
+            /*Overriding the global styles*/
+            @media (min-width: 992px) {
+                .page-header .page-title {width: 79%;}
+                .page-header .shareDL { width: 21%;}  
+            }
+        </style>
+    <script data-cfasync="false" nonce="520d5f31-4347-415c-aaf3-15a3a78cf11d">try{(function(w,d){!function(cJ,cK,cL,cM){if(cJ.zaraz)console.error("zaraz is loaded twice");else{cJ[cL]=cJ[cL]||{};cJ[cL].executed=[];cJ.zaraz={deferred:[],listeners:[]};cJ.zaraz._v="5815";cJ.zaraz._n="520d5f31-4347-415c-aaf3-15a3a78cf11d";cJ.zaraz.q=[];cJ.zaraz._f=function(cN){return async function(){var cO=Array.prototype.slice.call(arguments);cJ.zaraz.q.push({m:cN,a:cO})}};for(const cP of["track","set","debug"])cJ.zaraz[cP]=cJ.zaraz._f(cP);cJ.zaraz.init=()=>{var cQ=cK.getElementsByTagName(cM)[0],cR=cK.createElement(cM),cS=cK.getElementsByTagName("title")[0];cS&&(cJ[cL].t=cK.getElementsByTagName("title")[0].text);cJ[cL].x=Math.random();cJ[cL].w=cJ.screen.width;cJ[cL].h=cJ.screen.height;cJ[cL].j=cJ.innerHeight;cJ[cL].e=cJ.innerWidth;cJ[cL].l=cJ.location.href;cJ[cL].r=cK.referrer;cJ[cL].k=cJ.screen.colorDepth;cJ[cL].n=cK.characterSet;cJ[cL].o=(new Date).getTimezoneOffset();cJ[cL].q=[];for(;cJ.zaraz.q.length;){const cW=cJ.zaraz.q.shift();cJ[cL].q.push(cW)}cR.defer=!0;for(const cX of[localStorage,sessionStorage])Object.keys(cX||{}).filter((cZ=>cZ.startsWith("_zaraz_"))).forEach((cY=>{try{cJ[cL]["z_"+cY.slice(7)]=JSON.parse(cX.getItem(cY))}catch{cJ[cL]["z_"+cY.slice(7)]=cX.getItem(cY)}}));cR.referrerPolicy="origin";cR.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(cJ[cL])));cQ.parentNode.insertBefore(cR,cQ)};["complete","interactive"].includes(cK.readyState)?zaraz.init():cJ.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bb=>new Promise((bc=>{if(bb){bb.e&&bb.e.forEach((bd=>{try{const be=d.querySelector("script[nonce]"),bf=be?.nonce||be?.getAttribute("nonce"),bg=d.createElement("script");bf&&(bg.nonce=bf);bg.innerHTML=bd;bg.onload=()=>{d.head.removeChild(bg)};d.head.appendChild(bg)}catch(bh){console.error(`Error executing script: ${bd}\n`,bh)}}));Promise.allSettled((bb.f||[]).map((bi=>fetch(bi[0],bi[1]))))}bc()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+    <body data-ng-app="pubwebApp">
+        <a href="#content" class="globalskip">Skip to main content</a>
+<nav class="nav-primary-mobile" id="nav-primary-mobile"></nav>
+<div class="t1_nav navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="t1_container clearfix">
+        <a id="logo" class="btn btn-default icon-FRB_logo-bw visible-xs-table-cell t1__btnlogo" href="/default.htm" role="button"><span class="sr-only">Back to Home</span></a>
+        <a href="/default.htm" id="banner" class="visible-xs-table-cell t1__banner" title="Link to Home Page" role="button">Board of Governors of the Federal Reserve System</a>
+        <ul class="nav navbar-nav visible-md visible-lg t1_toplinks">
+            <li class="navbar-text navbar-text__social">
+                <span class="navbar-link" tabindex="0">Stay Connected</span>
+            <ul class="nav navbar-nav t1_social social_nine">
+              <li class="social__item">
+                <a
+                  data-icon="facebook"
+                  href="https://www.facebook.com/federalreserve"
+                  class="noIcon"
+                >
+                  <div class="icon-facebook-color icon icon__sm"></div>
+                  <span class="sr-only"
+                    >Federal Reserve Facebook Page</span
+                  ></a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  data-icon="instagram"
+                  href="https://www.instagram.com/federalreserveboard/"
+                  class="noIcon"
+                >
+                  <div class="icon-instagram icon icon__sm"></div>
+                  <span class="sr-only"
+                    >Federal Reserve Instagram Page</span
+                  ></a
+                >
+              </li>
+
+              <li class="social__item">
+                <a
+                  data-icon="youtube"
+                  href="https://www.youtube.com/federalreserve"
+                  class="noIcon"
+                >
+                  <div class="icon-youtube-color icon icon__sm"></div>
+                  <span class="sr-only"
+                    >Federal Reserve YouTube Page</span
+                  ></a
+                >
+              </li>
+
+              <li class="social__item">
+                <a
+                  data-icon="flickr"
+                  href="https://www.flickr.com/photos/federalreserve/"
+                  class="noIcon"
+                >
+                  <div class="icon-flickr-color icon icon__sm"></div>
+                  <span class="sr-only"
+                    >Federal Reserve Flickr Page</span
+                  ></a
+                >
+              </li>
+
+              <li class="social__item">
+                <a
+                  data-icon="linkedin"
+                  href="https://www.linkedin.com/company/federal-reserve-board"
+                  class="noIcon"
+                >
+                  <div class="icon-linkedin-color icon icon__sm"></div>
+                  <span class="sr-only">Federal Reserve LinkedIn Page</span></a
+                >
+              </li>
+              <li class="social__item">
+                <a data-icon="threads" href="https://www.threads.net/@federalreserveboard" class="noIcon">
+                  <div class="icon-threads icon icon__sm"></div>
+                  <span class="sr-only">Federal Reserve Threads Page</span></a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  data-icon="twitter"
+                  href="https://twitter.com/federalreserve"
+                  class="noIcon"
+                >
+                  <div class="icon-twitter-color icon icon__sm"></div>
+                  <span class="sr-only"
+                    >Federal Reserve Twitter Page</span
+                  ></a
+                >
+              </li>
+
+              <li class="social__item">
+                <a data-icon="rss" href="/feeds/feeds.htm" class="noIcon">
+                  <div class="icon-rss-color icon icon__sm"></div>
+                  <span class="sr-only">Subscribe to RSS</span></a
+                >
+              </li>
+
+              <li class="social__item">
+                <a data-icon="email" href="/subscribe.htm" class="noIcon">
+                  <div class="icon-email-color icon icon__sm"></div>
+                  <span class="sr-only">Subscribe to Email</span></a
+                >
+              </li>
+                </ul>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/recentpostings.htm">Recent Postings</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/newsevents/calendar.htm">Calendar</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/publications.htm">Publications</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/sitemap.htm">Site Map</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/azindex.htm">A-Z index</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/careers.htm">Careers</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/faqs.htm">FAQs</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/videos.htm">Videos</a>
+            </li>
+
+            <li class="navbar-text">
+                <a class="navbar-link" href="/aboutthefed/contact-us-topics.htm">Contact</a>
+            </li>
+        </ul>
+        <form class="nav navbar-form hidden-xs nav__search" role="search" action="//www.fedsearch.org/board_public/search"  method="get">
+            <div class="form-group input-group input-group-sm">
+                <label for="t1search" class="sr-only">Search</label>
+                <input id="t1search" class="nav__input form-control" name="text" placeholder="Search" type="text" />
+                <span class="input-group-btn">
+                    <button type="submit" class="nav__button btn btn-default" id="headerTopLinksSearchFormSubmit" name="Search">
+                        <span class="sr-only">Submit Search Button</span>
+                        <span class="icon-magnifying-glass icon icon__xs icon--right"></span>
+                    </button>
+                </span>
+            </div>
+            <div class="nav__advanced">
+                <a class="noIcon" href="//www.fedsearch.org/board_public/">Advanced</a>
+            </div>
+        </form>
+        <div class="btn-group visible-xs-table-cell visible-sm-table-cell t1__dropdown">
+            <span class="icon icon__md icon--right dropdown-toggle icon-options-nav" data-toggle="dropdown">
+                <span class="sr-only">Toggle Dropdown Menu</span>
+            </span>
+        </div>
+    </div>
+</div>
+<header class="jumbotron hidden-xs">
+    <a class="jumbotron__link" href="/default.htm" title="Link to Home Page">
+        <div class="container-fluid">
+            <h1 class="jumbotron__heading">Board of Governors of the Federal Reserve System
+            </h1>
+            <p class="jumbotron__content">
+                <em>The Federal Reserve, the central bank of the United States, provides
+          the nation with a safe, flexible, and stable monetary and financial
+          system.</em>
+            </p>
+        </div>
+    </a>
+</header>
+<div class="t2__offcanvas visible-xs-block">
+    <div class="navbar-header">
+        <button type="button" class="offcanvas__toggle icon-offcanvas-nav" data-toggle="offcanvas" data-target="#offcanvasT2Menu" data-canvas="body">
+            <span class="sr-only">Main Menu Toggle Button</span>
+        </button>
+        <span class="navbar-brand offcanvas__title">Sections</span>
+        <button type="button" class="offcanvas__search icon-search-nav" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Search Toggle Button</span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse mobile-form" id="navbar-collapse">
+        <form method="get" class="navbar-form" role="search" action="//www.fedsearch.org/board_public/search">
+            <div class="form-group input-group mobileSearch">
+                <label class="sr-only" for="t2search">Search</label>
+                <input id="t2search" name="text" class="form-control" placeholder="Search" type="text" />
+                <span class="input-group-btn">
+                    <span class="sr-only">Search Submit Button</span>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+<nav class="nav-primary navbar hidden-xs nav-nine" id="nav-primary" role="navigation">
+    <ul class="nav navbar-nav" role="menubar">
+        <li role="menuitem" class="dropdown nav-about dropdown--3Col">
+            <a href="/aboutthefed.htm" class="sr-only-focusable" aria-haspopup="true" id="aboutMenu">About<br />the Fed</a>
+            <ul aria-labelledby="aboutMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-4 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/structure-federal-reserve-system.htm">Structure of the Federal Reserve System</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/the-fed-explained.htm">The Fed Explained</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/bios/board/default.htm">Board Members</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/advisorydefault.htm">Advisory Councils</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/federal-reserve-system.htm">Federal Reserve Banks</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/directors/about.htm">Federal Reserve Bank and Branch Directors</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/fract.htm">Federal Reserve Act</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/currency.htm">Currency</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-4 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/boardmeetings/meetingdates.htm">Board Meetings</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/boardvotes.htm">Board Votes</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/diversityinclusion.htm">Diversity & Inclusion</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/careers.htm">Careers</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/procurement/about.htm">Do Business with the Board</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/k8.htm">Holidays Observed - K.8</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/ethics-values.htm">Ethics & Values</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-4 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/contact-us-topics.htm">Contact</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/foia/about_foia.htm">Requesting Information (FOIA)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/faqs.htm">FAQs</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/educational-tools/default.htm">Economic Education</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/fed-financial-statements.htm">Fed Financial Statements</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/innovation.htm">Innovation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-news dropdown--1Col">
+            <a href="/newsevents.htm" class="sr-only-focusable" aria-haspopup="true" id="newsMenu">News<br />& Events</a>
+            <ul aria-labelledby="newsMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <a class="sr-only-focusable" href="/newsevents/pressreleases.htm">Press Releases</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/newsevents/speeches.htm">Speeches</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/newsevents/testimony.htm">Testimony</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/newsevents/calendar.htm">Calendar</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/videos.htm">Videos</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/photogallery.htm">Photo Gallery</a>
+                </li>
+
+                <li>
+                    <a class="sr-only-focusable" href="/conferences.htm">Conferences</a>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-monetary dropdown--2Col">
+            <a href="/monetarypolicy.htm" class="sr-only-focusable" aria-haspopup="true" id="monetaryMenu">Monetary<br />Policy</a>
+            <ul aria-labelledby="monetaryMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-6 list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Federal Open Market Committee</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/fomc.htm">About the FOMC</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/fomccalendars.htm">Meeting calendars and information</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/fomc_historical.htm">Transcripts and other historical materials</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/fomc_projectionsfaqs.htm">FAQs</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Monetary Policy Principles and Practice</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/monetary-policy-principles-and-practice.htm">Notes</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-6 list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Policy Implementation</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/policy-normalization.htm">Policy Normalization</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/policytools.htm">Policy Tools</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Reports</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/publications/mpr_default.htm">Monetary Policy Report</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/publications/beige-book-default.htm">Beige Book</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/publications/balance-sheet-developments-report.htm">Federal Reserve Balance Sheet Developments</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Review of Monetary Policy Strategy, Tools, and Communications</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/monetarypolicy/review-of-monetary-policy-strategy-tools-and-communications.htm">Overview</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-supervision dropdown--fw">
+            <a href="/supervisionreg.htm" class="sr-only-focusable" id="supervisionMenu" aria-haspopup="true">Supervision<br />& Regulation</a>
+            <ul aria-labelledby="supervisionMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-3 col-nav list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Institution Supervision</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/novel-activities-supervision-program.htm">Novel Activities Supervision Program</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/community-and-regional-financial-institutions.htm">Community & Regional Financial Institutions</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/large-financial-institutions.htm">Large Financial Institutions</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/foreign-banking-organizations.htm">Foreign Banking Organizations</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/financial-market-utility-supervision.htm">Financial Market Utilities</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/consumer-compliance.htm">Consumer Compliance</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Reports</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/publications/supervision-and-regulation-report.htm">Federal Reserve Supervision and Regulation Report</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Reporting Forms</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/apps/reportingforms">All Reporting Forms</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/reporting-forms-whats-new.htm">Recent Updates</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/apps/reportingforms/home/review">Information collections under review</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href='/apps/ReportingForms/?reportTypesIdsJson=["1"]'>Financial Statements</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href='/apps/ReportingForms/?reportTypesIdsJson=["2"]'>Applications/structure change</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href='/apps/ReportingForms/?reportTypesIdsJson=["3"]'>Federal Financial Institutions Examination Council (FFIEC)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href='/apps/ReportingForms/?reportTypesIdsJson=["8"]'>Municipal & Government Securities</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Supervision & Regulation Letters</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/srletters/srletters.htm">By Year</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/topics/topics.htm">By Topic</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Banking Applications & Legal Developments</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/application-process.htm">Application Process</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/board-and-reserve-bank-actions.htm">Board & Reserve Bank Action</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/legal-developments.htm">Enforcement Actions & Legal Developments</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Regulatory Resources</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/reglisting.htm">Regulations</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/publications/supmanual.htm">Manuals</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/basel/basel-default.htm">Basel Regulatory Framework</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/volcker-rule.htm">Volcker Rule</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/training-and-assistance-landing.htm">Education, Training, and Assistance</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Banking & Data Structure</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/apps/reportforms/insider.aspx">Beneficial Ownership reports</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/lbr/">Large Commercial Banks</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/iba/">U.S. Offices of Foreign Entities</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/fhc.htm">Financial Holding Companies</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/isb-default.htm">Interstate Branching</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/suds.htm">Securities Underwriting & Dealing Subsidiaries</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/minority-depository-institutions.htm">Minority Depository Institutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li role="menuitem" class="dropdown nav-stability dropdown--2Col">
+            <a href="/financial-stability.htm" class="sr-only-focusable" aria-haspopup="true" id="stabilityMenu">Financial<br />Stability</a>
+            <ul aria-labelledby="stabilityMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <div class="row">
+                    <ul class="col-sm-6 list-unstyled">
+                        <li class="nav__header">
+                            <p>
+                                <strong>Financial Stability Assessments </strong>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/what-is-financial-stability.htm">About Financial Stability</a>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/types-of-financial-system-vulnerabilities-and-risks.htm">Types of Financial System Vulnerabilities & Risks</a>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/monitoring-risk-across-the-financial-system.htm">Monitoring Risk Across the Financial System</a>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/proactive-monitoring-of-markets-and-institutions.htm">Proactive Monitoring of Markets & Institutions</a>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/financial-stability-and-stress-testing.htm">Financial Stability & Stress Testing</a>
+                        </li>
+                    </ul>
+                    <ul class="col-sm-6 list-unstyled">
+                        <li class="nav__header">
+                            <p>
+                                <strong>Financial Stability Coordination & Actions</strong>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/responding-to-financial-system-emergencies.htm">Responding to Financial System Emergencies</a>
+                        </li>
+                        <li>
+                            <a class="sr-only-focusable" href="/financial-stability/cooperation-on-financial-stability.htm">Cooperation on Financial Stability</a>
+                        </li>
+                        <li class="nav__header">
+                            <p>
+                                <strong>Reports</strong>
+                            </p>
+                        </li>
+
+                        <li>
+                            <a class="sr-only-focusable" href="/publications/financial-stability-report.htm">Financial Stability Report</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </li>
+        <li role="menuitem" class="dropdown nav-payment dropdown--fw">
+            <a href="/paymentsystems.htm" class="sr-only-focusable" id="paymentMenu" aria-haspopup="true">Payment<br />Systems</a>
+            <ul aria-labelledby="paymentMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-3 col-nav list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Regulations & Statutes</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/regcc-about.htm">Regulation CC (Availability of Funds and Collection of Checks)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/regii-about.htm">Regulation II (Debit Card Interchange Fees and Routing)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/reghh-about.htm">Regulation HH (Financial Market Utilities)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/other-regulations.htm">Other Regulations and Statutes</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Payment Policies</strong>
+                                </p>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/pfs_about.htm">Federal Reserve's Key Policies for the Provision of Financial Services</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/joint_requests.htm">Guidelines for Evaluating Joint Account Requests</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/oo_about.htm">Overnight Overdrafts</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/psr_about.htm">Payment System Risk</a>
+                            </li>
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/telecomm.htm">Sponsorship for Priority Telecommunication Services</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Reserve Bank Payment Services & Data</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fedach_about.htm">Automated Clearinghouse Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/check_about.htm">Check Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/coin_about.htm">Currency and Coin Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/psr_data.htm">Daylight Overdrafts and Fees</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fednow_about.htm">FedNow<sup>&reg;</sup> Service</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fedfunds_about.htm">Fedwire Funds Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fedsecs_about.htm">Fedwire Securities Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fisagy_about.htm">Fiscal Agency Services</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/master-account-and-services-database-about.htm">Master Account and Services Database</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/natl_about.htm">National Settlement Service</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Financial Market Utilities & Infrastructures</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/over_about.htm">Supervision & Oversight of Financial Market Infrastructures</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/designated_fmu_about.htm">Designated Financial Market Utilities</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/int_standards.htm">International Standards for Financial Market Infrastructures</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Research, Reports, & Committees</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/fr-payments-study.htm">Federal Reserve Payments Study (FRPS)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/payres_about.htm">Payments Research</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/reports.htm">Reports</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/paymentsystems/pspa_committee.htm">Payments System Policy Advisory Committee</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-econ dropdown--right dropdown--2Col">
+            <a href="/econres.htm" class="sr-only-focusable" aria-haspopup="true" id="econMenu">Economic<br />Research</a>
+            <ul aria-labelledby="econMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-6 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/researchers.htm">Meet the Researchers</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Working Papers and Notes</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/feds/index.htm">Finance and Economics Discussion Series (FEDS)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/notes/feds-notes/default.htm">FEDS Notes</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/ifdp/index.htm">International Finance Discussion Papers (IFDP)</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-6 list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Data, Models and Tools</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/economic-research-data.htm">Economic Research Data</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/us-models-about.htm">FRB/US Model</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/edo-models-about.htm">Estimated Dynamic Optimization (EDO) Model</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/scfindex.htm">Survey of Consumer Finances (SCF)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-data dropdown--right dropdown--fw">
+            <a href="/data.htm" class="sr-only-focusable" id="dataMenu" aria-haspopup="true">Data</a>
+            <ul aria-labelledby="dataMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-3 col-nav list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/datadownload"><span class="icon icon-ddp icon__sm"></span>Data Download Program</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Bank Assets and Liabilities</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h3/current/default.htm">Aggregate Reserves of Depository Institutions and the Monetary Base - H.3</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h8/current/default.htm">Assets and Liabilities of Commercial Banks in the U.S. - H.8</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/assetliab/current.htm">Assets and Liabilities of U.S. Branches and Agencies of Foreign Banks</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/chargeoff/">Charge-Off and Delinquency Rates on Loans and Leases at Commercial Banks</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/sfos/sfos.htm">Senior Financial Officer Survey</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/sloos.htm">Senior Loan Officer Opinion Survey on Bank Lending Practices</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Bank Structure Data</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/lbr/">Large Commercial Banks</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/minority-depository-institutions.htm">Minority Depository Institutions</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/iba/default.htm">Structure and Share Data for the U.S. Offices of Foreign Banks</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Business Finance</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/cp/">Commercial Paper</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/g20/current/default.htm">Finance Companies - G.20</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/govsecure/current.htm">New Security Issues, State and Local Governments</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/corpsecure/current.htm">New Security Issues, U.S. Corporations</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Dealer Financing Terms</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/scoos.htm">Senior Credit Officer Opinion Survey on Dealer Financing Terms</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Exchange Rates and International Data</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h10/current/">Foreign Exchange Rates - H.10/G.5</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/intlsumm/current.htm">International Summary Statistics</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/secholdtrans/current.htm">Securities Holdings and Transactions</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/statbanksus/current.htm">Statistics Reported by Banks and Other Financial Firms in the United States</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/iba/default.htm">Structure and Share Data for U.S. Offices of Foreign Banks</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Financial Accounts</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/z1/default.htm">Financial Accounts of the United States - Z.1</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Household Finance</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/g19/current/default.htm">Consumer Credit - G.19</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/housedebt/default.htm">Household Debt Service and Financial Obligations Ratios</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/mortoutstand/current.htm">Mortgage Debt Outstanding</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/econres/scfindex.htm">Survey of Consumer Finances (SCF)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/shed.htm">Survey of Household Economics and Decisionmaking</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Industrial Activity</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/g17/current/default.htm">Industrial Production and Capacity Utilization - G.17</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Interest Rates</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h15/">Selected Interest Rates - H.15</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled col-nav">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Micro Data Reference Manual (MDRM)</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/mdrm.htm">Micro and Macro Data Collections</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Money Stock and Reserve Balances</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h41/">Factors Affecting Reserve Balances - H.4.1</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/releases/h6/current/default.htm">Money Stock Measures - H.6</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Other</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/data/yield-curve-models.htm">Yield Curve Models and Data</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" class="dropdown nav-consumer dropdown--right dropdown--4Col">
+            <a href="/consumerscommunities.htm" class="sr-only-focusable" aria-haspopup="true" id="consumerMenu">Consumers<br /> & Communities</a>
+            <ul aria-labelledby="consumerMenu" role="menu" class="dropdown-menu sub-nav-group navmenu-nav">
+                <li>
+                    <div class="row">
+                        <ul class="col-sm-3 list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Regulations</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/cra_about.htm">Community Reinvestment Act (CRA)</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/reglisting.htm">All Regulations</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Supervision & Enforcement</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/supervisionreg/caletters/caletters.htm">CA Letters</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/apps/enforcementactions/default.aspx">Enforcement Actions</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/independent-foreclosure-review.htm">Independent Foreclosure Review</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled">
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Community Development</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/neighborhood-revitalization.htm">Housing and Neighborhood Revitalization</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/small-business-and-entrepreneurship.htm">Small Business and Entrepreneurship</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/workforce.htm">Employment and Workforce Development</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/cdf.htm">Community Development Finance</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/rural-community-economic-development.htm">Rural Community and Economic Development</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/conferences.htm">Conferences</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Research & Analysis</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/shed.htm">Survey of Household Economics and Decisionmaking</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/community-development-publications.htm">Research Publications & Data Analysis</a>
+                            </li>
+                        </ul>
+                        <ul class="col-sm-3 list-unstyled">
+                            <li>
+                                <a class="sr-only-focusable" href="/aboutthefed/cac.htm">Community Advisory Council</a>
+                            </li>
+
+                            <li class="nav__header">
+                                <p>
+                                    <strong>Consumer Resources</strong>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/foreclosure.htm">Mortgage and Foreclosure Resources</a>
+                            </li>
+
+                            <li>
+                                <a class="sr-only-focusable" href="/consumerscommunities/comm-dev-system-map.htm">Federal Reserve Community Development Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+        <!-- BODY CONTENT -->
+        <div id="content" class="container container__main  economic-research" role="main">
+            <!-- Page Header -->
+            <div class="row">
+                <div class="page-header">
+                    <!-- T3 NAV: Breadcrumbs -->
+                    <ol id="t3_nav" class="breadcrumb">
+                        
+                            <li class='breadcrumb__item'><a class="breadcrumb__link" href="/default.htm">Home</a></li>
+                            
+                                                    <li class='breadcrumb__item'><a class="breadcrumb__link" href="/econres.htm">Economic Research</a></li>
+                                                    
+                    
+                                                    <li class='breadcrumb__item'><a class="breadcrumb__link" href="/econres/notes/feds-notes/default.htm">FEDS Notes</a></li>
+                                                    
+                                                    <li class='breadcrumb__item'><a class="breadcrumb__link" href="/econres/notes/feds-notes/2024-index.htm">2024</a></li>
+                                                    
+                                                
+                                                
+                
+                                                
+                        
+                    </ol>
+                    <!-- Page Title/Share & Download Buttons -->
+                    <div class="header-group">
+                        <!-- Page Title -->
+                        <div id="page-title" class="page-title">
+                        
+                                <h2>FEDS Notes</h2>
+                                        
+                        </div><!-- /  #page-title .btn-group .pull-left -->
+                        
+                        <!-- Share / Download Button -->
+                        <!-- Delete/Add class="hidden" to <div> below when display/hiding this option -->
+                        <div class="shareDL">
+                            <!-- InstanceBeginEditable name="ShareDLButton" -->
+                            
+                            <a href="" class="btn shareDL__button noIcon">
+                                <span class="icon icon__sm icon--centered icon-twitter-color"></span>
+                                <span class="shareDL__iconTitle">Twitter</span>
+                            </a>   
+                                
+                          
+                            <a href="#" class="btn shareDL__button dropdown-toggle" data-toggle="dropdown">
+                                <span class="icon icon__sm icon--centered icon-share-header"></span>
+                                <span class="shareDL__iconTitle">Share</span>
+                            </a>
+                            <ul class="dropdown-menu shareDL__dropdown--header" role="menu">
+                              
+
+
+    
+            <li class='shareDL__item'>
+             
+                <a class="shareDL__link icon__link sr-only-focusable" href="https://twitter.com/share?url=https://www.federalreserve.gov/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-20240816.html&text=Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems&via=FederalReserve">
+                        <span class="icon icon__sm icon--centered icon-twitter-color"></span>
+                </a>
+            </li>
+            
+            <li class='shareDL__item'>
+             
+                <a class="shareDL__link icon__link sr-only-focusable" href="https://www.facebook.com/sharer.php?u=https://www.federalreserve.gov/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-20240816.html&name=Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems">
+                        <span class="icon icon__sm icon--centered icon-facebook-color"></span>
+                </a>
+            </li>
+            
+            <li class='shareDL__item'>
+             
+                <a class="shareDL__link icon__link sr-only-focusable" href="https://www.linkedin.com/shareArticle?url=https://www.federalreserve.gov/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-20240816.html&title=Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems&mini=true">
+                        <span class="icon icon__sm icon--centered icon-linkedin-color"></span>
+                </a>
+            </li>
+            
+            <li class='shareDL__item'>
+            
+                <a class="shareDL__link icon__link sr-only-focusable" href="/cdn-cgi/l/email-protection#d4ebb6bbb0ade9bca0a0a4a7eefbfba3a3a3fab2b1b0b1a6b5b8a6b1a7b1a6a2b1fab3bba2fbb1b7bbbaa6b1a7fbbabba0b1a7fbb2b1b0a7f9babba0b1a7fbbbb2b2b8bdbab1f9a4b5adb9b1baa0a7f9bdb9a4b8bdb7b5a0bdbbbaa7f9b2bba6f9a6b1b8bdb5b6bdb8bda0adf9b5bab0f9a6b1a7bdb8bdb1bab7adf9bdbaf9b0bdb3bda0b5b8f9a4b5adb9b1baa0f9a7ada7a0b1b9a7f9e6e4e6e0e4ece5e2fabca0b9b8f2a7a1b6beb1b7a0e99bb2b2b8bdbab1f484b5adb9b1baa0a7eef49db9a4b8bdb7b5a0bdbbbaa7f4b2bba6f486b1b8bdb5b6bdb8bda0adf4b5bab0f486b1a7bdb8bdb1bab7adf4bdbaf490bdb3bda0b5b8f484b5adb9b1baa0f487ada7a0b1b9a7">
+                        <span class="icon icon__sm icon--centered icon-email-color"></span>
+                </a>
+            </li>
+                    
+    
+ 
+ 
+                            </ul>
+                            
+                            
+                            <a href="/feeds/feds_notes.xml" class="btn shareDL__button">
+                                <span class="icon icon__sm icon--centered icon-RSS"></span>
+                                <span class="shareDL__iconTitle">RSS</span>
+                            </a>
+                                 
+                            <!-- InstanceEndEditable -->
+                        </div>
+                        <!--/ End Share / Download Button -->
+                    </div><!-- / .header-group .btn-group -->  
+                </div><!-- / .page-header -->
+            </div><!-- / .row -->
+
+
+  
+
+
+
+            <!-- Content Area -->
+            <div class='row'>
+            
+                <div class="col-xs-12 col-md-8 col-sm-12">  
+                    <p>August 16, 2024</p>
+                    <h3>Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems</h3>
+                    <p>Laila Aboulaiz, Bunmi Akintade, Hamzah Daud, Monique Lansey, Megan Rodden, Lucas Sawyer, and Matthew Yip<a href="#fn1" title="footnote 1"><sup>1</sup></a><a name="f1"></a></p>
+                    <h4>Introduction</h4>
+
+<p>With the proliferation of digital payments, internet-based technology has been integral in supporting the delivery of these transactions. Traditional digital payments, such as those made with credit cards, debit cards, and mobile wallets, often require an internet connection to settle transactions. Processors must communicate between banks to carry out a payment, relying on internet connectivity to do so. Yet internet access is highly uneven globally. The International Telecommunication Union (ITU) estimates that two-thirds of individuals in the world's least developed countries and about 2.6 billion people globally are still fully offline (ITU, 2023a, 2023b). Even in the United States, there are considerable disparities in internet access based on geography, income, and race or ethnicity (Goldberg, 2022; Pew 2021).</p>
+
+<p>Beyond access issues, several recent high-profile outages have highlighted the need for building more reliability and resiliency in digital payment systems. For example, outages at Square in September 2023 and at Fiserv in February 2021, two of the biggest payment processors in the U.S., left a wide range of merchants unable to accept electronic payments (Square, 2023b; Dailey and Taylor, 2021). Meanwhile, in Europe, a 2018 Visa outage resulted in 5 million failed transactions during a 10-hour outage (Hogg, 2018, p. 4).</p>
+
+<p>In recent years, payment service providers have launched a variety of "offline" digital payment services. This note presents a landscape assessment of several offline digital payment use cases globally and analyzes the potential for these services to mitigate internet outage risks and bolster digital payment resilience. We do not find evidence of fully offline digital payment systems in production today. Many services branded as offline payment solutions are more accurately classified as hybrid solutions because they ultimately require internet access for clearing and settlement. These services can play a role in mitigating risks associated with temporary internet outages. Truly offline digital payment systems are in early development stages. More mature implementations of offline systems could both augment payment system resilience and improve access to digital payment services, where lack of internet connectivity is a barrier to uptake. This note also lays out a variety of risks associated with offline payment models, including risks related to double spending, security, user privacy, and merchant liability. Overall, certain offline payment models are promising, but more research and wider uptake is needed for the technology to drive incremental gains in payment system resilience and reliability.</p>
+
+<h4>Typology of Digital Payments</h4>
+
+<p>To understand offline digital payments, it can be helpful to examine a traditional online digital payment. For example, when a consumer makes a credit card payment at a merchant, the financial institutions of the consumer and the merchant use internet connectivity to communicate and carry out the payment. It can take mere seconds for the consumer's unique card information to be transmitted to the card processor, its validity verified, requisite funds availability confirmed, and the approval or declination transmitted back to the point-of-sale (POS) terminal (Figure 1). The internet connectivity in this process also enables financial institutions, processors, and customers to transmit information about fraud and money laundering red flags, which helps protect payment systems from malicious actors.</p>
+
+<div class="panel panel-callout">
+<div class="panel-heading">
+<h5 class="panel-title"><a id="fig1"></a>Figure 1</h5>
+</div>
+
+<div class="panel-body">
+<figure><img alt="Figure 1. See accessible link for data." class="img-responsive" src="/econres/notes/feds-notes/figure1-3456.png" />
+<figcaption>
+<div class="footnotes">
+<p>Note: Example of a consumer-to-merchant retail payment in an online payment system. The figure depicts a credit or debit card payment made by a payer at a merchant's POS terminal. An online connection allows the payer's payment information to be sent to the card processor for authorization and authentication, either approving or denying the payment. The figure conveys how day-to-day payments between a consumer and a merchant in card-present payment scenarios requires internet.</p>
+
+<p>Source: Author illustration.</p>
+
+<p><a href="/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm#fig1">Accessible version</a></p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+
+<p>In contrast, offline digital payments do not use an internet connection during the payment transaction process. As discussed below, this note categorizes offline digital payments as hybrid or offline, depending on their ultimate reliance on internet connectivity. Importantly, we focus primarily on retail payments made at the point-of-sale.<a href="#fn2" title="footnote 2"><sup>2</sup></a><a name="f2"></a></p>
+
+<h4>Hybrid Offline Digital Payments</h4>
+
+<p>A hybrid offline digital payment service<strong> </strong>offers incremental offline capabilities relative to the baseline payment system. Most often, these hybrid services enable merchants to continue accepting digital payments while they are temporarily offline. Typically, it is the POS system that can be temporarily offline, meaning that it does not have access or connection to the internet, at the time of payment. We also reviewed hybrid cases that enable payers to make offline payments in systems that typically require them to be online. The status quo services in these systems are often smart phone app- or mobile wallet-based.</p>
+
+<p>Hybrid payment services are commonly referred to as offline options in the payments ecosystem, but this characterization is misleading because the systems still require post-sale or periodic internet connectivity to authorize and settle transactions. In the typical hybrid offline digital payment service, a payer (the person making payment) uses a payment method (for example, a credit card, QR code, or digital wallet) at a POS terminal disconnected from the internet, but the transaction authorization is sought later by the payee (the person or merchant receiving payment) when internet connectivity is restored.</p>
+
+<p>In a hybrid payment card system, for example, when the payer's card credentials are provided, the offline POS terminal locally verifies the card's authenticity (Toast, 2023). The terminal then stores the transaction data (card details, amount, timestamp, and so on) on the device (Ayden, 2023). At this point, the payee can render the goods or services to the payer. However, because the terminal does not have an internet connection, it cannot communicate with the card processor to verify that the payer has sufficient funds to cover the payment obligation (NTC Texas, 2021) (Figure 2). Some terminals have a time limit on how long they locally store transactions (commonly 24 to 72 hours) and will delete pending transactions if internet connectivity is not restored within that period (Square, 2023b; Sorenson, 2023). In instances where the payer has insufficient funds or of prolonged internet inaccessibility, the payee assumes the loss (Stripe, 2023a). While the payer perceives the transaction to process as quickly as in an online payment system, the payee has a slow processing timeline dependent on when internet connectivity is re-established and carries significant risk of loss to fraud or transaction deletion.</p>
+
+<div class="panel panel-callout">
+<div class="panel-heading">
+<h5 class="panel-title"><a id="fig2"></a>Figure 2</h5>
+</div>
+
+<div class="panel-body">
+<figure><img alt="Figure 2. See accessible link for data." class="img-responsive" src="/econres/notes/feds-notes/figure2-3456.png" />
+<figcaption>
+<div class="footnotes">
+<p>Note: Example of a consumer-to-merchant retail transaction in a hybrid payment system. The figure depicts when a consumer makes a payment at a merchant POS terminal, but the terminal is offline (not connected to the internet). The terminal will store the payment information until it is back online, at which point the payment information can be sent to the payment processor for authorization.</p>
+
+<p>Source: Author illustration.</p>
+
+<p><a href="/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm#fig2">Accessible version</a></p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+
+<h4>Offline Digital Payments</h4>
+
+<p>In an <strong>offline digital payment system,</strong> two parties use payment devices to transact instantaneously without the payer or payee needing an internet connection at any step in the process. The payer and payee each have a physical device that locally stores funds, or a record of funds, and do not interact with an internet-connected intermediary in the transaction process (Figure 3). Funds are stored digitally on a payment device such as a mobile phone, are typically encrypted, and are transferred from the payer to payee using secure protocols when in physical proximity to each other's devices (Brodsky, Dubey, and Lucas, 2023a). Offline payment systems can be characterized as an exchange of digital bearer instruments for instant, in-person settlement.</p>
+
+<div class="panel panel-callout">
+<div class="panel-heading">
+<h5 class="panel-title"><a id="fig3"></a>Figure 3</h5>
+</div>
+
+<div class="panel-body">
+<figure><img alt="Figure 3. See accessible link for data." class="img-responsive" src="/econres/notes/feds-notes/figure3-3456-new.png" />
+<figcaption>
+<div class="footnotes">
+<p>Note: Example of a consumer-to-merchant or peer-to-peer retail transaction in an offline payment system. The figure depicts a fully offline payment, where no step in the payment process needs connection to the internet for the payment to be authenticated and authorized.</p>
+
+<p>Source: Author illustration.</p>
+
+<p><a href="/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm#fig3">Accessible version</a></p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+
+<h3>Hybrid and Offline Digital Payments Case Studies</h3>
+
+<h4>Hybrid Offline Digital Payments</h4>
+
+<p><strong>Stripe</strong><br />
+Stripe, a payments platform, offers an offline payment feature via a private beta program through the Stripe Terminal, which accepts offline payments using major credit cards (Stripe, 2023b). The offline functionality allows the Stripe Terminal to accept a payment during periods of limited or no internet connectivity. After the merchant requests access to the Stripe offline mode feature in private beta, the merchant must connect to a Stripe reader while it is offline. The merchant's payment application must be connected to a Stripe reader prior to being offline and connect to the reader while online at least every 60 days to receive required security updates. Before collecting offline payments, the merchant's client-side application needs to be updated to handle offline-related events by implementing the Offline Delegate protocol (Stripe, 2023a).</p>
+
+<p>From the end user's perspective, the Stripe Offline Payment collection process is like an online payment experience. In the event of a temporary outage, the Stripe Terminal securely and temporarily stores the payment information in the terminal (Figure 4). Once an internet connection is restored, the Stripe Terminal automatically forwards the stored payments to Stripe's backend infrastructure. Payment information is collected offline at the time of sale, but authorization is processed after the terminal internet connectivity is restored and the payment is forwarded to Stripe's backend (Stripe, 2023b).</p>
+
+<div class="panel panel-callout">
+<div class="panel-heading">
+<h5 class="panel-title"><a id="fig4"></a>Figure 4</h5>
+</div>
+
+<div class="panel-body">
+<figure><img alt="Figure 4. See accessible link for data." class="img-responsive" src="/econres/notes/feds-notes/figure4-3456.png" />
+<figcaption>
+<div class="footnotes">
+<p>Note: Overview of Stripe offline digital payment collection process. The POS terminal will collect and store the payment method information to accept the payment at the time of sale and then will fully process and settle the payment once internet connection is regained.</p>
+
+<p>Source: Author illustration, adapted from Stripe, 2023b.</p>
+
+<p><a href="/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm#fig4">Accessible version</a></p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+
+<p>Stripe readers that support offline payments are only available in the United States (Stripe, 2023). When <strong>collecting payments</strong>, Stripe puts in place additional controls specific to offline payments to prevent fraudulent transactions. For example, swiping and tapping cards is not permitted in markets that enforce Strong Customer Authentication (SCA) (Stripe, 2023c).<a href="#fn3" title="footnote 3"><sup>3</sup></a><a name="f3"></a> When <strong>processing the payment</strong>, Stripe enforces an offline maximum of $10,000 or the equivalent in the local operating currency (Stripe, 2023a). The merchant bears the risk of transaction declines associated with the offline payment. To reduce transaction declines, a merchant can do three things: 1) limit the duration of unprocessed and finalized offline transactions by restoring the internet connectivity as quickly as possible, 2) deny transactions surpassing a predetermined amount, and 3) decline all offline payments if the sum of the transactions posted to Stripe Terminal exceeds a specified threshold (Stripe 2023a).</p>
+
+<p><strong>Reserve Bank of India's UPI Lite</strong><br />
+To simplify the process of transferring money for India's population and encourage usage of digital payments systems, the Reserve Bank of India (RBI) created the Unified Payments Infrastructure (UPI) (Mistry, 2023). Under the supervision of the RBI, the National Payments Corporation of India (NPCI) developed the UPI on top of India's existing digital payments infrastructure, the Immediate Payment Service (IMPS). The UPI was launched in April 2016, offering an interface across banks and payment service providers. UPI users can make instant funds transfers between bank accounts with their smartphones, offering a simplified digital transaction experience (NPCI, 2023c). UPI has been widely adopted, counting hundreds of millions of daily transactions. The platform recorded its highest-ever number of transactions in June 2023 at more than 9.3 billion peer-to-peer (P2P) and consumer-to-merchant transactions (NPCI, 2023b). One key goal of the UPI system was to incorporate low-value transactions into India's digital payments ecosystem – it is estimated that 60 percent of transactions are under INR 200 (approximately US $2.44) – without overwhelming India's real-time banking system (NPCI, 2023e).</p>
+
+<p>In January 2023, a new UPI service, called UPI Lite, which included an offline feature, was introduced to address these small-value transactions (RBI, 2022). UPI Lite was designed to be simpler than UPI, and it has contributed to UPI's growth and popularity. UPI Lite's offline payment process allows users to transact without an internet connection. It was designed to be simple and useful for small value payments. To use the service, users must have the UPI-enabled app that is linked to their bank account. When they are connected to the internet, users establish and fund an escrow-like account on their mobile phone (NPCI, 2023d). After this stored value account is established, the offline feature can be used to make payments. Payment initiation does not depend on banking infrastructure. Rather, it relies on the mobile app software and the stored value being tracked by the software (NPCI, 2023d). Payers initiate a transaction by scanning a merchant's quick response (QR) code and entering the amount to be paid to the merchant. A Pay Now button is displayed and will complete the transaction (NPCI, 2023d).</p>
+
+<p>Settlement takes place once the user's mobile phone is connected to the internet. The UPI-enabled app retrieves the stored transaction data and processes the payment. The settlement process utilizes India's IMPS. IMPS facilitates these instant fund transfers between the payee's and payer's participating banks by leveraging messaging protocols and existing banking infrastructure (NPCI, 2023a). UPI Lite uses NPCI's Common Library software to keep track of the user's balance.</p>
+
+<p><strong>Matera</strong><br />
+Matera is a Brazilian software company that provides instant payments and QR code technology to financial institutions. It has been used by the Central Bank of Brazil's instant payment platform Pix, which was implemented in 2020. Pix, which is offered through apps and digital wallet services from banks, has been used by over 110 million Brazilians and has seen network throughput of around USD 89 billion as of 2021 (Capurro and Sims, 2021).</p>
+
+<p>Matera was granted a mobile offline payment patent in October 2022, which, if implemented, will allow a customer to initiate an offline digital payment via their phone without an active data or internet connection. The patent invention claims to support an offline payment authorization via a mobile device with "irreversibility... or non-refusal assurance," which authenticates "payment transactions generation from mobile devices such as smartphones, tablets or other devices with sufficient processing capacity to execute encryption algorithms" (Letto and Guimaraes, 2022). This means that a payer with no internet connectivity, Bluetooth, or Near Field Communication (NFC) capability can generate a bar code, speaker for sound output, or any other "physical means to send a small amount of data to the sales equipment of the payee" via a mobile device. However, a payer must set up the offline capability while online.</p>
+
+<p>The payee is responsible for capturing the payer's payment credentials and processing it via their POS terminal, similar to what is currently done with credit card payments. The payee must have an online device (Letto and Guimaraes, 2022), such as a POS terminal or a cash register. The merchant online capability allows for the payment to be fully processed, despite the payer being fully offline. The merchant POS terminal must be able to connect via application programming interface to the merchant's financial institution, which then allows communication with the payer's financial institution to authorize the transaction. The customers must connect with the login credentials of a financial account that will verify that mobile device as an authorized payer. The patent states that payment can be sent with a bank, payment institution, credit company or similar (Letto and Guimaraes, 2022). A private and public key via a PIN is used as the authorized payer verification.</p>
+
+<p><strong>Crunchfish's Digital Cash</strong><br />
+Crunchfish is a Swedish company that specializes in touchless gesture recognition technology. V-Key is a Singapore-based company focusing on mobile security solutions. Together, these two companies have created a software-focused offline payment solution. To make payments systems more resilient, Crunchfish developed a payment app called Digital Cash, which incorporates touchless gesture technology. This gesture technology allows users to make payments with finger movements and hand gestures without having to touch a payment terminal (Crunchfish, 2023). The user experience for Digital Cash is typical of a payment mobile app, like Zelle or CashApp: set up and register (users link their bank accounts to the app), initiate the payment via a touchless gesture, authorize and confirm the payment (with a PIN or biometric to secure the transaction), and finally process and complete (settle) the payment.</p>
+
+<p>Digital Cash supports an offline mode that uses V-Key's Virtual Operating System Virtual Secure Element (V-OS VSE) technology. This VSE is designed to provide a secure environment and method for making offline payments on a user's mobile phone. Within the software, there are features and functions that are not conventional. First, V-OS uses a virtual machine to secure the payment transaction.<a href="#fn4" title="footnote 4"><sup>4</sup></a><a name="f4"></a> Second, the cryptographic keys used during the transaction are stored in the V-OS VSE, out of reach from the environment of the mobile operating system.<a href="#fn5" title="footnote 5"><sup>5</sup></a><a name="f5"></a> When a user initiates an offline payment using Digital Cash, V-OS creates a container, called the VSE, to store any sensitive transaction data, such as cryptographic keys or payment credentials. The VSE processes the payment information within this secure environment, using the stored payment credentials. The mobile device, which is not connected to the internet, then communicates with the merchant's payment terminal via a technology like Bluetooth or near-field communication (NFC); the payment details are shared between the mobile device and the merchant's payment terminal. The merchant validates and stores the payment details within their payment terminal, allowing for later processing and settlement. Once the merchant's terminal regains an internet connection, the software on the terminal then synchronizes the stored offline transactions with the payment gateway and the payment is settled (V-Key, 2022).<a href="#fn6" title="footnote 6"><sup>6</sup></a><a name="f6"></a></p>
+
+<p><strong>Offline Digital Payments</strong><br />
+As stated in the introduction, we do not find evidence of fully offline digital payment systems in production today. It is very difficult to design and implement a payment system without an online connection to a financial institution because such connections help to ensure self-verifiability and user authentication, prevent unauthorized payments, and support interoperability (Park and Baek, 2017, 2348-2349). However, below we discuss one offline payment framework, OPERA, that has been tested under laboratory conditions and proposes a hardware-based solution to address several key impediments to fully offline digital payments.</p>
+
+<p><strong>OPERA</strong><br />
+The fully offline framework is proposed in the paper "OPERA: A Complete Offline and Anonymous Digital Transaction System with a One-Time Readable Memory<em>,</em>"<em> </em>published in 2017 by Ki-Woong Park and Sung Hoon Baek. The authors state that conventional offline digital payments are not fully offline because they require periodic or post-transaction check-in to perform validation of the payment. The OPERA authors identify three key impediments to creating a fully offline digital payment (Park and Baek, 2017, 2349):</p>
+
+<ul>
+	<li class="paragraph">(1) Self-verifiability: A token must be validated without the need of online help from a financial authority.</li>
+	<li class="paragraph">(2) User anonymity: To be synonymous with cash, user privacy is required.</li>
+	<li class="paragraph">(3) Atomic transfer: The exchange of assets between two parties must be carried out instantaneously in a single transaction, typically without intermediaries.</li>
+</ul>
+
+<p>Taking these challenges into consideration, the authors propose OPERA, a fully offline approach that is P2P and anonymous, implementing a one-time readable memory (ORM) into mobile devices or digital wallets using hardware. The ORM is a computer memory that allows for data to be stored and can only be accessed to read. Tokens are stored in the ORM within an Opera-Digital Wallet (ODW), which uses a transaction and power control unit (TPCU) to ensure the authentication and control of the user's token (Figure 5). Tokens, backed by fiat currency from a financial authority with the power to issue banknotes, are signed with a secure cryptographic key and can only be encrypted by the private key of the financial authority. A data bus, the system within the device that transports data bi-directionally, allows for secure communication with other ODWs. To make a payment, a payer and a payee will connect their ODW via a plug. The amount of money to be transferred will be inputted by the payee and transmitted via tokens. The number of transferred tokens will depend on the amount of the payment, so that the least number of tokens is used. For example, if a payer pays 20 USD to a payee, two tokens will be transmitted.</p>
+
+<div class="panel panel-callout">
+<div class="panel-heading">
+<h5 class="panel-title"><a id="fig5"></a>Figure 5</h5>
+</div>
+
+<div class="panel-body">
+<figure><img alt="Figure 5. See accessible link for data." class="img-responsive" src="/econres/notes/feds-notes/figure5-3456.png" />
+<figcaption>
+<div class="footnotes">
+<p>Note: Overall architecture of OPERA Digital Wallet (ODW). It is comprised of a one-time readable memory (ORM) for token storage, a power control unit (TPCU) that supports authentication, and a data bus that allows for secure communications with other ODWs.</p>
+
+<p>Source: Park and Baek 2017, 2351.</p>
+
+<p><a href="/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm#fig5">Accessible version</a></p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+
+<p>To carry out a payment, the OPERA system deploys a "three-stage digital cash exchange protocol." <strong>Stage 1</strong> is the secure mounting of the ODWs and anonymous authentication, which uses an anonymous attestation scheme. The mounting is the physical connection between two devices. Messaging that happens between the payer and payee is hidden on on-chip, protecting against malicious attacks or physical breakage. <strong>Stage 2</strong> is when the token is transacted from payer to payee. The payer will generate an encrypted payment request message of the number of digital tokens that needs to be transmitted. The payee, upon receiving this message, will transmit an acknowledgement, and confirm the number of tokens to be transmitted. Via two messaging stages, the payer and payee confirm the amount of money to be transmitted. Finally, the verification and unmount occurs during <strong>Stage 3<em> </em></strong>(Park and Baek, 2017, 2352). The scheme uses a key to encrypt the tokens sent from the payer to the payee, allowing the payee to decrypt the tokens and store them as a token queue. If the verification is done correctly, the two incremental counters (which store the number of times a token transmission has occurred) should be identical for the payer and the payee. Once the payment transaction is finalized, the ODWs can be disconnected (Park and Baek, 2017, 2353).</p>
+
+<p>OPERA is unique in that various operational efficiency and resiliency tests were conducted, testing the safety against potential attacks such as copied token attacks, falsified ODW and replay attacks. It is one of the few solutions that has fully offline capabilities, ensuring that neither the payer nor the payee require internet connection throughout the payment process. However, broad adoption of OPERA would be challenging given that it requires a specific memory type and a complex token security infrastructure. Mobile phones typically do not support the memory technology required. Unless adoption of a new payment method is mandated, it needs to operate within the constraints of already deployed infrastructure and technology.</p>
+
+<h4>Risks Associated with Hybrid and Fully Offline Payment Systems</h4>
+
+<p><strong>Double Spending</strong><br />
+One of the biggest risks of offline digital payments is double spending, where the same money is spent more than once. Double spending is a risk for all digital payment types, but to the extent that there is a processing delay in an offline digital payment transaction, the risk of double-spending and unauthorized transactions increases (Brodsky, Dubey and Lucas, 2023b, 6). Types of attacks that could lead to double spending include man in the middle attacks (an unauthorized transmission between a user and website) (PCMag, 2023a), transaction replay (information is stored without authorization and then re-transmitted into an unauthorized operation to trick the receiver, such as false identification) (PCMag, 2023b), or jailbreaking (exploiting a flaw in an electronic device to install software to gain access to the operating system) (Mastercard, 2016).</p>
+
+<p>Double spending is one of the biggest risks for merchants who typically bear the loss. This is a key barrier to widespread implementation and adoption of offline digital payment methods. Atomic digital transfer is a potential double spending mitigant. As introduced within the context of Opera, atomic transfer occurs when two parties instantaneously exchange assets in a single transaction without intermediaries (Kapron, 2022). The instantaneous nature of atomic transfer ensures that an amount of money is only spent once, and ledgers on both the payer and payee ends are appropriately updated. However, atomic transfer is challenging to implement in an offline digital payment setting. Currently, a more practical double-spending mitigant for offline payment models involves setting offline payment thresholds at an acceptable level based on a merchant's risk appetite.</p>
+
+<p><strong>Security</strong><br />
+Hybrid offline systems are still subject to the same security requirements as those applicable to online transactions, where relevant, such as the standards reflected in the Payment Card Industry Data Security Standards and the NACHA Operation Guidelines. However, payments accepted via hybrid services may be delayed or may face additional difficulties adhering to security standards. For example, online digital payment systems help to mitigate security risks with real-time connection to a trusted financial institution. For a hybrid system, connection to these institutions is limited or held off to a later time, impacting the real-time oversight of security standards. In contrast, a fully offline approach will have no online connection, necessitating other methods of security—for example, through hardware-based approaches.</p>
+
+<p>In a fully offline digital payment system, digital money must be authenticated by the payee's device during the transaction, and opportunities for retrospective investigations are limited. Vulnerability in the software or hardware of an offline payment device could allow criminals to digitally counterfeit funds. Developing secure software and hardware for offline payment devices is a basic requirement before these systems are deployed. A diversity of security designs for offline payment security has been proposed, including proprietary encryption, device fingerprinting, interoperable Public Key Infrastructure (PKI) protocols, purpose-built hardware, and more (Brodsky, Dubey, and Lucas, 2023b).<a href="#fn7" title="footnote 7"><sup>7</sup></a><a name="f7"></a> Experimentation with security measures is usually an extensive process before deployment and requires ongoing engagement.</p>
+
+<p><strong>User Privacy</strong><br />
+Similar to online digital payments, offline payments can pose risks to user privacy and require proactive steps by users, developers, and regulators to ensure responsible handling of personal and financial data. Payment data stored offline can be compromised. In scenarios where a user's payment-enabled device is lost, stolen, or accessed by unauthorized individuals, the stored data, including transaction histories and sensitive card details, may be exposed. This exposure compromises user privacy and raises concerns about the potential misuse of the compromised information. Additionally, risk inherent in offline digital payments pertains to the interception of transactional data during the transmission process. Adversaries with the technical skills and resources can exploit vulnerabilities in the communication channel or the user's device to eavesdrop on or tamper with payment data. This interception may lead to unauthorized access to sensitive financial details and personal information, posing a considerable threat to user privacy.</p>
+
+<p>To address the privacy concerns in offline digital payments, anonymous authentication methods can be employed to protect the information exchanged between the payer and payee. Anonymous authentication protocols work to ensure that the identities of the parties involved in the transaction remain undisclosed, reducing the risk of personal information exposure. By using cryptographic techniques and temporary identifiers, anonymous authentication could allow users to maintain privacy while engaging in digital transactions.</p>
+
+<p><strong>Loss of Funds</strong><br />
+Offline digital payments systems locally store account balances and transaction histories on the user's device. If the device is lost, stolen, or fails, the user has limited recourse. In cases of loss or theft, a bank cannot reload a new device with the lost device's balance because—by the system's very nature—the bank cannot access the offline funds stored on the device. Therefore, the bank cannot verify the amount of money on the device when it was lost or stolen. Losing offline digital funds is like losing physical cash. The loss, theft, or destruction of physical cash is a final event—the bank from which the cash was withdrawn cannot reliably compensate customers in such events without exposing itself to fraudulent claims.</p>
+
+<p>There are some limited options to mitigate loss risk in hybrid offline payment systems. If a phone holding digital cash is lost or stolen, there can be an option for the user to remotely turn on Wi-Fi and LTE search. If the phone finds a connection, it will lock the funds and move them to the user's online balance. Similarly, if a user reports a stolen phone or payment card with offline funds, the payment processor can recover the funds if the phone or card is used at a POS terminal that has internet connectivity. When a stolen offline device transacts with an online terminal, the terminal would cross-reference a blacklist, decline the transaction, and transfer the offline funds to the true owner's online account. However, these options do not cover all cases. In instances where an offline phone never finds an internet connection or a stolen payment card does not transact with an online terminal, the user's funds would be lost.</p>
+
+<p><strong>Reputational Risks</strong><br />
+Reputational risk is the potential harm or damage to the image, credibility, and trustworthiness of individuals, businesses, or payment service providers resulting from negative incidents or perceptions related to payment transactions. These risks can arise from security breaches, data leaks, fraudulent activities, poor customer experience, or ineffective dispute resolution mechanisms. Ensuring a seamless and positive customer experience is vital for mitigating reputational risks. Clear and transparent communication about security measures, privacy policies, and dispute resolution procedures fosters customer trust. There are risks inherent to any payment method, but for a new capability to be implemented and adopted, like offline digital payments, firms and financial institutions will need to ensure product reliability and mitigate reputational risks.</p>
+
+<h4>Conclusion</h4>
+
+<p>The most viable offline digital payment use cases currently in production are best characterized as hybrid, rather than fully, offline payments. These hybrid systems leverage both offline and online capabilities. Early research demonstrates that fully offline digital payment systems may be possible in the future, but more applied research is needed in this area.</p>
+
+<p>Offline payments, whether hybrid or fully offline, can bolster resiliency and reliability in digital payment ecosystems. Hybrid systems can help mitigate the impact of temporary internet outages, which could be important for enabling transactions in diverse contexts, such as remote areas, crowded events, or regions with unreliable internet connectivity. More mature fully offline digital payment schemes could have more extensive benefits for digitally excluded population segments. However, offline payments also pose risks. Companies and financial institutions that are seeking to adopt offline models will need to identify and control risks related to double spending, security, user privacy, and potential loss of funds.</p>
+
+<h4>References</h4>
+
+<p>Ayden (2023). "Offline Payments." Ayden Docs. accessed July 26, 2023, https://docs.adyen.com/point-of-sale/offline-payment/.</p>
+
+<p>Brodsky, Bonni, Anurag Dubey, and David T. Lucas (2023a). "Enabling Offline Payments in an Online World: A Practical Guide to Offline Payment Design." Crunchfish and Lipis Advisors. https://www.crunchfish.com/wp-content/uploads/2023/01/Lipisadvisors_WP1_offlinepayments.pdf.</p>
+
+<p>Brodsky, Bonni, Anurag Dubey, and David T. Lucas (2023b). "Enabling Offline Payments in an Online World: A Practical Guide to Offline Payment Security." Crunchfish and Lipis Advisors. https://www.crunchfish.com/wp-content/uploads/2023/05/Lipis_WP2_Crunchfish_Enabling-offline-payments_v5.pdf.</p>
+
+<p>Capurro, Maria Eloisa and Shannon Sims (2021). "Pix Mobile Payment: How Brazil's Central Bank Launched Platform." Bloomberg.com, October 6, www.bloomberg.com/news/articles/2021-10-06/pix-mobile-payment-how-brazil-s-central-bank-launched-platform.</p>
+
+<p>Committee on Payment and Market Infrastructures (CPMI) and World Bank Group (WBG) (2016). "<a href="https://www.bis.org/cpmi/publ/d144.pdf">Payment aspects of financial inclusion (PDF)</a>." Basel: Bank for International Settlements.</p>
+
+<p>Crunchfish (2023), "Digital Cash," accessed July 28, https://www.crunchfish.com/digital-cash/.</p>
+
+<p>Dailey, Natasha and Kate Taylor (2021), "Customers are reporting credit-card payment crashes at restaurants and stores across the US, including Chick-fil-A and Ikea," Business Insider, February 26, https://www.businessinsider.com/credit-card-payments-system-outage-stores-restaurants-chick-fil-a-2021-2.</p>
+
+<p>Demirguc-Kunt, Asli, Leora Klapper, Dorothe Singer, and Saniya Ansar (2018). <a href="https://documents1.worldbank.org/curated/en/332881525873182837/pdf/126033-PUB-PUBLIC-pubdate-4-19-2018.pdf">The Global Findex Database 2017: Measuring financial inclusion and the fintech revolution (PDF)</a>. World Bank Publications.</p>
+
+<p>European Central Bank (ECB) (2021), "<a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210728~cb0848ee42.en.html">ECB publishes an independent review of TARGET incidents in 2020</a>," press release, July 28.</p>
+
+<p>Goldberg, Rafi (2022), "<a href="https://www.ntia.gov/blog/2022/new-ntia-data-show-enduring-barriers-closing-digital-divide-achieving-digital-equity#:~:text=Only%2054%20percent%20of%20Americans,percent%20of%20Hispanics%20did%20s">New NTIA Data Show Enduring Barriers to Closing the Digital Divide, Achieving Digital Equity</a>," United States Department of Commerce: National Telecommunications and Information Administration.</p>
+
+<p>Hogg, Charlotte (2018), "<a href="https://www.parliament.uk/globalassets/documents/commons-committees/treasury/Correspondence/2017-19/visa-response-150618.pdf">Letter from Visa regarding service disruption to the UK Parliament (PDF)</a>," Visa Europe.</p>
+
+<p>International Telecommunication Union (ITU) (2023a). "<a href="https://www.itu.int/en/mediacentre/Pages/PR-2023-09-12-universal-and-meaningful-connectivity-by-2030.aspx">Population of global offline continues steady decline to 2.6 billion people in 2023</a>," press release, International Telecommunication Union.</p>
+
+<p>International Telecommunication Union (ITU) (2023b). "<a href="https://www.itu.int/en/mediacentre/Pages/PR-2023-03-05-facts-and-figures-focus-on-least-developed-countries.aspx">World's least developed countries threatened by deepening digital divide</a>," press release, International Telecommunication Union.</p>
+
+<p>Jack, William, and Tavneet Suri (2011). "<a href="https://doi.org/10.3386/w16721">Mobile money: The economics of M-PESA</a>." National Bureau of Economic Research, Working Paper No. 16721.</p>
+
+<p>Kapron, Zennon (2022). "The Future of Cross-Border Payments in Asia Is Atomic." Forbes, December 21, https://www.forbes.com/sites/zennonkapron/2022/12/21/the-future-of-cross-border-payments-in-asia-is-atomic/?sh=482ed15613a7.</p>
+
+<p>Letto, Carlos Augusto Leite and Carlos Andre Branco Guimaraes (2022). "Method for Payment Authorization on Offline Mobile Devices with Irreversibility Assurance," United States Patent, https://patentimages.storage.googleapis.com/3d/fa/a4/a5043f2dba33d3/US11481766.pdf.</p>
+
+<p>Mastercard (2016). "<a href="https://www.mastercard.us/content/dam/public/mastercardcom/na/us/en/documents/contactless-merchant-toolkit.pdf">Contactless Toolkit for Merchants (PDF)</a>,".</p>
+
+<p>Mistry, Mehul (2023), "The Rise of UPI: Transforming the way Indians transact," Times of India Blogs, July 25, https://timesofindia.indiatimes.com/blogs/voices/the-rise-of-upi-transforming-the-way-indians-transact/.</p>
+
+<p>National Payments Corporation of India (NPCI) (2023a), "<a href="https://www.npci.org.in/what-we-do/imps/product-overview">IMPS (Immediate Payment Service) Product Overview</a>," accessed July 28.</p>
+
+<p>National Payments Corporation of India (NPCI) (2023b), "<a href="https://www.npci.org.in/what-we-do/upi/upi-ecosystem-statistics">UPI Ecosystem Statistics</a>," accessed July 28.</p>
+
+<p>National Payments Corporation of India (NPCI) (2023c), "<a href="https://www.npci.org.in/what-we-do/upi/product-overview">UPI Product Overview</a>," accessed July 28.</p>
+
+<p>National Payments Corporation of India (NPCI) (2023d), "<a href="https://www.npci.org.in/what-we-do/upi-lite/product-overview">UPI Lite Product Overview</a>," accessed July 28.</p>
+
+<p>National Payments Corporation of India (NPCI) (2023e), "<a href="https://www.npci.org.in/PDF/npci/upi-lite/Product-Booklet.pdf">UPI Lite: Make instant small value payments at lightning speed (PDF)</a>," accessed July 28.</p>
+
+<p>NTC Texas (2021). "Everything You Need to Know about Offline Credit Card Processing." March 10. Accessed July 26, 2023, https://ntctexas.com/everything-you-need-to-know-about-offline-credit-card-processing.</p>
+
+<p>Park, Ki-Woong and Sung Hoon Baek (2017). "<a href="https://doi.org/10.1587/transinf.2016inp0008">Opera: A Complete Offline and Anonymous Digital Cash Transaction System with a One-Time Readable Memory</a>." IEICE Transactions on Information and Systems E100.D, no. 10 (2017): 2348–56.</p>
+
+<p>PCMag (2023a), "PCMag Encyclopedia: man-in-the-middle-attack," accessed July 18, 2023, https://www.pcmag.com/encyclopedia/term/man-in-the-middle-attack.</p>
+
+<p>PCMag (2023b), "PCMag Encyclopedia: replay attack," accessed July 18, 2023, https://www.pcmag.com/encyclopedia/term/replay-attack.</p>
+
+<p>Pew Research Center (2021), "<a href="https://www.pewresearch.org/internet/fact-sheet/internet-broadband/?tabId=tab-2ab2b0be-6364-4d3a-8db7-ae134dbc05cd">Internet/Broadband Fact Sheet</a>,".</p>
+
+<p>Reserve Bank of India (2022), "<a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12215&amp;Mode=0">Framework for Facilitating Small Value Digital Payments in Offline Mode</a>," Notifications, January 2.</p>
+
+<p>Sorensen, Emily (2023). "<a href="https://www.mobiletransaction.org/how-to-accept-credit-card-payments-offline/">How Can You Accept Cards When There's No 3G or Internet?</a>" Mobile Transaction. March 17 accessed July 26, 2023.</p>
+
+<p>Square (2023a), "An update on last week's outage," press release, https://squareup.com/us/en/press/an-update-on-last-weeks-outage.</p>
+
+<p>Square (2023b), "Process Card Payments with Offline Mode," accessed July 28, https://squareup.com/help/us/en/article/7777-process-card-payments-with-offline-mode.</p>
+
+<p>Stripe (2023a), "Collect payments while offline," Stripe Docs, accessed July 28, https://stripe.com/docs/terminal/features/operate-offline/collect-payments.</p>
+
+<p>Stripe (2023b), "Operate Offline," Stripe Docs, accessed July 28, https://stripe.com/docs/terminal/features/operate-offline/overview.</p>
+
+<p>Stripe (2023c), "Strong customer authentication readiness" Stripe docs, accessed July 28, https://stripe.com/docs/strong-customer-authentication).</p>
+
+<p>Toast (2023). "Offline Card Payments." Toasttab, accessed July 26, 2023. https://doc.toasttab.com/doc/platformguide/adminOfflineCCPayments.html.</p>
+
+<p>V-Key (2022), "V-OS Virtual Secure Element," https://www.v-key.com/wp-content/uploads/2019/07/V-OS-Virtual-Secure-Element-2022-3.pdf.</p>
+
+<hr align="left" size="1" width="33%" />
+<div class="footnotes">
+<p><a name="fn1"></a>1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or of the Federal Reserve System. The authors would like to thank David Mills, Sonja Danburg, Jillian Mascelli, Jeff Allen, Kathy Wilson, and Sarah Wright of the Federal Reserve Board for their feedback. <a href="#f1">Return to text</a></p>
+
+<p><a name="fn2"></a>2. We exclude e-commerce payments because e-commerce requires internet access. E-commerce transactions are generally settled online, though cash-on-delivery is a is a popular method of settling e-commerce purchases in many parts of the world. Additionally, our research scope does not include prepaid, SMS-based electronic money payments made over mobile networks, such as M-Pesa (CPMI and WBG, 2016). These mobile money payment models, which have revolutionized payment systems in some developing economies, have already been the subject of considerable research (Jack and Suri, 2011; Demirguc-Kunt and others, 2018). <a href="#f2">Return to text</a></p>
+
+<p><a name="fn3"></a>3. Strong Customer Authentication (SCA), a rule in effect as of September 14, 2019, as part of PSD2 regulation in Europe, requires changes to how European customers authenticate online payments. Card payments require a different user experience, namely 3D Secure, to meet SCA requirements. Transactions that don't follow the new authentication guidelines may be declined by your customers' banks. https://stripe.com/docs/strong-customer-authentication <a href="#f3">Return to text</a></p>
+
+<p><a name="fn4"></a>4. In this case, a virtual machine is a trusted execution environment where cryptographic keys are stored on a mobile phone but away from the unsecure area of the mobile phone. <a href="#f4">Return to text</a></p>
+
+<p><a name="fn5"></a>5. A cryptographic key is a string of characters used for altering data within an encryption algorithm. This key is required for both encrypting and decrypting data. <a href="#f5">Return to text</a></p>
+
+<p><a name="fn6"></a>6. A payment gateway is the transaction processing technology that captures, stores, and transmits payment information from the customer to the merchant. <a href="#f6">Return to text</a></p>
+
+<p><a name="fn7"></a>7. Proprietary encryption would limit interoperability. Device fingerprinting ties the offline trust application to the device on which it is running to mitigate cloning. Purpose-built hardware includes OPERA's one-time-readable memory (ORM) that only allows data to be read once, which mitigates replay attacks where a malicious party resends a transaction multiple times. <a href="#f7">Return to text</a></p>
+</div>
+                    
+                    <div style="margin-top: 10px;">
+                        <strong>Please cite this note as:</strong>
+                        <p>Aboulaiz, Laila, Bunmi Akintade, Hamzah Daud, Monique Lansey, Megan Rodden, Lucas Sawyer, and Matthew Yip (2024). "Offline Payments: Implications for Reliability and Resiliency in Digital Payment Systems," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 16, 2024, https://doi.org/10.17016/2380-7172.3456.</p>
+                    </div>
+                    
+                </div>            
+               
+                <div class="col-xs-12 col-md-4 col-sm-12">
+                      
+                    
+                </div><!--/ End Right-Rail -->
+                <div class="col-xs-12 col-md-9 footnotes feds-note" style="margin-top:10px;">
+                    <p><em><strong>Disclaimer:</strong> FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.</em></p>
+                </div>
+            </div>            
+            <!--/ End Content Area -->
+            
+            <a id="back-top" class="icon__backTop icon-backtop" href="#" title="Scroll To Top"><span class="sr-only">Back to Top</span></a>
+
+            <div class="row">
+                <div class="lastUpdate" id="lastUpdate">Last Update:
+                August 16, 2024
+                </div>
+            </div>
+        </div><!-- / #content .container -->
+                    <footer class="container footer">
+                <div class="row footer__content">
+                    <div class="col-xs-12 col-sm-4">
+                        <h6 class="footer__heading"><span class="text-uppercase">Board of Governors</span> <em>of the</em> <span class="text-uppercase">Federal Reserve System</span></h6>
+                        <ul class="list-unstyled">
+                            <li class='footer__listItem'><a class="footer__link" href="/aboutthefed.htm">About the Fed</a></li><li class='footer__listItem'><a class="footer__link" href="/newsevents.htm">News & Events</a></li><li class='footer__listItem'><a class="footer__link" href="/monetarypolicy.htm">Monetary Policy</a></li><li class='footer__listItem'><a class="footer__link" href="/supervisionreg.htm">Supervision & Regulation</a></li><li class='footer__listItem'><a class="footer__link" href="/financial-stability.htm">Financial Stability</a></li><li class='footer__listItem'><a class="footer__link" href="/paymentsystems.htm">Payment Systems</a></li><li class='footer__listItem'><a class="footer__link" href="/econres.htm">Economic Research</a></li><li class='footer__listItem'><a class="footer__link" href="/data.htm">Data</a></li><li class='footer__listItem'><a class="footer__link" href="/consumerscommunities.htm">Consumers & Communities</a></li><li class='footer__listItem'><a class="footer__link" href="/aboutthefed/aroundtheboard/stayconnected-qr-code-2.htm">Connect with the Board</a></li> 
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h6 class="text-uppercase footer__heading">Tools and Information</h6>
+                        <ul class="list-unstyled">
+                             <li class='footer__listItem'><a href="/aboutthefed/contact-us-topics.htm" class="footer__link">Contact</a></li>
+                            <li class='footer__listItem'><a href="/publications.htm" class="footer__link">Publications</a></li>
+                            <li class='footer__listItem'><a href="/foia/about_foia.htm" class="footer__link">Freedom of Information (FOIA)</a></li>
+                            <li class='footer__listItem'><a href="https://oig.federalreserve.gov/" class="footer__link">Office of Inspector General</a></li>
+                            <li class='footer__listItem'><a href="/publications/annual-report.htm" class="footer__link">Budget &amp; Performance</a> | <a href="/regreform/audit.htm" class="footer__link">Audit</a></li>
+                            <li class='footer__listItem'><a href="/eeo.htm" class="footer__link">No FEAR Act</a></li>
+                            <li class='footer__listItem'><a href="/espanol.htm" class="footer__link">Espa&ntilde;ol</a></li>
+                            <li class='footer__listItem'><a href="/website-linking-policies.htm" class="footer__link">Website Policies</a>  | <a href="/privacy.htm" class="footer__link">Privacy Program</a></li>
+                            <li class='footer__listItem'><a href="/accessibility.htm" class="footer__link">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer__social">
+                            <h6 class="text-uppercase footer__heading footer__heading--social">Stay Connected</h6>
+                            
+            <a
+              class="icon__md icon footer__btn icon-facebook-color"
+              href="https://www.facebook.com/federalreserve"
+              ><span class="sr-only"
+                >Federal Reserve Facebook Page</span
+              ></a
+            >
+            <a
+              class="icon__md icon footer__btn icon-instagram"
+              href="https://www.instagram.com/federalreserveboard/"
+              ><span class="sr-only"
+                >Federal Reserve Instagram Page</span
+              ></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-youtube-color"
+              href="https://www.youtube.com/federalreserve"
+              ><span class="sr-only"
+                >Federal Reserve YouTube Page</span
+              ></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-flickr-color"
+              href="https://www.flickr.com/photos/federalreserve/"
+              ><span class="sr-only"
+                >Federal Reserve Flickr Page</span
+              ></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-linkedin-color"
+              href="https://www.linkedin.com/company/federal-reserve-board"
+              ><span class="sr-only">Federal Reserve LinkedIn Page</span></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-threads"
+              href="https://www.threads.net/@federalreserveboard"
+              ><span class="sr-only">Federal Reserve Threads Page</span></a
+            >
+            <a
+              class="icon__md icon footer__btn icon-twitter-color"
+              href="https://twitter.com/federalreserve"
+              ><span class="sr-only"
+                >Link to Federal Reserve Twitter Page</span
+              ></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-rss-color"
+              href="/feeds/feeds.htm"
+              ><span class="sr-only">Subscribe to RSS</span></a
+            >
+
+            <a
+              class="icon__md icon footer__btn icon-email-color"
+              href="/subscribe.htm"
+              ><span class="sr-only">Subscribe to Email</span></a
+            >
+ 
+                        </div>
+                        <a href="https://www.usa.gov/" target="_blank" title="Link to USA.gov">
+                            <img class='footer__image' src="/images/USAGov%402x.png" alt="Link to USA.gov" />
+                        </a>
+                        <a href="/open/open.htm" target="_blank" title="Link to Open.gov">
+                            <img class='footer__image' src="/images/OpenGov%402x.png" alt="Link to Open.gov" />
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 footer__footer">
+                        <p class="text-uppercase footer__text footer__text--left">Board of Governors <em class="text-lowercase">of the</em> Federal Reserve System</p>
+                        <p class="footer__text footer__text--right">20th Street and Constitution Avenue N.W., Washington, DC 20551</p>
+                    </div>
+                </div>
+            </footer>
+            
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/jquery.min.js" type="text/javascript"></script>
+            <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="/js/scripts.js" type="text/javascript"></script>
+            <script src="/js/modal.js" type="text/javascript"></script>
+            <script src="/js/sticky-tables.js" type="text/javascript"></script>
+            <script type="text/javascript" src="/js/slides/ekko-lightbox.min.js"></script>
+            <script src="/js/t4-nav-controller.js" type="text/javascript"></script>
+                     
+            <script type="text/javascript">
+                $(document).ready(function($) {
+                    // delegate calls to data-toggle="lightbox"
+                    $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                        event.preventDefault();
+                        $(this).ekkoLightbox();
+                    });
+                    $('a[data-click="false"]').click(function(e) {
+                        e.preventDefault();
+                        var target = $(this).data('target');
+                        $(target).click();
+                    });
+                });
+            </script>          
+
+            
+        <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$$$','$$$']  ],
+      displayMath: [ ['$$$$','$$$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+        <!-- Published format -->
+        <script src="/resources/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+        <!--<ul><li>/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-accessible-20240816.htm</li></ul>-->
+    </body>
+</html>
