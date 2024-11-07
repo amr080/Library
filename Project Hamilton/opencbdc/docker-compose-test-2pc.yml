@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  test-2pc:
+    build:
+      context: .
+      target: twophase
+    image: opencbdc-tx-twophase
+    platform: linux/amd64
+    tty: true
+    command: sh ./scripts/test-transaction.sh ./2pc-compose.cfg
+    networks:
+      - 2pc-network
+
+networks:
+  2pc-network:
+    external: true

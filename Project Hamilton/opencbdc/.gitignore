@@ -1,0 +1,82 @@
+# Generated files
+atomizerd
+sentineld
+shardd
+shard-cli
+atomizer-cli
+benchmark-makeblock
+client-cli
+tests/run_unit_tests
+tools/txtester/tx-generator
+tools/txtester/tx-player
+archiverd
+
+# ignore generated docs
+doxygen_generated
+
+# Default build folder
+build/
+
+# Default dependency installation folder
+prefix/
+
+# 3rd party generated files
+3rdparty/secp256k1_genctx
+3rdparty/src/ecmult_static_context.h
+
+Makefile
+CMakeCache.txt
+
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.pyc
+*.o
+*.o-*
+*.a
+*.log
+*.tgz
+
+leveldb*/
+NuRaft*/
+curl*/
+jsoncpp*/
+ethash*/
+lua-*/
+benchmark-results/
+CMakeFiles/
+plots/
+.deps/
+.libs/
+
+runtime_locking_shard*_raft*
+runtime_locking_shard*_raft*/
+ticket_machine_raft_*
+ticket_machine_raft_*/
+
+# Database
+blocks.dat
+test_db
+
+# System files
+.DS_Store
+.dirstamp
+
+# IDE support
+.vscode/
+.idea/
+cmake-build-*/
+
+# Regtest output files
+*.gcov
+*.xml
+build/gcov_data
+build/tests
+
+# E2E Test results
+testruns/
+
+# Virtualenv
+.py_venv/

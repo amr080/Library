@@ -1,0 +1,34 @@
+name: Doxygen Deployment
+
+on:
+  push:
+    branches:
+      - trunk
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  gh-pages-deploy:
+    name: Github Pages Deploy
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Run Doxygen
+        uses: mattnotmitt/doxygen-action@edge
+        with:
+          working-directory: .
+          doxyfile-path: ./Doxyfile
+          enable-latex: false
+          additional-packages: graphviz
+      - name: Deploy GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.TX_PAGES_DEPLOY_KEY }}
+          external_repository: mit-dci/opencbdc-tx-pages
+          publish_dir: ./doxygen_generated/html
