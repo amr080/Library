@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFT Documentation Index</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <button class="refresh-button" onclick="location.reload()">Refresh</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Last Modified</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TABLE_CONTENT -->
+        </tbody>
+    </table>
+    <script>
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('a[href$=".md"]')) {
+                e.preventDefault();
+                const mdPath = e.target.closest('a').getAttribute('href');
+                window.location.href = '/view-md' + mdPath;
+            }
+        });
+    </script>
+</body>
+</html>

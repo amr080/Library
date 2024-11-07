@@ -1,0 +1,3 @@
+# Strategy
+
+USDX provides on-chain exposure to an ETF that seeks to track the investment results of an index composed of U.S. Dollar- denominated government bonds issued by the US Treasury. U.S. government bonds are high-quality, AAA-rated securities that can diversify one’s investment portfolio. Historically, when stock markets sell off, these bonds have experienced a flight-to-quality and have increased in value. Thus, U.S. Treasury bonds can serve as a portfolio hedge against risk-off periods. Funds raised from the issuance of USDX will be used to get exposure to the ETF shares through a collateralized loan agreement, leveraging the expertise and capabilities of our partner, Trade Asset Securitisation Company.
