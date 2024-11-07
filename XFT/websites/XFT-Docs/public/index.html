@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XFT | Docs</title>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img id="logo" src="assets/logo.png" alt="XFT Logo" style="cursor: pointer;">
+    <span>Documentation</span>
+  </header>
+
+  <div id="sidePanel">
+    <a href="#" class="link" onclick="loadContent('investment-products/investment-products')">Products</a>
+    <a href="#" class="link" onclick="loadContent('investment-products/faqs')">FAQs</a>
+    <p><strong>Getting Started</strong></p>
+    <a href="#" class="link" onclick="loadContent('getting-started/wallet')">Wallets</a>
+    <a href="#" class="link" onclick="loadContent('getting-started/onboarding')">Onboarding</a>
+    <p><strong>USDX</strong></p>
+    <a href="#" class="link" onclick="loadContent('usdx/overview-usdx')">Overview</a>
+    <a href="#" class="link" onclick="loadContent('investment-products/risks')">Risks</a>
+    <a href="#" class="link" onclick="loadContent('usdx/how-it-works-usdx')">How It Works</a>
+    <a href="#" class="link" onclick="loadContent('usdx/income-fees-yield')">Income, Fees & Yield</a>
+    <a href="#" class="link" onclick="loadContent('usdx/purchasing-usdx')">Purchasing USDX</a>
+    <a href="#" class="link" onclick="loadContent('usdx/redeeming-usdx')">Redeeming USDX</a>
+    <a href="#" class="link" onclick="loadContent('usdx/fund-usdx')">Fund Structure</a>
+    <a href="#" class="link" onclick="loadContent('usdx/strategy-usdx')">Strategy</a>
+    <p><strong>Technical</strong></p>
+    <a href="#" class="link" onclick="loadContent('technical/API')">API</a>
+    <a href="#" class="link" onclick="loadContent('technical/fix')">FIX Protocol</a>
+    <a href="#" class="link" onclick="loadContent('technical/contracts')">Contracts</a>
+    <a href="#" class="link" onclick="loadContent('technical/blockchain')">Blockchain</a>
+    <p><strong>Legal</strong></p>
+    <a href="#" class="link" onclick="loadContent('legal/privacy-policy')">Privacy Policy</a>
+    <a href="#" class="link" onclick="loadContent('legal/cookies-policy')">Cookies Policy</a>
+    <a href="#" class="link" onclick="loadContent('legal/disclaimers')">Disclaimers</a>
+  </div>
+
+  <div id="content" style="padding-bottom: 100px;">
+    {{content}}
+  </div>
+  <footer>
+    © 2024 X Financial Technologies. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
