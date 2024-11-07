@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFT - Case Studies</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <nav>
+               <div class="nav-left">
+                  <div class="logo">
+                      <a href="index.html">
+                          <img src="assets/logo.png" alt="XFT Logo">
+                      </a>
+                  </div>
+                  <div class="nav-items">
+                      <ul>
+                          <li class="dropdown" id="company">
+                              <a href="https://xproducts.replit.app/">Company</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="index.html">About</a></li>
+                                  <li><a href="https://x-financial-technologies.replit.app/team.html">Team</a></li>
+
+                                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfz6iy8AxjnxgMQNiesB9uqyxRi2hqWyqOipLKicF-8P83ziQ/viewform">Careers</a></li>
+                                  <li><a href="https://xft-docs.replit.app/">XFT Docs</a></li>
+                                  <li><a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Investor Relations</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown" id="products">
+                              <a href="products.html">Products</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="payments.html">Payments</a></li>
+
+                                  <li><a href="https://xft-prediction-docs.vercel.app/">Alts CLOB</a></li>
+                                  <li><a href="indexing.html">Indexing</a></li>
+                                  <li><a href="https://x-ledger.replit.app/">RegTech</a></li>
+
+                                  <li><a href="https://xft-trading-system.onrender.com/">Fund Launchpad</a></li>
+
+                                  <li><a href="https://x-ledger.replit.app/">API Reference</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown" id="funds">
+                                <a href="https://x-ledger.replit.app/api/xft/funds">Funds</a>
+                                <ul class="dropdown-content">
+                                    <li><a href="usdx.html">USDX</a></li>
+                                    <li><a href="xcvt.html">XCVT</a></li>
+                                </ul>
+                            </li>
+                          <li class="dropdown" id="resources">
+                              <a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Resources</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="faqs.html">FAQs</a></li>
+                                  <li><a href="terminal.html">Terminal</a></li>
+                                  <li><a href="https://x-ledger.replit.app/api/cef">Listings</a></li>
+                                  <li><a href="systems.html">System Designs</a></li>
+                                  <li><a href="research.html">Research</a></li>
+                                  <li><a href="case-studies.html">Case Studies</a></li>
+                                  <li><a href="mailto:alex@alexandros-securities.com">Contact</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+               </div>
+                <div class="get-started">
+                <a href="https://forms.gle/DN21tcCnGAab7Qfa6">Get Started</a>
+              </div>
+            </nav>
+      </header>
+
+
+    <main class="content-wrapper">
+        <h1>Case Studies</h1>
+        <p>Why XFT? We empowers enterprises who list, trade, and use USDX. Discover how our platform partners are using USDX to power their business.</p>
+        <section id="case-studies">
+            
+            <button class="accordion2">Case Study 1: Visa & USDX</button>
+              <div class="panel">
+
+                  <h3>Subscription</h3>
+                  <ul>
+                    <li>1. Visa identifies idle cash in user accounts via <code>GET /api/neobank/idle_cash</code>.</li>
+                    <li>2. Visa initiates USDX subscription with XFT via <code>POST /api/neobank/transfer</code>.</li>
+                    <li>3. Visa wires USD to XFT's bank.</li>
+                    <li>4. XFT processes subscription, issues temporary certificate.</li>
+                    <li>5. XFT wires USD to custodian.</li>
+                    <li>6. Custodian buys U.S. Treasuries via primary dealer.</li>
+                    <li>7. XFT sets USDX price using Pricer contract via <code>GET /api/usdx/reference_price</code>.</li>
+                    <li>8. XFT sets Claimable Timestamp in USDXManager.</li>
+                    <li>9. After timestamp, XFT initiates minting via <code>POST /api/usdx/mint</code>.</li>
+                    <li>10. USDXManager proposes mint to Token contract.</li>
+                    <li>11. XFT approves and signs transaction.</li>
+                    <li>12. USDX tokens minted to Visa's wallet via <code>POST /api/usdx/mint</code>.</li>
+                  </ul>
+
+                  <h3>Yield Accrual and Distribution</h3>
+                  <ul>
+                    <li>1. Treasuries yield accrues.</li>
+                    <li>2. XFT calculates daily yield via <code>POST /api/yield/calculate</code>.</li>
+                    <li>3. Smart contract updates USDX balances (rebasing) via <code>POST /api/yield/rebase</code> or price (accumulating) via <code>POST /api/yield/update_price</code>.</li>
+                    <li>4. Visa sees increased USDX value or quantity.</li>
+                    <li>5. Process repeats daily for yield distribution via <code>POST /api/yield/distribute</code>.</li>
+                  </ul>
+
+                  <h3>Redemption</h3>
+                  <ul>
+                    <li>1. Visa initiates redemption request via <code>POST /api/usdx/burn</code>.</li>
+                    <li>2. USDXManager contract receives request.</li>
+                    <li>3. USDX tokens burned from Visa's wallet via <code>POST /api/usdx/burn</code>.</li>
+                    <li>4. XFT notified of redemption.</li>
+                    <li>5. XFT instructs custodian to sell Treasuries via <code>POST /api/investment/sell</code>.</li>
+                    <li>6. Primary dealer executes Treasury sale.</li>
+                    <li>7. Custodian receives USD from sale.</li>
+                    <li>8. XFT processes redemption.</li>
+                    <li>9. USD wired from XFT's bank to Visa.</li>
+                    <li>10. Visa receives USD in account.</li>
+                    <li>11. Transaction recorded in XFT's systems.</li>
+                    <li>12. Visa updates user balances.</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 2: Mastercard & USDX</button>
+              <div class="panel">
+                  <ul>
+                      <li>Mastercard has $67,500,000 in idle cash across user accounts.</li>
+                  </ul>
+                  <ul>
+                    <li>1. Mastercard identifies $67,500,000 idle cash via <code>GET /api/neobank/idle_cash</code>.</li>
+                    <li>2. Mastercard transfers $67.5M USD to XFT using <code>POST /api/neobank/transfer</code>.</li>
+                    <li>3. XFT mints 67,500,000 USDX tokens to Mastercard’s wallet via <code>POST /api/usdx/mint</code>.</li>
+                    <li>4. XFT aggregates and invests the transferred funds into U.S. Treasuries via <code>POST /api/investment/purchase</code>.</li>
+                    <li>5. XFT calculates daily yield using <code>POST /api/yield/calculate</code> (0.0137% for 5% annual yield).</li>
+                    <li>6. XFT distributes yield by calling <code>POST /api/yield/distribute</code> to rebase USDX tokens.</li>
+                    <li>7. Mastercard’s balance increases from 67,500,000 to 67,509,247 USDX tokens after one day.</li>
+                    <li>8. Mastercard requests redemption by calling <code>POST /api/usdx/burn</code>.</li>
+                    <li>9. XFT sells U.S. Treasuries via <code>POST /api/investment/sell</code>.</li>
+                    <li>10. XFT wires proceeds from the sale back to Mastercard’s bank account.</li>
+                  </ul>
+                  <h3>Result</h3>
+                  <ul>
+                    <li>Mastercard earns yield of 9,247 USDX tokens after one day, bringing the total balance to 67,509,247 USDX tokens.</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 3: Franklin Templeton</button>
+              <div class="panel">
+                  <h3>USDX</h3>
+                  <ul>
+                      <li>USDX invests inflows from idle neobank cash balances into Franklin OnChain U.S. Government Money Fund FOBXX or an equivalent.</li>
+                  </ul>
+                    <section>
+                        <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width: 482px" class="tg"><colgroup><col style="width: 170px"><col style="width: 300px"></colgroup>
+                        <thead><tr><th style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Increased AUM</span></th><th style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:normal">USDX inflows grow fund size</span></th></tr></thead>
+                        <tbody><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Enhanced Liquidity</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">More cash reserves</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Risk Reduction</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Diversification, steady inflows</td></tr>
+                        <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Capital Preservation</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Large buffer against volatility</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Yield Enhancement</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Access to broader investments</td></tr>
+                        <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Transparency</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Daily third-party reporting</td></tr><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal"><span style="font-weight:bold">Higher Revenue</span></td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Increased management fees</td></tr></tbody></table>
+                    </section>
+                  <h3>NAV Token</h3>
+                  <ul>
+                      <li>Closed-end funds (CEFs) are traditionally illiquid because they have a fixed number of shares and do not issue new shares after their initial public offering. To "open" a CEF, XFT enables a process similar to ETF creation through tokenization. Investors exchange a basket of underlying assets or cash for "creation tokens" that represent NAV, which can then be used to mint CEF shares or redeem illiquid assets. These tokenized shares are tradable on secondary markets, providing liquidity to what was previously a closed system.</li>
+                  </ul>
+              </div>
+
+
+            <button class="accordion2">Case Study 4: Neobanks</button>
+              <div class="panel">
+                  <h3>USDX</h3>
+                    <section id="investors-benefits">
+                        <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width: 469px" class="tg"><colgroup><col style="width: 170px"><col style="width: 300px"></colgroup>
+                        <thead><tr><th style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Cash Management</th><th style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Earn low-risk yield on your cash with the benefits of instant, 24/7 minting and redeeming.</th></tr></thead>
+                        <tbody><tr><td style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Borrowing &amp; Lending</td><td style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Keep earning yield when you pledge USDX as collateral for borrowing.</td></tr>
+                        <tr><td style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Bilateral Settlement</td><td style="border-color:inherit;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Instantly settle transactions while continuously earning yield.</td></tr></tbody></table>
+                    </section>
+                  <ul>
+                      <li>XFT tokens offer enhanced investor protection and lower risk compared to existing stablecoins.</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 5: US National Deficit</button>
+              <div class="panel">
+                  <h3>Problem</h3>
+                  <ul>
+                      <li>The U.S. national debt grows due to high borrowing costs and inefficient demand for Treasuries, limiting the government's ability to manage debt sustainably.</li>
+                  </ul>
+                  <h3>Solution</h3>
+                  <ul>
+                      <li>XFT's tokenized money market fund "USDX" channels massive cash inflows into U.S. Treasuries, increasing demand, lowering yields, and reducing borrowing costs, helping manage the national debt.</li>
+                  </ul>
+                  <ul>
+                    <li>1. <strong>Neobanks funnel</strong> deposits into the tokenized fund.</li>
+                    <li>2. <strong>Fund purchases</strong> U.S. Treasuries with those inflows.</li>
+                    <li>3. <strong>Increased demand</strong> lowers Treasury yields.</li>
+                    <li>4. <strong>U.S. government borrows</strong> at lower interest rates.</li>
+                    <li>5. <strong>Reduced borrowing costs</strong> help slow national debt growth.</li>
+                  </ul>
+                  <ul>
+                      <li><a href="https://home.treasury.gov/system/files/221/TBACCharge2Q42023.pdf" target="_blank">Source</a></li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 6: Money Market Funds</button>
+              <div class="panel">
+                  <h3>Problem</h3>
+                  <ul>
+                      <li>1. Idle non-yielding cash balances</li>
+                      <li>2. Collateral immobility</li>
+                      <li>3. Money market fund outflows during market stress</li>
+                      <li>4. Low demand for US treasuries</li>
+                  </ul>
+                    <ul>
+                      <li><strong>Traditional MMF</strong>: Investor sells MMF shares to get cash for margin call, causing fund outflows.</li>
+                    </ul>
+                  <h3>Solution</h3>
+                  <ul>
+                      <li>1. Tokenized US treasuries fund "USDX"</li>
+                      <li>2. Rebasing token for yield distribution</li>
+                      <li>3. Neobank cash inflows -> treasuries</li>
+                  </ul>
+                  <ul>
+                    <li><strong>Tokenized MMF</strong>: Investor uses MMF tokens directly as collateral, avoiding sale and fund outflows.</li>
+                  </ul>
+                  <ul>
+                      <li><a href="https://home.treasury.gov/system/files/221/TBACCharge2Q42023.pdf" target="_blank">Source</a></li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 7: Closed-End Funds</button>
+              <div class="panel">
+                  <ul>
+                      <li>"Competing products such as <strong>closed-end mutual funds </strong>or unit investment trusts (UITs) don’t enjoy this luxury. Not having anyone behind them to create or redeem shares and manage the market price results in them imposing higher charges and regularly trading at notable premiums or discounts to their NAVs."</li>
+                  </ul>
+                  <div id="matrix">
+                        <table class="tg center" style="undefined;table-layout: fixed; width: 654px"><colgroup>
+                        <col style="width: 100.111111px">
+                        <col style="width: 277.111111px">
+                        <col style="width: 277.111111px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="tg-5ur8">Customer</th>
+                            <th class="tg-5ur8">Problem</th>
+                            <th class="tg-5ur8">Solution</th>
+                          </tr></thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-j5n6">CEF</td>
+                            <td class="tg-j5n6">Fixed share count trades at volatile premiums/discounts to NAV</td>
+                            <td class="tg-j5n6">Second layer of liquidity</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-j5n6">Neobanks</td>
+                            <td class="tg-j5n6">Limited retail access to alternatives</td>
+                            <td class="tg-j5n6">Tokenize assets and quote at NAV on platforms</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-j5n6">CEF</td>
+                            <td class="tg-j5n6">Sparse NAV exit opportunities + liquidity for underlying assets</td>
+                            <td class="tg-j5n6">Orderbook for alternative assets</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-j5n6">Blockchain</td>
+                            <td class="tg-j5n6">Global regulatory and adoption variance</td>
+                            <td class="tg-j5n6">Geoledgers, token wrapping, regulatory oracle</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                  <ul>
+                      <li><a href="https://www.investopedia.com/terms/r/redemption-mechanism.asp#:~:text=Competing%20products%20such,to%20their%20NAVs." target="_blank">Source</a></li>
+                  </ul>
+                  <ul>
+                      <li>1. create tokens!</li>
+                  </ul>
+              </div>
+
+
+            <button class="accordion2">Case Study 8: Apple Inc.</button>
+              <div class="panel">
+                  <h3>Corporate Treasury—Apple Inc.</h3>
+                  <ul>
+                      <li><strong>Use case:</strong> Apple holds large cash reserves. By allocating a portion to USDX, Apple can manage short-term cash with instant liquidity while earning yield on U.S. Treasuries.</li>
+                  </ul>
+                    <ul>
+                        <li><strong>Process:</strong> Apple mints USDX using excess + idle cash, earning daily yield. If funds are needed, they can instantly redeem for USD + USDC or use USDX as collateral directly for operational expenses or investments.</li>
+                    </ul>
+              </div>
+
+            <button class="accordion2">Case Study 9: Robinhood & USDX</button>
+              <div class="panel">
+                   <ul>
+                        <li><strong>Use case:</strong> Offering yield-generating option as collateral on user cash balances</li>
+                    </ul>
+                  <h3>Process</h3>
+                      <ul>
+                          <li>1. Robinhood integrates USDX as a cash management solution</li>
+                          <li class="no-bullets">2. Users can:
+                              <ul class="no-bullets" style="padding-left: 10px;">
+                                  <li>a) Opt to allocate idle cash to USDX within the app</li>
+                                  <li>b) Directly purchase USDX as an investment in US government securities</li>
+                              </ul>
+                          </li>
+                          <li>3. Daily yield accrues, visible to users in real-time</li>
+                          <li>4. Instant liquidity allows users to trade, withdraw or use USDX as collateral anytime</li>
+                          <li>5. Robinhood earns revenue share on yield generated</li>
+                      </ul>
+                  <ul>
+                      <li><strong>Benefit:</strong> Robinhood increases user engagement and retention by embedding a low-risk, yield-bearing cash management feature and expanding their investment universe.</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 10: State Street Global Advisors</button>
+              <div class="panel">
+                   <ul>
+                        <li><strong>Use case:</strong> Enhancing cash management for institutional clients</li>
+                    </ul>
+                  <h3>Process</h3>
+                    <ul>
+                        <li>1. State Street allocates $1B client cash to USDX</li>
+                        <li>2. Daily yield accrual improves returns</li>
+                        <li>3. 24/7 liquidity and collateral use enables frictionless reallocation</li>
+                        <li>4. Low minimum enables broader client access</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Benefit:</strong> State Street offers improved cash management solutions, increasing client satisfaction and AUM.</li>
+                    </ul>
+              </div>
+
+            <button class="accordion2">Case Study 11: USDX for International Remittances</button>
+              <div class="panel">
+                  <h3>Problem</h3>
+                   <ul>
+                        <li>Western Union faces high costs and slow processing times for international money transfers due to traditional banking intermediaries and currency exchange processes.</li>
+                    </ul>
+                  <h3>Solution</h3>
+                  <ul>
+                      <li>Western Union integrates USDX to streamline cross-border remittances.</li>
+                  </ul>
+                  <h3>Process</h3>
+                    <ul>
+                        <li>1. Sender in US deposits USD at Western Union.</li>
+                        <li>2. Western Union mints equivalent USDX via POST /api/usdx/mint.</li>
+                        <li>3. USDX transferred to recipient's country Western Union branch instantly.</li>
+                        <li>4. Local branch redeems USDX for local currency via POST /api/usdx/burn.</li>
+                        <li>5. Recipient collects local currency.</li>
+                    </ul>
+                    <h3>Benefits</h3>
+                      <ul>
+                          <li>1. Near-instant transfers (minutes vs. days)</li>
+                          <li>2. FX fee reduction by 20 to 30 bps</li>
+                          <li>3. 24/7 availability</li>
+                          <li>4. Continuous yield accrual during transfer process</li>
+                          <li>5. Reduced forex risk exposure.</li>
+                      </ul>
+                  <h3>Result</h3>
+                    <ul>
+                        <li>Western Union reduces operational costs by 30% and increases transfer speed by 95%, leading to improved customer satisfaction and market competitiveness in the remittance industry.</li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="https://usa.visa.com/content/dam/VCOM/regional/na/us/Solutions/documents/visa-crypto.com-usdc-case-study.pdf" target="_blank">Source</a></li>
+                    </ul>
+              </div>
+
+
+            <button class="accordion2">Case Study 12: USDC & SVB Collapse</button>
+              <div class="panel">
+                  <ul>
+                      <li>Depegging</li>
+                  </ul>
+                  <ul>
+                      <li><a href="https://www.spglobal.com/content/dam/spglobal/corporate/en/images/general/special-editorial/stablecoinsadeepdiveintovaluationanddepegging.pdf" target="_blank">Source</a></li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Case Study 13: Ecommerce</button>
+              <div class="panel">
+                  <ul>
+                      <li><strong>Use case:</strong> Payments + cash management</li>
+                  </ul>
+                  <h3>Process</h3>
+                    <ul>
+                        <li>Styl integrates USDX for payments on their platform</li>
+                        <li class="no-bullets">Users can:
+                            <ul class="no-bullets" style="padding-left: 10px;">
+                                <li>a) Load USD or USDC to their Styl account</li>
+                                <li>b) Funds are automatically converted to USDX</li>
+                                <li>c) Use USDX balance for purchases on Styl</li>
+                            </ul>
+                        </li>
+                        <li>Styl holds user USDX balances, earning yield</li>
+                        <li>Styl holds user USDX balances, earning yield</li>
+                        <li>Styl retains a portion of the yield as revenue</li>
+                    </ul>
+                  <ul>
+                    <li><strong>Benefits:</strong> Seamless cash onboarding, yield generation on user balanaces, new revenue stream + rewards program, reduced transaction fees (20-30 bps for international payments).</li>
+                  </ul>
+                    <ul>
+                        <li><a href="https://usa.visa.com/content/dam/VCOM/regional/na/us/Solutions/documents/visa-crypto.com-usdc-case-study.pdf" target="_blank">Source</a></li>
+                    </ul>
+              </div>
+
+            
+
+            
+            <button class="accordion2">Key Clients</button>
+              <div class="panel">
+                    <ul>
+                       <li>Traditional institutions benefit from 24/7 instant minting/redemption, daily low-risk yield generation, and low minumums with USDX.</li> 
+                    </ul>
+                  <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width: 720px" class="tg"><colgroup><col style="width: 169.090909px"><col style="width: 189.090909px"><col style="width: 362.090909px"></colgroup>
+                  <thead><tr><th style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Client Type</th><th style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Examples</th><th style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Use Case</th></tr></thead>
+                  <tbody><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Corporate Treasuries</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Apple, Microsoft</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Short-term cash management with instant liquidity</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Insurance Companies</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">AIG, Prudential</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Managing float and reserves with low-risk, yield-bearing assets</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Pension Funds</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">CalPERS</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Diversifying portfolio with stable, tokenized government securities</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Multinational Corporations</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Coca-Cola, Procter &amp; Gamble</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Cross-border settlements and treasury operations</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">University Endowments</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Harvard, DUMAC</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:inherit;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:middle;word-break:normal">Allocating portion of funds to digital assets for yield and innovation</td></tr></tbody></table>
+
+                    <ul>
+                        <li>1. USDX is a tokenized US Treasuries fund</li>
+                        <li>2. NAV token is a second layer of liquidity for closed-end funds</li>
+                    </ul>
+
+                  
+                  <table style="border-collapse:collapse;border-spacing:0;table-layout: fixed; width: 603px" class="tg"><colgroup><col style="width: 106.66667px"><col style="width: 173.66667px"><col style="width: 322.66667px"></colgroup>
+                  <thead><tr><th style="background-color:#efefef;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Product</th><th style="background-color:#efefef;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Client</th><th style="background-color:#efefef;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Use Case</th></tr></thead>
+                  <tbody><tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal" rowspan="2">USDX</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Franklin Templeton</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">FOBXX inflows</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Visa</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Cash management, yield-bearing collateral</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal" rowspan="2">NAV Token</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Franklin Templeton</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Closed-end fund discount reduction</td></tr>
+                  <tr><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Goldman Sachs</td><td style="border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Arbitrage</td></tr></tbody></table>
+                  
+                  <ul>
+                      <li>Visa -> USDX -> FOBXX</li>
+                  </ul>
+
+
+
+
+              </div>
+      
+        </section>
+
+        <section id="case-studies-2">
+            <h2>Exchanges</h2>
+            <p>Offer USDX to your customers and unlock the potential of the most liquid, accessible digital dollar on the market. Plus, exchanges who integrate USDX not only support the utility and infrastructure of our digital dollar, they also share in its growth.</p>
+            <h2>Payments</h2>
+            <p>By using USDX, you can gain access to valuable liquidity and add alpha to your business. Near-instant cross-border payments </p>
+            <h2>Asset Managers</h2>
+            <p>Reduce liquidty and counterparty risk when you allocate USDX into your portfolio.</p>
+        
+        </section>
+    </main>
+
+    
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ledger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <nav>
+           <div class="nav-left">
+              <div class="logo">
+                  <a href="index.html">
+                      <img src="assets/logo.png" alt="XFT logo">
+                  </a>
+              </div>
+              <div class="nav-items">
+                  <ul>
+                      <li class="dropdown" id="company">
+                          <a href="https://xproducts.replit.app/">Company</a>
+                          <ul class="dropdown-content">
+                              <li><a href="index.html">About</a></li>
+                              <li><a href="https://x-financial-technologies.replit.app/team.html">Team</a></li>
+
+                              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfz6iy8AxjnxgMQNiesB9uqyxRi2hqWyqOipLKicF-8P83ziQ/viewform">Careers</a></li>
+                              <li><a href="https://xft-docs.replit.app/">XFT Docs</a></li>
+                              <li><a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Investor Relations</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown" id="products">
+                          <a href="products.html">Products</a>
+                          <ul class="dropdown-content">
+                              <li><a href="payments.html">Payments</a></li>
+
+                              <li><a href="https://xft-prediction-docs.vercel.app/">Alts CLOB</a></li>
+                              <li><a href="indexing.html">Indexing</a></li>
+                              <li><a href="https://x-ledger.replit.app/">RegTech</a></li>
+
+                              <li><a href="https://x-ledger.replit.app/">Fund Launchpad</a></li>
+
+                              <li><a href="https://x-ledger.replit.app/">API Reference</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown" id="funds">
+                            <a href="https://x-ledger.replit.app/api/xft/funds">Funds</a>
+                            <ul class="dropdown-content">
+                                <li><a href="usdx.html">USDX</a></li>
+                                <li><a href="xcvt.html">XCVT</a></li>
+                            </ul>
+                        </li>
+                      <li class="dropdown" id="resources">
+                          <a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Resources</a>
+                          <ul class="dropdown-content">
+                              <li><a href="faqs.html">FAQs</a></li>
+                              <li><a href="demos.html">Demos</a></li>
+                              <li><a href="https://x-ledger.replit.app/api/cef">Listings</a></li>
+                              <li><a href="systems.html">System Designs</a></li>
+                              <li><a href="research.html">Research</a></li>
+                              <li><a href="case-studies.html">Case Studies</a></li>
+                              <li><a href="mailto:alex@alexandros-securities.com">Contact</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+           </div>
+            <div class="get-started">
+            <a href="admin.html">Login</a>
+          </div>
+        </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <section id="docs-nav">
+        <p><a href="index.html">&lt;&lt;&lt;&lt;&lt;&lt; back to main</a></p>
+    </section>
+  <form id="login-form">
+    <h2>Login</h2>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button type="submit" class="admin-btn">Login</button>
+  </form>
+
+  <div id="admin-panel" style="display:none;">
+    <h2>Add New Post</h2>
+    <ul></ul>
+    <p style="font-size: small;">&lt;strong&gt;bold text&lt;/strong&gt; • &lt;i&gt;italicized text&lt;/i&gt;</p>
+    <form id="new-post-form">
+      <input type="text" id="title" placeholder="Title" required><br><br>
+      <textarea id="content" placeholder="Content" required></textarea><br><br>
+      <button type="submit" class="admin-btn">Add Post</button>
+    </form>
+  </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFT - Payments Gateway</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <nav>
+               <div class="nav-left">
+                  <div class="logo">
+                      <a href="index.html">
+                          <img src="assets/logo.png" alt="XFT Logo">
+                      </a>
+                  </div>
+                  <div class="nav-items">
+                      <ul>
+                          <li class="dropdown" id="company">
+                              <a href="https://xproducts.replit.app/">Company</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="index.html">About</a></li>
+                                  <li><a href="https://x-financial-technologies.replit.app/team.html">Team</a></li>
+
+                                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfz6iy8AxjnxgMQNiesB9uqyxRi2hqWyqOipLKicF-8P83ziQ/viewform">Careers</a></li>
+                                  <li><a href="https://xft-docs.replit.app/">XFT Docs</a></li>
+                                  <li><a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Investor Relations</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown" id="products">
+                              <a href="products.html">Products</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="payments.html">Payments</a></li>
+
+                                  <li><a href="https://xft-prediction-docs.vercel.app/">Alts CLOB</a></li>
+                                  <li><a href="indexing.html">Indexing</a></li>
+                                  <li><a href="https://x-ledger.replit.app/">RegTech</a></li>
+
+                                  <li><a href="https://xft-trading-system.onrender.com/">Fund Launchpad</a></li>
+
+                                  <li><a href="https://x-ledger.replit.app/">API Reference</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown" id="funds">
+                                <a href="https://x-ledger.replit.app/api/xft/funds">Funds</a>
+                                <ul class="dropdown-content">
+                                    <li><a href="usdx.html">USDX</a></li>
+                                    <li><a href="xcvt.html">XCVT</a></li>
+                                </ul>
+                            </li>
+                          <li class="dropdown" id="resources">
+                              <a href="https://www.linkedin.com/in/alexander-r-57b60416a/">Resources</a>
+                              <ul class="dropdown-content">
+                                  <li><a href="faqs.html">FAQs</a></li>
+                                  <li><a href="terminal.html">Terminal</a></li>
+                                  <li><a href="https://x-ledger.replit.app/api/cef">Listings</a></li>
+                                  <li><a href="systems.html">System Designs</a></li>
+                                  <li><a href="research.html">Research</a></li>
+                                  <li><a href="case-studies.html">Case Studies</a></li>
+                                  <li><a href="mailto:alex@alexandros-securities.com">Contact</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+               </div>
+                <div class="get-started">
+                <a href="https://forms.gle/DN21tcCnGAab7Qfa6">Get Started</a>
+              </div>
+            </nav>
+      </header>
+
+
+    <main class="content-wrapper">
+
+
+        <section id="intro">
+            <h2>XFT Payments Gateway</h2>
+        </section>
+
+
+        <section id="usdx-payment-api-work">
+            <button class="accordion2">USDX Flows</button>
+              <div class="panel">
+                  <h3>Payments</h3>
+                  <ul>
+                        <li>1. End User initiates ACH deposit from bank account to their account at Company.</li>
+                        <li>2. End User authenticates bank account using Plaid.</li>
+                        <li>3. XFT API sends the deposit details to XFT’s bank.</li>
+                        <li>4. XFT’s bank pulls the USD from the End User’s bank into the XFT reserve account.</li>
+                        <li>5. XFT creates new USDX and deposits into the Company’s XFT Account.</li>
+                  </ul>
+                    <h3>Payouts</h3>
+                    <ul>
+                          <li>1. End User initiates withdrawal of their balance with Company to their bank.</li>
+                          <li>2. End User authenticates their bank account using Plaid.</li>
+                          <li>3. Withdrawal details passed to XFT, who removes USDX from Company’s XFT Account.</li>
+                          <li>4. XFT API sends withdrawal details to XFT’s bank.</li>
+                          <li>5. XFT’s bank transfers USD funds to End User’s bank.</li>
+                    </ul>
+                  <h3>Distributions</h3>
+
+              </div>
+
+        </section>
+
+
+        
+
+        <section id="payment-api-work">
+            <button class="accordion2">Crypto Ramps</button>
+              <div class="panel">
+                  <ul>
+                        <li><code>POST /v1/crypto/onramp_sessions</code></li>
+                        <li><code>GET /v1/crypto/onramp_sessions/:id</code></li>
+                        <li><code>GET /v1/crypto/onramp_sessions</code></li>
+                        <li><code>GET /v1/crypto/onramp/quotes</code></li>
+                  </ul>
+                  
+              </div>
+            
+        </section>
+
+        
+        <section id="payment-flows">
+
+
+            <button class="accordion2">Card Transactions</button>
+              <div class="panel">
+                  <ul>
+                    <li><strong>1. Presentment</strong> — a cardholder presents a card for payment</li>
+                    <li><strong>2. Authorization</strong> — the merchant acquirer sends a message across the network to the issuer processor to make sure there are enough funds to complete the transaction</li>
+                    <li><strong>3. Clearance</strong> — once authorized, the transaction is completed and information about the transaction is shared over the network between the merchant acquirer and the issuer processor</li>
+                    <li><strong>4. Settlement</strong> — at the end of the day, money is moved across the network from issuer to merchant</li>
+                  </ul>
+                  <h3>Example</h3>
+                  <ul>
+                    <li>1. A cardholder spends $100 at a restaurant where there is a 2.5% interchange rate</li>
+                    <li>2. The merchant (restaurant) receives $97.50 which equals $100 less the $2.50 in interchange it owes the issuer; the merchant also pays a fee to its merchant acquirer and the network for processing the transaction</li>
+                    <li>3. The issuer receives $2.50, recognized as interchange revenue; the issuer pays a fee to its issuer processor and the network for processing the transaction</li>
+                    <li>4. The merchant acquirer receives a fee from the merchant for processing the transaction</li>
+                    <li>5. The issuer processor receives a fee from the issuer for processing the transaction</li>
+                    <li>6. The network receives a small fee from both the merchant and issuer for processing the transaction</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">How funds flow from customer to your company</button>
+              <div class="panel">
+                  <ul>
+                      <li><strong>Step 1: </strong>Your Customer Pays</li>
+                      <li>Your customer has just made a purchase on your site using credit or debit. Hooray! The transaction begins its journey through your payment gateway.</li>
+                  </ul>
+                    <ul>
+                        <li><strong>Step 2: </strong>Encryption</li>
+                        <li>When your customer's personal information and payment transaction data goes through the payment gateway, it's encoded to ensure secure transmission across the Internet.</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Step 3: </strong>Authentication</li>
+                        <li>The payment processor validates (aka "authenticates") that the payment data is being sent by its claimed source, as a way to curb fraud.</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Step 4: </strong>Authorization</li>
+                        <li>The payment processor requests the issuing bank to authorize a specific amount of funds from your customer's credit or debit card. The issuer checks to make sure the customer has enough credit to make the purchase and sends back an approval or decline. This entire process typically takes only a few seconds.</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Step 5: </strong>Settlement</li>
+                        <li>Settlement occurs when the card issuer sends the appropriate funds to your acquiring bank, which then deposits them into your merchant account. This can take a few days to complete.</li>
+                    </ul>
+                  <ul>
+                      <li><strong>Step 6: </strong>You're Paid</li>
+                      <li>The funds are now accessible in your merchant account. But you may notice that some of the funds are not available, as most payment processors hold back a reserve temporarily to ensure you can take care of any liabilities, such as chargebacks or reversals.</li>
+                  </ul>
+                  <h3>Involved Parties</h3>
+                  <ul>
+                      <li>1. Merchant Acquirers (or Merchant Services Providers)</li>
+                      <li>2. Payment Processors</li>
+                      <li>3. Payment Gateways</li>
+                  </ul>
+              </div>
+
+            <button class="accordion2">Pay-in and pay-out</button>
+              <div class="panel">
+                  <h3>Simplified pay-in and pay-out flow</h3>
+                  <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F97b1d6c8-641f-4539-af55-8a11d54f0493_1600x545.png" alt="XFT pay-in and pay-out flow simple" class="image">
+                  <h3>Pay-In (Submit Funds)</h3>
+                  <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F417a58dc-bc13-46a1-964c-0dd0da2e310d_1600x889.png" alt="XFT pay-in flow" class="image">
+                  <br>
+              </div>
+            
+            <button class="accordion2">Key Terms</button>
+              <div class="panel">
+                  <ul>
+                      <li><strong>Payments gateway: </strong>software that links your site’s shopping cart to the processing network.</li>
+                      <li><strong>Payments processor: </strong> software responsible for moving the transaction through the processing network, sending you a billing statement, working with your bank, etc</li>
+                  </ul>
+              </div>
+            
+
+        </section>
+
+
+        <section id="payments-general">
+            <button class="accordion2">Notes</button>
+              <div class="panel">
+                    <ul>
+                        <li><a href="https://www.mastercard.us/content/dam/public/mastercardcom/na/global-site/documents/transaction-processing-rules.pdf">Transaction Processing Rules</a> - Mastercard</li>
+                        <li><a href="https://usa.visa.com/content/dam/VCOM/download/about-visa/visa-rules-public.pdf">Transaction Processing Rules</a> - Visa</li>
+                      <li><a href="https://www.aldridgewealthmanagementgroup.com/mediahandler/media/492591/guide_investing_payment_processors_103122%20_1_.pdf">Payment Processing</a></li>
+                        <li><a href="https://www.paypalobjects.com/marketing/brc/us/ultimate-payment-processor-guide-2023/paypal-enterprise-payments-ebook.pdf">Paypal Enterprise Payments Ebook</a></li>
+                      <li><a href="https://d1.awsstatic.com/solutions/guidance/architecture-diagrams/payment-connectivity-gateway-orchestration-and-routing-on-aws.pdf">Payment Connectivity, Gateway, Orchestration, and Routing</a></li>
+                      <li><a href="https://www.oracle.com/webfolder/technetwork/docs/fin-pci-compliance/Credit_Card_Gateway_Integration_Technical_Specifications.pdf">Payment Gateway Integration and Credit Card Processing</a></li>
+                      <li><a href="https://edgepay.io/sites/default/files/2019-11/EdgePay%20Technical%20Specification%20Version%201.17_1.pdf">EdgePay</a></li>
+                      <li><a href="https://merchants.worldpay.us/docs/">WorldPay</a></li>
+                      <li><a href="https://newsletter.pragmaticengineer.com/p/designing-a-payment-system">Designing a payments system</a></li>
+                      <li><a href="https://go.plaid.com/rs/495-WRE-561/images/Plaid_ACH_Whitepaper.pdf?utm_source=LinkedIn&utm_medium=paid&utm_campaign=Linkedin_US_LeadGen_Retargeting_Static&utm_creative=Linkedin_US_LeadGen_Retargeting_Static_ACH">Plaid ACH Whitepaper</a></li>
+                        <li><a href="https://skyrocketgroup.com/wp-content/uploads/2019/11/SPS_Payment-Processing-Industry-Basics_final.pdf">Credit card processing flows</a></li>
+                        <li><a href="http://euro.ecom.cmu.edu/resources/elibrary/epay/Payments-101.pdf">Payments 101</a></li>
+                        <li><a href="https://stripe.com/blog/payment-api-design">Stripe payments API design</a></li>
+                        <li><a href="https://stripe.com/files/payments/guide/Payment-methods-guide.pdf">Stripe payments methods</a></li>
+                        <li>XFT API <a href="https://xft-api.netlify.app/">repo 1</a> + <a href="https://tokenized-mmf-api.netlify.app/">repo 2</a></li>
+                    </ul>
+
+                <h3>Payments Research</h3>
+                  <ul>
+                      <li><a href="https://885542.fs1.hubspotusercontent-na1.net/hubfs/885542/Marketing%20Assets/B2B%20Payments%20The%20Last%20Major%20Bastion%20of%20Paper-based%20Payments%20and%20Processes/FT%20Partners%20Research%20-%20B2B%20Payments.pdf">FT Partners B2B Payments</a></li>
+                      <li><a href="https://www.jpmorgan.com/content/dam/jpm/treasury-services/documents/jpm-payments-are-eating-the-world.pdf">JPM Payments are eating the world</a></li>
+                      <li><a href="https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/iso-20022/learning-guide-module8-swift-transaction-manager.pdf">BNY SWIFT</a></li>
+                      <li><a href="https://www.bis.org/cpmi/paysys/unitedstatescomp.pdf">US Payment Systems</a></li>
+                      <li><a href="http://cdn.hl.com/pdf/2024/payments-market-update--april-2024.pdf">Houlihan Lokey</a> - Market Size</li>
+                      <li><a href="https://s203.q4cdn.com/711684571/files/doc_presentations/2016/9/08_Payment-Services.pdf">US Bank</a></li>
+                      <li><a href="https://addicusadvisors.com/media/vfco1b1u/payment-processing-trends-in-ma.pdf">Trends</a></li>
+                      <li><a href="https://www.mckinsey.com/~/media/mckinsey/industries/financial%20services/our%20insights/the%202022%20mckinsey%20global%20payments%20report/the-2022-mckinsey-global-payments-report.pdf">McKinsey Global Payments Report</a></li>
+                  </ul>
+                <h3>Banks & Crypto</h3>
+                  <ul>
+                      <li><a href="https://developer.barclays.com/">Barclays</a></li>
+                      <li><a href="https://www.circle.com/hubfs/marketing/pdfs/why-circle-plaid.pdf">Why Circle and Plaid</a></li>
+                  </ul>
+
+                  
+              </div>
+        </section>
+        
+
+
+
+
+        
+
+
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

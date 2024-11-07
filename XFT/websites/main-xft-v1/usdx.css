@@ -1,0 +1,975 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+body {
+  font-family: 'Inter', sans-serif;
+} 
+
+
+
+.content-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+}
+.content-wrapper2 {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.image {
+    width: 35%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+.xp-image {
+    width: 90%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+
+.image3 {
+    width: 75%; /* Sets the width of the images to 100% of their container */
+    height: auto; /* Maintains the aspect ratio of the images */
+    padding: 10px; /* Adds space around the images */
+    display: block; /* Makes each image block level to ensure it takes its own line */
+    margin: 0; /* Centers the images within their container */
+}
+
+
+
+
+header {
+  background-color: #fff;
+  padding: 5px;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* space-between moves to right, flex-start left aligns */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center; /* Centers the items in the nav bar */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible; /* Dropdown change from hidden */
+}
+
+nav ul li {
+  float: left;
+  position: relative; /* Necessary for dropdown positioning */
+}
+
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;  /* Button Spacing */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px; /* Adjust font size here */
+}
+
+/* Get started button formatting when in nav bar list */
+nav ul li.get-started {
+  margin-left: 10px; /* Add margin to the right of the "Get Started" button */
+}
+
+
+.logo {
+  margin-right: 20px;
+}
+.logo img {
+  max-width: 60px; /* this controls the height */
+  height: auto;
+}
+
+nav ul li.get-started a {
+  background-color: #000066;
+  color: #fff;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li.get-started a:hover {
+  background-color: #000080;
+}
+
+
+/* New Get Started button structure */
+.get-started a {
+  background-color: #000066;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Adjust font size here */
+}
+
+.get-started {
+  margin-left: auto;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 175px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 0.5px solid #f0f0f0;
+
+}
+
+.dropdown-content li {
+  float: none; /* Remove float to align items vertically */
+  list-style-type: none; /* Add this to remove bullets */
+}
+
+.dropdown-content li a {
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  color: #000;
+  font-weight: 400;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+  margin-top: 40px;
+  color: #000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Adds space between about and link flex items */
+}
+
+/* controls links section */
+.about-company {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+
+/* controls links section */
+.footer-links {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 33%;
+  padding: 10px;
+}
+
+.footer-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-title.large-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.footer-title {
+  font-size: 1.0em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-company,
+  .footer-links {
+      flex-basis: 100%;
+      text-align: center;
+  }
+
+  .footer-column {
+      flex-basis: 100%;
+      text-align: center;
+  }
+
+  .footer-section {
+      text-align: center;
+  }
+
+  #debt {
+    transform: scale(0.3);  /* Adjust scale as needed */
+  }
+}
+
+
+/* new footer styling */
+.footer-inline-link a {
+  display: inline;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-inline-link a:hover {
+  text-decoration: underline;
+}
+
+
+.solutions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items at the top */
+}
+
+.solutions-list, .solutions-image {
+  flex: 1; /* Each child takes up equal space */
+  padding: 10px; /* Adds some spacing around each section */
+}
+
+.solutions-image img {
+  width: 100%; /* Ensures the image uses the full width of its container */
+  max-width: 700px; /* Optionally limit the size of the image */
+}
+
+
+
+/* Add styles for accordion functionality */
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+}
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.6s ease-out;
+}
+
+.accordion2 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.6s ease-out;
+}
+.accordion2:hover,
+.accordion2.active {
+    background-color: #ccc;
+}
+
+
+
+.accordion:hover,
+.accordion.active {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.panel.show {
+    display: block;
+}
+
+
+.panel ul, .panel h3 {
+    font-size: 12px; /* Smaller font size for content inside panel */
+}
+
+
+/* No bullets list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.no-bullets li {
+  list-style-type: none;
+}
+
+
+ul ul {
+  margin-left: 20px;
+}
+
+ul ul li {
+  list-style-type: disc;
+}
+
+
+/* subnav styling*/
+#memo-nav a {
+  color: black;
+}
+
+#budget-nav a {
+  color: black;
+}
+
+#demo-nav a {
+  color: black;
+
+}
+
+
+
+
+
+
+/* REFERENCES */
+/* new styling  */
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+/* references on page */
+
+#references {
+  font-size: 0.8em;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-top: 20px;
+  line-height: 1.0;
+}
+
+#references ul {
+  column-count: 2;
+  column-gap: 15px;
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: ref-counter;
+}
+
+#references li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  break-inside: avoid-column; /* Prevents splitting across columns */
+}
+
+#references li::before {
+  counter-increment: ref-counter;
+  content: "[" counter(ref-counter) "]";
+  position: absolute;
+  left: 0;
+  font-size: 0.8em;
+}
+
+#references a {
+  display: inline-block;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+sup.reference {
+  font-size: 60%; /* Adjust this value as needed */
+  vertical-align: super;
+}
+
+/* references in button */
+#references2 {
+  font-size: 0.8em;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  line-height: 1.0;
+}
+
+#references2 ul {
+  column-count: 2;
+  column-gap: 15px;
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: ref-counter;
+}
+
+#references2 li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  break-inside: avoid-column; /* Prevents splitting across columns */
+}
+
+#references2 li::before {
+  counter-increment: ref-counter;
+  content: "[" counter(ref-counter) "]";
+  position: absolute;
+  left: 0;
+  font-size: 0.8em;
+}
+
+#references2 a {
+  display: inline-block;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+
+/* Flow styling */
+
+.flow-container {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.flow-image {
+  flex: 1;
+  text-align: center;
+}
+
+.flow-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flow-description {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.flow-description h2 {
+  margin-top: 0;
+}
+
+.flow-description ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Flow2 styling */
+
+.flow2-container {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.flow2-image {
+  flex: 2; /* Increase image column width */
+  text-align: center;
+}
+
+.flow2-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flow2-description {
+  flex: 1; /* Decrease description column width */
+  padding: 0 20px;
+}
+
+.flow2-description h2 {
+  margin-top: 0;
+}
+
+.flow2-description ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+
+/* Flow3 styling */
+
+.flow3-container {
+  display: flex;
+  margin: 0px 0;
+  width: 100%;
+}
+
+.flow3-image {
+  flex: 1; /* decrease image column width */
+  text-align: left;
+}
+
+.flow3-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flow3-description {
+  flex: 2; /* increase description column width */
+  padding: 0 0px;
+}
+
+.flow3-description h2 {
+  margin-top: 0;
+}
+
+.flow3-description ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Split Columns */
+
+/* COLUMNS IN MIDDLE OF PAGE */
+.two-column-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adds space between the two columns */
+}
+
+.column {
+  flex: 1; /* Each column takes up equal space */
+  padding: 0px; /* Adds padding inside each column */
+}
+
+/* 2/3 and 1/3 Column Layout */
+.split-container {
+  display: flex;
+  margin: 20px 0; /* Adds vertical space around container */
+}
+
+.two-thirds {
+  flex: 2; /* Takes up 2/3 of the container */
+  padding: 10px; /* Optional: Adds padding inside column */
+}
+
+.one-third {
+  flex: 1; /* Takes up 1/3 of container */
+  padding: 10px; /* Optional: Adds padding insidecolumn */
+}
+
+
+/* Value cells formatting  */
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px; /* Add this line. Adjust the value as needed */
+  margin: 0 auto; /* Center container */
+}
+
+/* Cell formats */
+.value-item {
+  flex: 1 1 30%; /* Allow the items to wrap while taking 30% of the container's width */
+  min-width: 150px;
+  max-width: 250px; /* Limit the maximum width for better distribution */
+  text-align: center;
+  padding: 10px;
+}
+.value-item strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.value-item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+/* terminal container */
+div.terminal-container { 
+    margin: 20px 0; /* This adds 20px margin to top and bottom */
+}
+
+/* bullets on problem page */
+#problem-page ul {
+    list-style-type: disc; /* Restores the bullets */
+    padding-left: 20px; /* Indents to make space for the bullets */
+}
+
+
+
+/* Output container for arbitrage demo */
+#output1 {
+  width: 42.3%;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+#output1 .title {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #000;
+}
+
+#output1 .info {
+  font-style: italic;
+}
+
+#output1 .step {
+  color: #363636;
+  margin-left: 20px;
+}
+
+#output1 .profit {
+  color: black;
+}
+
+#output1 .profit-value {
+  font-weight: bold;
+  color: #1e5e2b;  /* A darker green */
+}
+
+#output1 .complete {
+  color: #ff3860;
+  font-weight: bold;
+}
+
+#output1 .error {
+  color: #ff3860;
+}
+
+/* key terms box */
+.key-terms {
+  margin: 0 auto;  /* Centers the div horizontally */
+  padding-top: 200px;
+  padding-bottom: 20px;
+    max-width: 1000px; /* Optional: Restricts the width of the div */
+}
+
+.key-terms ul {
+    list-style-type: disc; /* Adds bullets to the list */
+    list-style-position: outside; /* Keeps the bullets within the padding area */
+    padding-left: 20px; /* Adds padding to align list items better */
+}
+
+
+/* Orderbook demo */
+.orderbook-container {
+  width: 600px;
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: #fff;
+}
+.orderbook-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.orderbook-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.orderbook-table th, .orderbook-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.buy-orders {
+  background-color: #e6f3ff;
+}
+.sell-orders {
+  background-color: #ffe6e6;
+}
+.match-output {
+  margin-top: 20px;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.button-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+
+
+/* NYSE clock */
+#live-feed {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+  padding: 5px;
+  width: auto; /* Width adjusts to fit the text content */
+}
+
+#clock {
+  font-size: 12px;
+}
+
+/*NYSE Clock in NAV part 2 */
+#demo2-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  color: black;
+}
+
+#demo-nav2 a {
+  color: black;
+
+}
+
+
+
+.right-links {
+  margin: 0;
+  font-size: 10px;
+}
+
+.right-links a {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+
+
+/* ETF Simulation styling */
+.etf-nav-simulation {
+  font-family: Arial, sans-serif;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+}
+
+.etf-nav-simulation .container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.etf-nav-simulation h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.etf-nav-simulation .tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+}
+
+.etf-nav-simulation .left-branch,
+.etf-nav-simulation .right-branch {
+  display: flex;
+  flex-direction: column;
+}
+
+.etf-nav-simulation .left-branch {
+  margin-right: 150px;
+}
+
+.etf-nav-simulation .box {
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin: 10px 0;
+  background-color: white;
+  min-width: 60px;
+}
+
+/* Horizontal line */
+.etf-nav-simulation .tree::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 1px;
+  background-color: black;
+}
+
+/* Vertical line */
+.etf-nav-simulation .tree::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 75px);
+  width: 1px;
+  height: 60%;
+  background-color: black;
+}
+
+
+
+.etf-nav-simulation #result {
+  font-weight: bold;
+}
+/* ETF STYLING END */
+
+
+
+/* table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Formulas and fractions */
+.formula {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 5px;
+}
+.fraction .top {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 0 5px;
+}
+.fraction .bottom {
+  display: block;
+  padding: 0 5px;
+}
+
+
+
+
+
+
+/* matrix table */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-5ur8{background-color:#000000;border-color:inherit;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:left;vertical-align:bottom}
+.tg .tg-j5n6{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;text-align:left;vertical-align:top}
+
+
+
+
+
+
+
+
+
+
+/*section coloring USDX */
+
+
+h1 {
+    font-size: 32px;
+}
+
+
+
+
+#overview {
+  margin-top: 20px; /* Add top margin */
+}
+
+#intro-table {
+  margin-bottom: 10px; /* Add top margin */
+}
+
+
+
+
