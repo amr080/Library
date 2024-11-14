@@ -7,6 +7,11 @@ Repo of blockchain-related research and demos.
 
 Fork needs synced. Main repo located on XFT organization account. See below for website. 
 
-[https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
-https://www.federalreserve.gov/econres/notes/feds-notes/examining-cbdc-and-wholesale-payments-20230908.html
+- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
+- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
+- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
+
+
+
+
 
