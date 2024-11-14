@@ -1,0 +1,34 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Demo Flow</strong><br>
+    User onboarding (KYC)<br>
+Bank account linking<br>
+Fiat deposit -> USDX mint<br>
+Show yield accrual<br>
+USDX redemption -> Fiat withdrawal<br><br>
+  </p>
+
+  <p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Onramp (Fiat -&gt; USDX)</strong><br>
+    POST /fiat/deposit - Initiate deposit {amount, currency, paymentMethod}<br>
+    POST /fiat/deposit - Verify deposit {depositId, kycData}<br>
+    POST /fiat/deposit - Complete deposit {depositId, paymentConfirmation}<br>
+    GET /fiat/deposit/status - Check deposit status {depositId}<br><br>
+  
+    <strong>Offramp (USDX -&gt; Fiat)</strong><br>
+    POST /fiat/withdraw - Initiate withdrawal {amount, bankDetails}<br>
+    POST /fiat/withdraw - Verify withdrawal {withdrawId, kycData}<br>
+    POST /fiat/withdraw - Complete withdrawal {withdrawId}<br>
+    GET /fiat/withdraw/status - Check withdrawal status {withdrawId}<br><br>
+  
+    <strong>Support</strong><br>
+    GET /fiat/supported-methods - List supported payment methods<br>
+    GET /fiat/limits - View transaction limits<br>
+    GET /fiat/fees - View transaction fees<br>
+    GET /fiat/rates - View current exchange rates<br><br>
+  
+    <strong>KYC/Banking</strong><br>
+    POST /kyc/verify - Submit KYC verification data<br>
+    POST /bank/link - Link a bank account<br>
+    GET /bank/accounts - Retrieve linked bank accounts<br><br>
+  </p>
+  

@@ -1,0 +1,31 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Core Payment API Endpoints</strong><br><br>
+  
+    <strong>Issuance</strong><br>
+    POST /mint - Mint new USDX {amount, to}<br>
+    GET /balance - Check USDX balance {address}<br>
+    GET /totalSupply - Get total USDX supply<br>
+    GET /sharesOf - Get shares for account {address}<br><br>
+  
+    <strong>Transfers & Payments</strong><br>
+    POST /transfer - Basic transfer {to, amount}<br>
+    POST /transferFrom - Transfer with allowance {from, to, amount}<br>
+    POST /permit - Gasless approval {owner, spender, value, deadline, signature}<br>
+    GET /allowance - Check spending allowance {owner, spender}<br><br>
+  
+    <strong>Yield Features</strong><br>
+    GET /rewardMultiplier - Current yield rate<br>
+    POST /addRewardMultiplier - Update yield {increment}<br>
+    GET /convertToShares - Convert tokens to shares {amount}<br>
+    GET /convertToTokens - Convert shares to tokens {shares}<br><br>
+  
+    <strong>DeFi Wrapping</strong><br>
+    POST /wrap - Convert to wUSDX {amount}<br>
+    POST /unwrap - Convert back to USDX {amount}<br><br>
+  
+    <strong>Admin Controls</strong><br>
+    POST /pause - Emergency pause<br>
+    POST /unpause - Resume operations<br>
+    POST /blockAccounts - Block addresses {addresses[]}<br><br>
+  </p>
+  

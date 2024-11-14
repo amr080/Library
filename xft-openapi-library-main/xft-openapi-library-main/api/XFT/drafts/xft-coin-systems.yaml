@@ -1,0 +1,1104 @@
+openapi: 3.0.0
+info:
+  title: XFT Coin Systems - USDX API
+  version: 1.0.0
+  description: >
+    API for managing blockchain-based payments, token operations, treasury management, and administrative functions for USDX and wUSDX tokens within the XFT Coin Systems.
+servers:
+  - url: https://api.xftcoin.com/v1
+    description: Production server
+paths:
+  /payments:
+    post:
+      summary: Initiate a payment
+      description: Initiate various payment operations such as minting, converting, burning, or transferring USDX/wUSDX.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/MintUSDXRequest'
+                - $ref: '#/components/schemas/ConvertUSDXRequest'
+                - $ref: '#/components/schemas/BurnUSDXRequest'
+                - $ref: '#/components/schemas/TransferUSDXRequest'
+      responses:
+        '201':
+          description: Payment initiated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '400':
+          description: Invalid request
+    get:
+      summary: Query payments by endToEndId
+      description: Retrieve payment status, transaction history, and yield distributions using endToEndId.
+      parameters:
+        - in: query
+          name: endToEndId
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the payment
+      responses:
+        '200':
+          description: Payment details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentQueryResponse'
+        '404':
+          description: Payment not found
+  /payments/{paymentId}:
+    get:
+      summary: Get payment details
+      description: Retrieve detailed information about a specific payment.
+      parameters:
+        - in: path
+          name: paymentId
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the payment
+      responses:
+        '200':
+          description: Payment details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentDetails'
+        '404':
+          description: Payment not found
+  /payments/{paymentId}/status:
+    get:
+      summary: Get payment status
+      description: Retrieve the current status of a specific payment.
+      parameters:
+        - in: path
+          name: paymentId
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the payment
+      responses:
+        '200':
+          description: Payment status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                enum: [RECEIVED, PROCESSING, COMPLETED, REJECTED, BLOCKED, PAUSED]
+        '404':
+          description: Payment not found
+  /yield:
+    get:
+      summary: Get current APY
+      description: Retrieve the current Annual Percentage Yield (APY) for USDX.
+      responses:
+        '200':
+          description: Current APY retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  currentAPY:
+                    type: number
+                    format: float
+                    description: Current APY percentage
+        '500':
+          description: Server error
+    post:
+      summary: Update yield rate
+      description: Update the yield rate for USDX.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateYieldRequest'
+      responses:
+        '200':
+          description: Yield rate updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Yield rate updated successfully
+        '400':
+          description: Invalid request
+  /admin:
+    post:
+      summary: Admin actions
+      description: Perform administrative actions such as blocking/unblocking accounts, pausing/unpausing the system, and updating user roles.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/BlockAccountRequest'
+                - $ref: '#/components/schemas/UnblockAccountRequest'
+                - $ref: '#/components/schemas/PauseSystemRequest'
+                - $ref: '#/components/schemas/UnpauseSystemRequest'
+                - $ref: '#/components/schemas/UpdateRoleRequest'
+      responses:
+        '200':
+          description: Admin action performed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Action performed successfully
+        '403':
+          description: Forbidden - insufficient permissions
+        '400':
+          description: Invalid request
+  /v1/tokens/usdx:
+    get:
+      summary: Get USDX token info
+      description: Retrieve information about the USDX token.
+      responses:
+        '200':
+          description: USDX token info retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USDXInfo'
+        '500':
+          description: Server error
+  /v1/tokens/usdx/mint:
+    post:
+      summary: Mint USDX tokens
+      description: Create new USDX tokens by providing collateral.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MintUSDXRequest'
+      responses:
+        '201':
+          description: USDX minted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '400':
+          description: Invalid request
+  /v1/tokens/usdx/burn:
+    post:
+      summary: Burn USDX tokens
+      description: Destroy USDX tokens in exchange for collateral.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BurnUSDXRequest'
+      responses:
+        '200':
+          description: USDX burned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: USDX burned successfully
+        '400':
+          description: Invalid request
+  /v1/tokens/usdx/rebase:
+    post:
+      summary: Trigger yield rebase
+      description: Distribute yield to USDX holders through a rebasing mechanism.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RebaseUSDXRequest'
+      responses:
+        '200':
+          description: Rebase triggered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Rebase executed successfully
+        '400':
+          description: Invalid request
+  /v1/tokens/usdx/yield:
+    get:
+      summary: Get current yield rate
+      description: Retrieve the current yield rate for USDX.
+      responses:
+        '200':
+          description: Current yield rate retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  yieldRate:
+                    type: number
+                    format: float
+                    description: Current yield rate percentage
+        '500':
+          description: Server error
+  /v1/tokens/wusdx:
+    get:
+      summary: Get wUSDX token info
+      description: Retrieve information about the wUSDX token.
+      responses:
+        '200':
+          description: wUSDX token info retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/wUSDXInfo'
+        '500':
+          description: Server error
+  /v1/tokens/wusdx/deposit:
+    post:
+      summary: Convert USDX to wUSDX
+      description: Deposit USDX tokens to receive wUSDX.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositwUSDXRequest'
+      responses:
+        '201':
+          description: USDX converted to wUSDX successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DepositwUSDXResponse'
+        '400':
+          description: Invalid request
+  /v1/tokens/wusdx/withdraw:
+    post:
+      summary: Convert wUSDX to USDX
+      description: Withdraw USDX tokens by burning wUSDX.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawwUSDXRequest'
+      responses:
+        '200':
+          description: wUSDX converted to USDX successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WithdrawwUSDXResponse'
+        '400':
+          description: Invalid request
+  /v1/tokens/wusdx/shares:
+    get:
+      summary: Get wUSDX share balance
+      description: Retrieve the share balance of wUSDX for a specific account.
+      parameters:
+        - in: query
+          name: account
+          required: true
+          schema:
+            type: string
+          description: Ethereum address of the account
+      responses:
+        '200':
+          description: wUSDX share balance retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  shares:
+                    type: string
+                    description: Number of wUSDX shares
+                  accumulatedYield:
+                    type: string
+                    description: Accumulated yield on wUSDX shares
+        '404':
+          description: Account not found
+  /v1/treasury/collateral:
+    get:
+      summary: List collateral positions
+      description: Retrieve a list of all collateral positions in the treasury.
+      responses:
+        '200':
+          description: Collateral positions retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CollateralListResponse'
+        '500':
+          description: Server error
+    post:
+      summary: Lock collateral
+      description: Lock collateral assets into the treasury.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LockCollateralRequest'
+      responses:
+        '201':
+          description: Collateral locked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Collateral locked successfully
+        '400':
+          description: Invalid request
+  /v1/treasury/collateral/unlock:
+    post:
+      summary: Unlock collateral
+      description: Unlock collateral assets from the treasury.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnlockCollateralRequest'
+      responses:
+        '200':
+          description: Collateral unlocked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Collateral unlocked successfully
+        '400':
+          description: Invalid request
+  /v1/treasury/collateral/yield:
+    get:
+      summary: Get collateral yield
+      description: Retrieve the yield generated from collateral assets.
+      responses:
+        '200':
+          description: Collateral yield retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  earnedYield:
+                    type: string
+                    description: Total yield earned from collateral
+        '500':
+          description: Server error
+  /v1/treasury/payments:
+    get:
+      summary: List payments
+      description: Retrieve a list of all treasury payments.
+      responses:
+        '200':
+          description: Payments list retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TreasuryPaymentsListResponse'
+        '500':
+          description: Server error
+  /v1/treasury/payments/fiat:
+    post:
+      summary: Create fiat onramp
+      description: Create a fiat onramp for depositing fiat currency into the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FiatOnrampRequest'
+      responses:
+        '201':
+          description: Fiat onramp created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FiatOnrampResponse'
+        '400':
+          description: Invalid request
+  /v1/treasury/payments/cross-border:
+    post:
+      summary: Create cross-border payment
+      description: Initiate a cross-border payment.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CrossBorderPaymentRequest'
+      responses:
+        '201':
+          description: Cross-border payment created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CrossBorderPaymentResponse'
+        '400':
+          description: Invalid request
+  /v1/treasury/payments/fees:
+    get:
+      summary: Get fee schedule
+      description: Retrieve the current fee schedule for payments.
+      responses:
+        '200':
+          description: Fee schedule retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeeScheduleResponse'
+        '500':
+          description: Server error
+  /v1/treasury/payments/limits:
+    get:
+      summary: Get payment limits
+      description: Retrieve the current payment limits.
+      responses:
+        '200':
+          description: Payment limits retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentLimitsResponse'
+        '500':
+          description: Server error
+  /v1/admin/accounts/block:
+    post:
+      summary: Block accounts
+      description: Block multiple accounts from accessing the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BlockAccountRequest'
+      responses:
+        '200':
+          description: Accounts blocked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Accounts blocked successfully
+        '400':
+          description: Invalid request
+        '403':
+          description: Forbidden - insufficient permissions
+  /v1/admin/accounts/unblock:
+    post:
+      summary: Unblock accounts
+      description: Unblock multiple previously blocked accounts.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnblockAccountRequest'
+      responses:
+        '200':
+          description: Accounts unblocked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Accounts unblocked successfully
+        '400':
+          description: Invalid request
+        '403':
+          description: Forbidden - insufficient permissions
+  /v1/admin/system/pause:
+    post:
+      summary: Pause system
+      description: Pause the entire system, halting all token transfers.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PauseSystemRequest'
+      responses:
+        '200':
+          description: System paused successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: System paused successfully
+        '403':
+          description: Forbidden - insufficient permissions
+  /v1/admin/system/unpause:
+    post:
+      summary: Unpause system
+      description: Unpause the system, allowing token transfers to resume.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnpauseSystemRequest'
+      responses:
+        '200':
+          description: System unpaused successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: System unpaused successfully
+        '403':
+          description: Forbidden - insufficient permissions
+  /v1/admin/reserves:
+    get:
+      summary: Get reserve proof
+      description: Retrieve the reserve proof for USDX backing.
+      responses:
+        '200':
+          description: Reserve proof retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReserveProofResponse'
+        '500':
+          description: Server error
+  /v1/admin/roles:
+    post:
+      summary: Update user roles
+      description: Update roles assigned to a user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateRoleRequest'
+      responses:
+        '200':
+          description: User roles updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User roles updated successfully
+        '400':
+          description: Invalid request
+        '403':
+          description: Forbidden - insufficient permissions
+  /v1/admin/status:
+    get:
+      summary: Get system status
+      description: Retrieve the current status of the system.
+      responses:
+        '200':
+          description: System status retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemStatusResponse'
+        '500':
+          description: Server error
+components:
+  schemas:
+    # Payment Schemas
+    MintUSDXRequest:
+      type: object
+      required:
+        - from
+        - amount
+        - collateral
+        - yieldPreference
+      properties:
+        from:
+          type: string
+          description: User's wallet address
+        amount:
+          type: string
+          description: Amount of collateral to convert to USDX
+        collateral:
+          type: string
+          description: Type of collateral (e.g., USDC)
+        yieldPreference:
+          type: string
+          enum: [ACCUMULATE, DISTRIBUTE]
+          description: User's preference for yield handling
+    ConvertUSDXRequest:
+      type: object
+      required:
+        - from
+        - to
+        - amount
+      properties:
+        from:
+          type: string
+          enum: [USDX, wUSDX]
+          description: Token type to convert from
+        to:
+          type: string
+          enum: [USDX, wUSDX]
+          description: Token type to convert to
+        amount:
+          type: string
+          description: Amount to convert
+    BurnUSDXRequest:
+      type: object
+      required:
+        - from
+        - amount
+        - collateral
+      properties:
+        from:
+          type: string
+          description: User's wallet address
+        amount:
+          type: string
+          description: Amount of USDX to burn
+        collateral:
+          type: string
+          description: Type of collateral to return
+    TransferUSDXRequest:
+      type: object
+      required:
+        - from
+        - to
+        - amount
+      properties:
+        from:
+          type: string
+          description: Sender's wallet address
+        to:
+          type: string
+          description: Recipient's wallet address
+        amount:
+          type: string
+          description: Amount to transfer
+    PaymentResponse:
+      type: object
+      properties:
+        paymentId:
+          type: string
+          description: Unique identifier for the payment
+        status:
+          type: string
+          enum: [RECEIVED, PROCESSING, COMPLETED, REJECTED, BLOCKED, PAUSED]
+          description: Current status of the payment
+        usdxAmount:
+          type: string
+          description: Amount of USDX involved in the payment
+        yieldRate:
+          type: string
+          description: Yield rate applied to the payment
+    PaymentQueryResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Current status of the payment
+        transactionHistory:
+          type: array
+          items:
+            type: object
+            properties:
+              transactionId:
+                type: string
+                description: Transaction identifier
+              timestamp:
+                type: string
+                format: date-time
+                description: Time of transaction
+              details:
+                type: string
+                description: Details of the transaction
+        yieldDistributions:
+          type: array
+          items:
+            type: object
+            properties:
+              distributionId:
+                type: string
+                description: Distribution identifier
+              amount:
+                type: string
+                description: Amount distributed as yield
+              timestamp:
+                type: string
+                format: date-time
+                description: Time of distribution
+    PaymentDetails:
+      type: object
+      properties:
+        amount:
+          type: string
+          description: Amount involved in the payment
+        tokenType:
+          type: string
+          enum: [USDX, wUSDX]
+          description: Type of token used
+        yieldEarned:
+          type: string
+          description: Yield earned from the payment
+        blockStatus:
+          type: string
+          description: Block status of the payment
+        kycStatus:
+          type: string
+          description: KYC verification status
+
+    # Yield Schemas
+    UpdateYieldRequest:
+      type: object
+      required:
+        - newAPY
+      properties:
+        newAPY:
+          type: number
+          format: float
+          description: New Annual Percentage Yield to set
+    RebaseUSDXRequest:
+      type: object
+      required:
+        - rebaseAmount
+      properties:
+        rebaseAmount:
+          type: string
+          description: Amount for the yield rebase
+
+    # Admin Schemas
+    BlockAccountRequest:
+      type: object
+      required:
+        - accounts
+      properties:
+        accounts:
+          type: array
+          items:
+            type: string
+          description: List of account addresses to block
+    UnblockAccountRequest:
+      type: object
+      required:
+        - accounts
+      properties:
+        accounts:
+          type: array
+          items:
+            type: string
+          description: List of account addresses to unblock
+    PauseSystemRequest:
+      type: object
+      properties:
+        reason:
+          type: string
+          description: Reason for pausing the system
+    UnpauseSystemRequest:
+      type: object
+      properties:
+        reason:
+          type: string
+          description: Reason for unpausing the system
+    UpdateRoleRequest:
+      type: object
+      required:
+        - userId
+        - role
+      properties:
+        userId:
+          type: string
+          description: User identifier to update roles for
+        role:
+          type: string
+          description: New role to assign
+
+    # Token Management Schemas
+    USDXInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the USDX token
+        symbol:
+          type: string
+          description: Symbol of the USDX token
+        decimals:
+          type: integer
+          description: Number of decimals the token uses
+        totalSupply:
+          type: string
+          description: Total supply of USDX tokens
+        yieldRate:
+          type: string
+          description: Current yield rate for USDX
+        reserveProof:
+          type: string
+          description: Proof of reserves backing USDX
+    wUSDXInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the wUSDX token
+        symbol:
+          type: string
+          description: Symbol of the wUSDX token
+        decimals:
+          type: integer
+          description: Number of decimals the token uses
+        totalShares:
+          type: string
+          description: Total shares of wUSDX
+        accumulatedYield:
+          type: string
+          description: Total accumulated yield on wUSDX
+    DepositwUSDXRequest:
+      type: object
+      required:
+        - usdxAmount
+      properties:
+        usdxAmount:
+          type: string
+          description: Amount of USDX to deposit for wUSDX
+    DepositwUSDXResponse:
+      type: object
+      properties:
+        wusdxAmount:
+          type: string
+          description: Amount of wUSDX received
+        transactionId:
+          type: string
+          description: Transaction identifier
+    WithdrawwUSDXRequest:
+      type: object
+      required:
+        - wusdxShares
+      properties:
+        wusdxShares:
+          type: string
+          description: Number of wUSDX shares to withdraw
+    WithdrawwUSDXResponse:
+      type: object
+      properties:
+        usdxAmount:
+          type: string
+          description: Amount of USDX received
+        transactionId:
+          type: string
+          description: Transaction identifier
+
+    # Treasury Schemas
+    CollateralListResponse:
+      type: object
+      properties:
+        collateralPositions:
+          type: array
+          items:
+            type: object
+            properties:
+              asset:
+                type: string
+                description: Type of collateral asset
+              amount:
+                type: string
+                description: Amount of collateral locked
+              purpose:
+                type: string
+                description: Purpose of collateral (e.g., TRADING)
+              timestamp:
+                type: string
+                format: date-time
+                description: Time when collateral was locked
+    LockCollateralRequest:
+      type: object
+      required:
+        - asset
+        - amount
+        - purpose
+      properties:
+        asset:
+          type: string
+          description: Type of collateral asset to lock
+        amount:
+          type: string
+          description: Amount of collateral to lock
+        purpose:
+          type: string
+          description: Purpose for locking collateral
+    UnlockCollateralRequest:
+      type: object
+      required:
+        - asset
+        - amount
+      properties:
+        asset:
+          type: string
+          description: Type of collateral asset to unlock
+        amount:
+          type: string
+          description: Amount of collateral to unlock
+    TreasuryPaymentsListResponse:
+      type: object
+      properties:
+        payments:
+          type: array
+          items:
+            type: object
+            properties:
+              paymentId:
+                type: string
+                description: Unique identifier for the payment
+              type:
+                type: string
+                description: Type of payment (fiat, cross-border)
+              amount:
+                type: string
+                description: Amount involved in the payment
+              status:
+                type: string
+                enum: [RECEIVED, PROCESSING, COMPLETED, REJECTED, BLOCKED, PAUSED]
+                description: Current status of the payment
+              timestamp:
+                type: string
+                format: date-time
+                description: Time when the payment was initiated
+    FiatOnrampRequest:
+      type: object
+      required:
+        - fiatAmount
+        - userId
+      properties:
+        fiatAmount:
+          type: string
+          description: Amount of fiat currency to convert to USDX
+        userId:
+          type: string
+          description: Identifier of the user initiating the onramp
+    FiatOnrampResponse:
+      type: object
+      properties:
+        onrampId:
+          type: string
+          description: Unique identifier for the fiat onramp
+        status:
+          type: string
+          description: Current status of the onramp
+    CrossBorderPaymentRequest:
+      type: object
+      required:
+        - from
+        - to
+        - amount
+        - currency
+      properties:
+        from:
+          type: string
+          description: Sender's wallet address
+        to:
+          type: string
+          description: Recipient's wallet address
+        amount:
+          type: string
+          description: Amount to transfer
+        currency:
+          type: string
+          description: Currency type for cross-border payment
+    CrossBorderPaymentResponse:
+      type: object
+      properties:
+        paymentId:
+          type: string
+          description: Unique identifier for the cross-border payment
+        status:
+          type: string
+          description: Current status of the payment
+    FeeScheduleResponse:
+      type: object
+      properties:
+        fees:
+          type: array
+          items:
+            type: object
+            properties:
+              service:
+                type: string
+                description: Service type (e.g., mint, burn, transfer)
+              fee:
+                type: string
+                description: Fee amount for the service
+    PaymentLimitsResponse:
+      type: object
+      properties:
+        dailyLimit:
+          type: string
+          description: Maximum payment amount allowed per day
+        monthlyLimit:
+          type: string
+          description: Maximum payment amount allowed per month
+
+    # Admin Reserve Proof
+    ReserveProofResponse:
+      type: object
+      properties:
+        reserveAssets:
+          type: array
+          items:
+            type: object
+            properties:
+              asset:
+                type: string
+                description: Type of reserve asset
+              amount:
+                type: string
+                description: Amount of reserve asset
+
+    # System Status
+    SystemStatusResponse:
+      type: object
+      properties:
+        systemPaused:
+          type: boolean
+          description: Indicates if the system is currently paused
+        totalUSDX:
+          type: string
+          description: Total USDX in circulation
+        totalwUSDX:
+          type: string
+          description: Total wUSDX in circulation
+        currentAPY:
+          type: number
+          format: float
+          description: Current Annual Percentage Yield

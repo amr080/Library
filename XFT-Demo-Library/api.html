@@ -1,0 +1,210 @@
+<style>
+    table {
+      border-collapse: collapse;
+      width: 800px;  /* Fixed width */
+      font-family: Arial;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #1a374d;
+      color: white;
+      font-weight: normal;
+    }
+  
+    .header {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #f0f0f0;  /* Light grey background */
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  
+    .container {
+      width: 800px;
+    }
+  </style>
+  <p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Demo Flow</strong><br>
+    Mint &gt; Check Balance<br>
+    Make Transfer &gt; Show Yield Accrual<br>
+    Schedule Payment &gt; Monitor Rebase<br>
+    Wrap/Unwrap for DeFi<br>
+    Display Risk Controls<br><br>
+  </p>
+  
+  <div class="container">
+    <div class="header">USDX API Endpoints</div>
+    <table>
+      <tr>
+        <th>Endpoint</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>/onboard</td>
+        <td>Register user, complete KYC</td>
+      </tr>
+      <tr>
+        <td>/push</td>
+        <td>Transfer USDX to user’s wallet</td>
+      </tr>
+      <tr>
+        <td>/yield</td>
+        <td>View or calculate yield accruals</td>
+      </tr>
+      <tr>
+        <td>/pay</td>
+        <td>Schedule recurring yield payments</td>
+      </tr>
+      <tr>
+        <td>/reinvest</td>
+        <td>Enable auto-compounding of yield</td>
+      </tr>
+      <tr>
+        <td>/redeem</td>
+        <td>Convert USDX holdings to fiat</td>
+      </tr>
+      <tr>
+        <td>/verify</td>
+        <td>Display SEC compliance status</td>
+      </tr>
+      <tr>
+        <td>/withdraw</td>
+        <td>Withdraw yield earnings only</td>
+      </tr>
+    </table>
+  </div>
+  
+
+  <div class="container">
+    <table>
+      <tr>
+        <th>Endpoint</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>/mint</td>
+        <td>Create initial USDX</td>
+      </tr>
+      <tr>
+        <td>/rebase</td>
+        <td>Show yield accrual mechanism</td>
+      </tr>
+      <tr>
+        <td>/transfer</td>
+        <td>Demonstrate payment flow</td>
+      </tr>
+      <tr>
+        <td>/wrap</td>
+        <td>Convert USDX to wUSDX for DeFi</td>
+      </tr>
+      <tr>
+        <td>/unwrap</td>
+        <td>Convert back to USDX</td>
+      </tr>
+      <tr>
+        <td>/getYield</td>
+        <td>Display earned yield</td>
+      </tr>
+      <tr>
+        <td>/burn</td>
+        <td>Redeem USDX</td>
+      </tr>
+      <tr>
+        <td>/permit</td>
+        <td>Show gasless approval</td>
+      </tr>
+    </table>
+  
+    <div class="header">Emergency Functions</div>
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>/pause</td>
+        <td>Pause all USDX operations</td>
+      </tr>
+      <tr>
+        <td>/block</td>
+        <td>Block specific accounts or transactions</td>
+      </tr>
+      <tr>
+        <td>/setMultiplier</td>
+        <td>Adjust yield or distribution multiplier</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <table>
+    <tr>
+      <th>Endpoint</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>/mint</td>
+      <td>Create USDX</td>
+    </tr>
+    <tr>
+      <td>/balance</td>
+      <td>Check amounts</td>
+    </tr>
+    <tr>
+      <td>/transfer</td>
+      <td>Send payment</td>
+    </tr>
+    <tr>
+      <td>/getYield</td>
+      <td>Check earnings</td>
+    </tr>
+    <tr>
+      <td>/rebase</td>
+      <td>Update yield</td>
+    </tr>
+    <tr>
+      <td>/schedulePayment</td>
+      <td>Recurring payments</td>
+    </tr>
+    <tr>
+      <td>/wrap</td>
+      <td>USDX to wUSDX</td>
+    </tr>
+    <tr>
+      <td>/unwrap</td>
+      <td>wUSDX to USDX</td>
+    </tr>
+    <tr>
+      <td>/pause</td>
+      <td>Emergency stop</td>
+    </tr>
+    <tr>
+      <td>/block</td>
+      <td>Restrict account</td>
+    </tr>
+    <tr>
+      <td>/setMultiplier</td>
+      <td>Adjust yields</td>
+    </tr>
+    <tr>
+      <td>/permit</td>
+      <td>Gasless approval</td>
+    </tr>
+    <tr>
+      <td>/burn</td>
+      <td>Redemption</td>
+    </tr>
+    <tr>
+      <td>/history</td>
+      <td>Transaction log</td>
+    </tr>
+  </table>

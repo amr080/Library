@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.file-browser {
+    width: 300px;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 16px;  /* Smaller base font */
+}
+
+.doc-viewer {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 0;
+    text-align: left;
+ }
+
+/* a {
+    text-decoration: none;
+    color: #0066cc;
+}
+*/
+
+
+/* Make folder icons and numbers smaller */
+td:first-child {
+    width: 20px;
+    padding-right: 4px;
+    color: #000;
+ }

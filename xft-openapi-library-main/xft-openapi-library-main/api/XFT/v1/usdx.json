@@ -1,0 +1,4644 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "USDX API",
+      "version": "1.0.0",
+      "description": "USDX is a permissionless, yield-bearing stablecoin for payments. This API allows interaction with USDX functionalities including balances, payouts, transfers, wallet management, payments, and more."
+    },
+    "servers": [
+      {
+        "url": "https://api.usdx.com",
+        "description": "Production Server"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Balances",
+        "description": "Operations related to account balances"
+      },
+      {
+        "name": "Payouts",
+        "description": "Operations related to payouts"
+      },
+      {
+        "name": "Wires",
+        "description": "Operations related to wire bank accounts"
+      },
+      {
+        "name": "Transfers",
+        "description": "Operations related to transfers"
+      },
+      {
+        "name": "Addresses",
+        "description": "Operations related to addresses"
+      },
+      {
+        "name": "Wallets",
+        "description": "Operations related to wallets"
+      },
+      {
+        "name": "Payments",
+        "description": "Operations related to payments"
+      },
+      {
+        "name": "Crypto Payments",
+        "description": "Operations related to crypto payments"
+      },
+      {
+        "name": "Cards",
+        "description": "Operations related to cards"
+      },
+      {
+        "name": "Settlements",
+        "description": "Operations related to settlements"
+      },
+      {
+        "name": "Chargebacks",
+        "description": "Operations related to chargebacks"
+      },
+      {
+        "name": "Checkout Sessions",
+        "description": "Operations related to checkout sessions"
+      },
+      {
+        "name": "Recipients",
+        "description": "Operations related to recipients"
+      },
+      {
+        "name": "Exchange Rates",
+        "description": "Operations related to exchange rates"
+      },
+      {
+        "name": "Token Management",
+        "description": "Operations related to token management"
+      },
+      {
+        "name": "Access Control",
+        "description": "Operations related to access control"
+      },
+      {
+        "name": "Protocol Control",
+        "description": "Operations related to protocol control"
+      },
+      {
+        "name": "Wrapped Token",
+        "description": "Operations related to wrapped USDX (wUSDX)"
+      },
+      {
+        "name": "Permits",
+        "description": "Operations related to permits"
+      },
+      {
+        "name": "Authentication",
+        "description": "User authentication and session management"
+      },
+      {
+        "name": "Transactions",
+        "description": "Operations related to transactions"
+      },
+      {
+        "name": "Treasury",
+        "description": "Operations related to treasury"
+      },
+      {
+        "name": "Cross-Border",
+        "description": "Operations related to cross-border payments"
+      },
+      {
+        "name": "WebSockets",
+        "description": "Real-time updates via WebSockets"
+      }
+    ],
+    "paths": {
+      "/v1/balances": {
+        "get": {
+          "tags": ["Balances"],
+          "summary": "List all account balances",
+          "responses": {
+            "200": {
+              "description": "A list of account balances",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BalancesResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/payouts": {
+        "get": {
+          "tags": ["Payouts"],
+          "summary": "List all payouts",
+          "responses": {
+            "200": {
+              "description": "A list of payouts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PayoutsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Payouts"],
+          "summary": "Create a new payout",
+          "requestBody": {
+            "description": "Payout object that needs to be added",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePayoutRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Payout created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Payout"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/payouts/{id}": {
+        "get": {
+          "tags": ["Payouts"],
+          "summary": "Get a specific payout",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the payout to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Payout details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Payout"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Payout not found"
+            }
+          }
+        }
+      },
+      "/v1/fees/daily": {
+        "get": {
+          "tags": ["Fees"],
+          "summary": "List NET burn fee calculations",
+          "responses": {
+            "200": {
+              "description": "Daily fee calculations",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DailyFeesResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/banks/wires": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "List wire bank accounts",
+          "responses": {
+            "200": {
+              "description": "List of wire bank accounts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WireAccountsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wires"],
+          "summary": "Create a wire bank account",
+          "requestBody": {
+            "description": "Wire bank account to add",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateWireAccountRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Wire bank account created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WireAccount"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/banks/wires/{id}": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get a specific wire bank account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the wire bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Wire bank account details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WireAccount"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Wire bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/wires/{id}/instructions": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get wire instructions for a specific wire account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the wire bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Wire instructions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WireInstructions"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Wire bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/cbit": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "List CBIT bank accounts",
+          "responses": {
+            "200": {
+              "description": "List of CBIT bank accounts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CBITAccountsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wires"],
+          "summary": "Create a CBIT bank account",
+          "requestBody": {
+            "description": "CBIT bank account to add",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCBITAccountRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "CBIT bank account created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CBITAccount"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/banks/cbit/{id}": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get a specific CBIT bank account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the CBIT bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "CBIT bank account details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CBITAccount"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "CBIT bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/cbit/{id}/instructions": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get CBIT instructions for a specific CBIT account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the CBIT bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "CBIT instructions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CBITInstructions"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "CBIT bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/cubix": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "List CUBIX bank accounts",
+          "responses": {
+            "200": {
+              "description": "List of CUBIX bank accounts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CUBIXAccountsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wires"],
+          "summary": "Create a CUBIX bank account",
+          "requestBody": {
+            "description": "CUBIX bank account to add",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCUBIXAccountRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "CUBIX bank account created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CUBIXAccount"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/banks/cubix/{id}": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get a specific CUBIX bank account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the CUBIX bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "CUBIX bank account details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CUBIXAccount"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "CUBIX bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/cubix/{id}/instructions": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get CUBIX instructions for a specific CUBIX account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the CUBIX bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "CUBIX instructions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CUBIXInstructions"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "CUBIX bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/pix": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "List PIX bank accounts",
+          "responses": {
+            "200": {
+              "description": "List of PIX bank accounts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PIXAccountsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wires"],
+          "summary": "Create a PIX bank account",
+          "requestBody": {
+            "description": "PIX bank account to add",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePIXAccountRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "PIX bank account created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PIXAccount"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/banks/pix/{id}": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get a specific PIX bank account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the PIX bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "PIX bank account details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PIXAccount"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "PIX bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/banks/pix/{id}/instructions": {
+        "get": {
+          "tags": ["Wires"],
+          "summary": "Get PIX instructions for a specific PIX account",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the PIX bank account",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "PIX instructions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PIXInstructions"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "PIX bank account not found"
+            }
+          }
+        }
+      },
+      "/v1/transfers": {
+        "get": {
+          "tags": ["Transfers"],
+          "summary": "List all transfers",
+          "responses": {
+            "200": {
+              "description": "List of transfers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TransfersResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Transfers"],
+          "summary": "Create a transfer",
+          "requestBody": {
+            "description": "Transfer object that needs to be created",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateTransferRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Transfer created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Transfer"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/transfers/{id}": {
+        "get": {
+          "tags": ["Transfers"],
+          "summary": "Get a specific transfer",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the transfer to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Transfer details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Transfer"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Transfer not found"
+            }
+          }
+        }
+      },
+      "/v1/addresses/deposit": {
+        "get": {
+          "tags": ["Addresses"],
+          "summary": "List deposit addresses",
+          "responses": {
+            "200": {
+              "description": "List of deposit addresses",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DepositAddressesResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Addresses"],
+          "summary": "Create a deposit address",
+          "requestBody": {
+            "description": "Deposit address to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateDepositAddressRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Deposit address created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DepositAddress"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/addresses/recipient": {
+        "get": {
+          "tags": ["Addresses"],
+          "summary": "List recipient addresses",
+          "responses": {
+            "200": {
+              "description": "List of recipient addresses",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RecipientAddressesResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Addresses"],
+          "summary": "Create a recipient address",
+          "requestBody": {
+            "description": "Recipient address to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRecipientAddressRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Recipient address created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RecipientAddress"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Addresses"],
+          "summary": "Delete a recipient address",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the recipient address to delete",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "Recipient address deleted successfully"
+            },
+            "404": {
+              "description": "Recipient address not found"
+            }
+          }
+        }
+      },
+      "/v1/deposits": {
+        "get": {
+          "tags": ["Deposits"],
+          "summary": "List all deposits",
+          "responses": {
+            "200": {
+              "description": "List of deposits",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DepositsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/wallets": {
+        "get": {
+          "tags": ["Wallets"],
+          "summary": "List all wallets",
+          "responses": {
+            "200": {
+              "description": "List of wallets",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WalletsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wallets"],
+          "summary": "Create a wallet",
+          "requestBody": {
+            "description": "Wallet to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateWalletRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Wallet created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Wallet"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/wallets/{id}": {
+        "get": {
+          "tags": ["Wallets"],
+          "summary": "Get a specific wallet",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the wallet to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Wallet details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Wallet"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Wallet not found"
+            }
+          }
+        }
+      },
+      "/v1/wallets/addresses": {
+        "get": {
+          "tags": ["Wallets"],
+          "summary": "List wallet addresses",
+          "responses": {
+            "200": {
+              "description": "List of wallet addresses",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WalletAddressesResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Wallets"],
+          "summary": "Create a blockchain address for a wallet",
+          "requestBody": {
+            "description": "Blockchain address to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateBlockchainAddressRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Blockchain address created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BlockchainAddress"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/payments": {
+        "get": {
+          "tags": ["Payments"],
+          "summary": "List all payments",
+          "responses": {
+            "200": {
+              "description": "List of payments",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Payments"],
+          "summary": "Create a payment",
+          "requestBody": {
+            "description": "Payment to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePaymentRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Payment created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Payment"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/payments/{id}": {
+        "get": {
+          "tags": ["Payments"],
+          "summary": "Get a specific payment",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the payment to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Payment details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Payment"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Payment not found"
+            }
+          }
+        },
+        "post": {
+          "tags": ["Payments"],
+          "summary": "Perform an action on a specific payment",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the payment",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "Action to perform on the payment",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "enum": ["capture", "cancel", "refund"]
+                    }
+                  },
+                  "required": ["action"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Payment action performed successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Payment"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid action"
+            },
+            "404": {
+              "description": "Payment not found"
+            }
+          }
+        }
+      },
+      "/v1/payments/exchange-rate": {
+        "post": {
+          "tags": ["Payments"],
+          "summary": "Get exchange rate",
+          "requestBody": {
+            "description": "Exchange rate request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeRateRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Exchange rate response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ExchangeRateResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/crypto/message": {
+        "get": {
+          "tags": ["Crypto Payments"],
+          "summary": "Get signing message for crypto payments",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "query",
+              "description": "Address for which to get the signing message",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Signing message",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SigningMessageResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid address"
+            }
+          }
+        }
+      },
+      "/v1/crypto/payment": {
+        "post": {
+          "tags": ["Crypto Payments"],
+          "summary": "Create a crypto payment",
+          "requestBody": {
+            "description": "Crypto payment to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCryptoPaymentRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Crypto payment created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CryptoPayment"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/payment-intents": {
+        "get": {
+          "tags": ["Crypto Payments"],
+          "summary": "List payment intents",
+          "responses": {
+            "200": {
+              "description": "List of payment intents",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentIntentsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Crypto Payments"],
+          "summary": "Create a payment intent",
+          "requestBody": {
+            "description": "Payment intent to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePaymentIntentRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Payment intent created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentIntent"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/payment-intents/{id}": {
+        "get": {
+          "tags": ["Crypto Payments"],
+          "summary": "Get a specific payment intent",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the payment intent to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Payment intent details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentIntent"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Payment intent not found"
+            }
+          }
+        },
+        "post": {
+          "tags": ["Crypto Payments"],
+          "summary": "Perform an action on a specific payment intent",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the payment intent",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "Action to perform on the payment intent",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "enum": ["expire", "refund"]
+                    }
+                  },
+                  "required": ["action"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Payment intent action performed successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentIntent"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid action"
+            },
+            "404": {
+              "description": "Payment intent not found"
+            }
+          }
+        }
+      },
+      "/v1/cards": {
+        "get": {
+          "tags": ["Cards"],
+          "summary": "List all cards",
+          "responses": {
+            "200": {
+              "description": "List of cards",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CardsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Cards"],
+          "summary": "Create a card",
+          "requestBody": {
+            "description": "Card to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCardRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Card created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Card"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/cards/{id}": {
+        "get": {
+          "tags": ["Cards"],
+          "summary": "Get a specific card",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the card to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Card details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Card"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Card not found"
+            }
+          }
+        },
+        "put": {
+          "tags": ["Cards"],
+          "summary": "Update a card",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the card to update",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "Card data to update",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCardRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Card updated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Card"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            },
+            "404": {
+              "description": "Card not found"
+            }
+          }
+        }
+      },
+      "/v1/payment-tokens": {
+        "post": {
+          "tags": ["Payment Tokens"],
+          "summary": "Create a payment token",
+          "requestBody": {
+            "description": "Payment token to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePaymentTokenRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Payment token created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaymentToken"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/settlements": {
+        "get": {
+          "tags": ["Settlements"],
+          "summary": "List all settlements",
+          "responses": {
+            "200": {
+              "description": "List of settlements",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SettlementsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/settlements/{id}": {
+        "get": {
+          "tags": ["Settlements"],
+          "summary": "Get a specific settlement",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the settlement to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Settlement details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Settlement"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Settlement not found"
+            }
+          }
+        }
+      },
+      "/v1/chargebacks": {
+        "get": {
+          "tags": ["Chargebacks"],
+          "summary": "List all chargebacks",
+          "responses": {
+            "200": {
+              "description": "List of chargebacks",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ChargebacksResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/chargebacks/{id}": {
+        "get": {
+          "tags": ["Chargebacks"],
+          "summary": "Get a specific chargeback",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the chargeback to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Chargeback details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Chargeback"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Chargeback not found"
+            }
+          }
+        }
+      },
+      "/v1/chargebacks/mock": {
+        "post": {
+          "tags": ["Chargebacks"],
+          "summary": "Create a mock chargeback",
+          "requestBody": {
+            "description": "Mock chargeback to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMockChargebackRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Mock chargeback created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Chargeback"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/checkout-sessions": {
+        "get": {
+          "tags": ["Checkout Sessions"],
+          "summary": "List all checkout sessions",
+          "responses": {
+            "200": {
+              "description": "List of checkout sessions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckoutSessionsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Checkout Sessions"],
+          "summary": "Create a checkout session",
+          "requestBody": {
+            "description": "Checkout session to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCheckoutSessionRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Checkout session created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckoutSession"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/checkout-sessions/{id}": {
+        "get": {
+          "tags": ["Checkout Sessions"],
+          "summary": "Get a specific checkout session",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the checkout session to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Checkout session details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckoutSession"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Checkout session not found"
+            }
+          }
+        },
+        "post": {
+          "tags": ["Checkout Sessions"],
+          "summary": "Extend a checkout session",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the checkout session to extend",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Checkout session extended successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckoutSession"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            },
+            "404": {
+              "description": "Checkout session not found"
+            }
+          }
+        }
+      },
+      "/v1/recipients": {
+        "get": {
+          "tags": ["Crypto Address Book"],
+          "summary": "List all recipients",
+          "responses": {
+            "200": {
+              "description": "List of recipients",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RecipientsResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Crypto Address Book"],
+          "summary": "Create a recipient",
+          "requestBody": {
+            "description": "Recipient to create",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRecipientRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Recipient created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Recipient"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+          }
+        }
+      },
+      "/v1/recipients/{id}": {
+        "get": {
+          "tags": ["Crypto Address Book"],
+          "summary": "Get a specific recipient",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the recipient to retrieve",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Recipient details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Recipient"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Recipient not found"
+            }
+          }
+        },
+        "patch": {
+          "tags": ["Crypto Address Book"],
+          "summary": "Modify a recipient",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the recipient to modify",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "Recipient data to modify",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModifyRecipientRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Recipient modified successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Recipient"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            },
+            "404": {
+              "description": "Recipient not found"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Crypto Address Book"],
+          "summary": "Delete a recipient",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the recipient to delete",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "Recipient deleted successfully"
+            },
+            "404": {
+              "description": "Recipient not found"
+            }
+          }
+        }
+      },
+      "/v1/exchange-rates": {
+        "get": {
+          "tags": ["Crypto Exchange Rates"],
+          "summary": "Get exchange rate",
+          "parameters": [
+            {
+              "name": "base",
+              "in": "query",
+              "description": "Base currency",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "USDX"
+              }
+            },
+            {
+              "name": "quote",
+              "in": "query",
+              "description": "Quote currency",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "USD"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Exchange rate details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ExchangeRateResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid parameters"
+            }
+          }
+        }
+      },
+      "/v1/token/supply": {
+        "get": {
+          "tags": ["Token Management"],
+          "summary": "Get total token supply",
+          "responses": {
+            "200": {
+              "description": "Total token supply",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TotalSupplyResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": ["Token Management"],
+          "summary": "Mint or burn tokens",
+          "requestBody": {
+            "description": "Token management request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MintBurnRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Token supply updated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TotalSupplyResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/token/supply/shares": {
+        "get": {
+          "tags": ["Token Management"],
+          "summary": "Get shares for address",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "query",
+              "description": "Address to get shares for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Shares details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SharesResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid address"
+            }
+          }
+        }
+      },
+      "/v1/token/supply/tokens": {
+        "post": {
+          "tags": ["Token Management"],
+          "summary": "Mint new tokens",
+          "requestBody": {
+            "description": "Mint tokens request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MintTokensRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Tokens minted successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TotalSupplyResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Token Management"],
+          "summary": "Burn tokens",
+          "requestBody": {
+            "description": "Burn tokens request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurnTokensRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Tokens burned successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TotalSupplyResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/token/convert/shares": {
+        "get": {
+          "tags": ["Token Management"],
+          "summary": "Convert tokens to shares",
+          "parameters": [
+            {
+              "name": "amount",
+              "in": "query",
+              "description": "Amount of tokens to convert",
+              "required": true,
+              "schema": {
+                "type": "number",
+                "format": "float"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Conversion result",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ConversionResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid amount"
+            }
+          }
+        }
+      },
+      "/v1/token/convert/tokens": {
+        "get": {
+          "tags": ["Token Management"],
+          "summary": "Convert shares to tokens",
+          "parameters": [
+            {
+              "name": "shares",
+              "in": "query",
+              "description": "Amount of shares to convert",
+              "required": true,
+              "schema": {
+                "type": "number",
+                "format": "float"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Conversion result",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ConversionResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid shares amount"
+            }
+          }
+        }
+      },
+      "/v1/accounts/block": {
+        "post": {
+          "tags": ["Access Control"],
+          "summary": "Block accounts",
+          "requestBody": {
+            "description": "List of addresses to block",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlockAccountsRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Accounts blocked successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BlockAccountsResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/accounts/unblock": {
+        "post": {
+          "tags": ["Access Control"],
+          "summary": "Unblock accounts",
+          "requestBody": {
+            "description": "List of addresses to unblock",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnblockAccountsRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Accounts unblocked successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UnblockAccountsResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/accounts/blocked/{address}": {
+        "get": {
+          "tags": ["Access Control"],
+          "summary": "Check if an address is blocked",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "path",
+              "description": "Address to check",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Block status",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BlockStatusResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Address not found"
+            }
+          }
+        }
+      },
+      "/v1/roles/grant": {
+        "post": {
+          "tags": ["Access Control"],
+          "summary": "Grant role to address",
+          "requestBody": {
+            "description": "Role grant request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrantRoleRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Role granted successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/GrantRoleResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/roles/revoke": {
+        "post": {
+          "tags": ["Access Control"],
+          "summary": "Revoke role from address",
+          "requestBody": {
+            "description": "Role revoke request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RevokeRoleRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Role revoked successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RevokeRoleResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        }
+      },
+      "/v1/protocol/pause": {
+        "post": {
+          "tags": ["Protocol Control"],
+          "summary": "Pause protocol",
+          "responses": {
+            "200": {
+              "description": "Protocol paused successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProtocolStatusResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Unable to pause protocol"
+            }
+          }
+        }
+      },
+      "/v1/protocol/unpause": {
+        "post": {
+          "tags": ["Protocol Control"],
+          "summary": "Unpause protocol",
+          "responses": {
+            "200": {
+              "description": "Protocol unpaused successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProtocolStatusResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Unable to unpause protocol"
+            }
+          }
+        }
+      },
+      "/v1/protocol/status": {
+        "get": {
+          "tags": ["Protocol Control"],
+          "summary": "Get protocol pause status",
+          "responses": {
+            "200": {
+              "description": "Protocol status",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProtocolStatusResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/rewards/multiplier": {
+        "post": {
+          "tags": ["Protocol Control"],
+          "summary": "Update reward multiplier",
+          "requestBody": {
+            "description": "Reward multiplier update request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateRewardMultiplierRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Reward multiplier updated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RewardMultiplierResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            }
+          }
+        },
+        "get": {
+          "tags": ["Protocol Control"],
+          "summary": "Get current reward multiplier",
+          "responses": {
+            "200": {
+              "description": "Current reward multiplier",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RewardMultiplierResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/wrapped/deposit": {
+        "post": {
+          "tags": ["Wrapped Token"],
+          "summary": "Deposit USDX for wUSDX",
+          "requestBody": {
+            "description": "Deposit request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepositRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Deposit successful",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DepositResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid deposit request"
+            }
+          }
+        }
+      },
+      "/v1/wrapped/withdraw": {
+        "post": {
+          "tags": ["Wrapped Token"],
+          "summary": "Withdraw USDX from wUSDX",
+          "requestBody": {
+            "description": "Withdraw request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WithdrawRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Withdrawal successful",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WithdrawResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid withdrawal request"
+            }
+          }
+        }
+      },
+      "/v1/wrapped/balance/{address}": {
+        "get": {
+          "tags": ["Wrapped Token"],
+          "summary": "Get wUSDX balance for an address",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "path",
+              "description": "Address to get wUSDX balance for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "wUSDX balance",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WUSDXBalanceResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Address not found"
+            }
+          }
+        }
+      },
+      "/v1/permits/nonce/{address}": {
+        "get": {
+          "tags": ["Permits"],
+          "summary": "Get current nonce for an address",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "path",
+              "description": "Address to get nonce for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Nonce value",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/NonceResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Address not found"
+            }
+          }
+        }
+      },
+      "/v1/permits/approve": {
+        "post": {
+          "tags": ["Permits"],
+          "summary": "Create permit approval",
+          "requestBody": {
+            "description": "Permit approval request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermitApprovalRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Permit approved successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PermitApprovalResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid permit request"
+            }
+          }
+        }
+      },
+      "/register": {
+        "post": {
+          "tags": ["Authentication"],
+          "summary": "Create a new account",
+          "requestBody": {
+            "description": "Registration details",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Account created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid registration details"
+            }
+          }
+        }
+      },
+      "/login": {
+        "post": {
+          "tags": ["Authentication"],
+          "summary": "Authenticate user",
+          "requestBody": {
+            "description": "Login credentials",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "User authenticated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AuthToken"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Invalid credentials"
+            }
+          }
+        }
+      },
+      "/logout": {
+        "post": {
+          "tags": ["Authentication"],
+          "summary": "End user session",
+          "responses": {
+            "200": {
+              "description": "User logged out successfully"
+            }
+          }
+        }
+      },
+      "/api/user": {
+        "get": {
+          "tags": ["Authentication"],
+          "summary": "Get current user info",
+          "responses": {
+            "200": {
+              "description": "User information",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/transactions": {
+        "get": {
+          "tags": ["Transactions"],
+          "summary": "Get transaction history",
+          "responses": {
+            "200": {
+              "description": "Transaction history",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TransactionsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/mint": {
+        "post": {
+          "tags": ["Transactions"],
+          "summary": "Mint new USDX tokens",
+          "requestBody": {
+            "description": "Mint request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MintRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "USDX minted successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MintResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid mint request"
+            }
+          }
+        }
+      },
+      "/api/redeem": {
+        "post": {
+          "tags": ["Transactions"],
+          "summary": "Redeem USDX tokens",
+          "requestBody": {
+            "description": "Redeem request",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedeemRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "USDX redeemed successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RedeemResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid redeem request"
+            }
+          }
+        }
+      },
+      "/api/treasury/stats": {
+        "get": {
+          "tags": ["Treasury"],
+          "summary": "Get treasury statistics",
+          "responses": {
+            "200": {
+              "description": "Treasury statistics",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/TreasuryStatsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/cross-border": {
+        "post": {
+          "tags": ["Cross-Border"],
+          "summary": "Initiate cross-border payment",
+          "requestBody": {
+            "description": "Cross-border payment details",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CrossBorderPaymentRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Cross-border payment initiated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CrossBorderPayment"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid payment request"
+            }
+          }
+        }
+      },
+      "/api/cross-border/{id}": {
+        "get": {
+          "tags": ["Cross-Border"],
+          "summary": "Get cross-border payment details",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the cross-border payment",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Cross-border payment details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CrossBorderPayment"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Cross-border payment not found"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "BalancesResponse": {
+          "type": "object",
+          "properties": {
+            "balances": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Balance"
+              }
+            }
+          }
+        },
+        "Balance": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0x123...abc"
+            },
+            "balance": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.5
+            }
+          }
+        },
+        "PayoutsResponse": {
+          "type": "object",
+          "properties": {
+            "payouts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Payout"
+              }
+            }
+          }
+        },
+        "Payout": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "payout_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xabc...123"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreatePayoutRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xabc...123"
+            }
+          },
+          "required": ["amount", "recipient"]
+        },
+        "DailyFeesResponse": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "netBurnFee": {
+              "type": "number",
+              "format": "float",
+              "example": 50.0
+            }
+          }
+        },
+        "WireAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "wireAccounts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/WireAccount"
+              }
+            }
+          }
+        },
+        "WireAccount": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "wire_123"
+            },
+            "bankName": {
+              "type": "string",
+              "example": "Bank Name"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "123456789"
+            },
+            "swiftCode": {
+              "type": "string",
+              "example": "SWIFT123"
+            },
+            "instructions": {
+              "$ref": "#/components/schemas/WireInstructions"
+            }
+          }
+        },
+        "CreateWireAccountRequest": {
+          "type": "object",
+          "properties": {
+            "bankName": {
+              "type": "string",
+              "example": "Bank Name"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "123456789"
+            },
+            "swiftCode": {
+              "type": "string",
+              "example": "SWIFT123"
+            }
+          },
+          "required": ["bankName", "accountNumber", "swiftCode"]
+        },
+        "WireInstructions": {
+          "type": "object",
+          "properties": {
+            "instruction1": {
+              "type": "string",
+              "example": "Instruction detail 1"
+            },
+            "instruction2": {
+              "type": "string",
+              "example": "Instruction detail 2"
+            }
+          }
+        },
+        "CBITAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "cbitAccounts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CBITAccount"
+              }
+            }
+          }
+        },
+        "CBITAccount": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "cbit_123"
+            },
+            "bankName": {
+              "type": "string",
+              "example": "CBIT Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "987654321"
+            },
+            "instructions": {
+              "$ref": "#/components/schemas/CBITInstructions"
+            }
+          }
+        },
+        "CreateCBITAccountRequest": {
+          "type": "object",
+          "properties": {
+            "bankName": {
+              "type": "string",
+              "example": "CBIT Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "987654321"
+            }
+          },
+          "required": ["bankName", "accountNumber"]
+        },
+        "CBITInstructions": {
+          "type": "object",
+          "properties": {
+            "instruction1": {
+              "type": "string",
+              "example": "CBIT Instruction 1"
+            },
+            "instruction2": {
+              "type": "string",
+              "example": "CBIT Instruction 2"
+            }
+          }
+        },
+        "CUBIXAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "cubixAccounts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CUBIXAccount"
+              }
+            }
+          }
+        },
+        "CUBIXAccount": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "cubix_123"
+            },
+            "bankName": {
+              "type": "string",
+              "example": "CUBIX Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "555555555"
+            },
+            "instructions": {
+              "$ref": "#/components/schemas/CUBIXInstructions"
+            }
+          }
+        },
+        "CreateCUBIXAccountRequest": {
+          "type": "object",
+          "properties": {
+            "bankName": {
+              "type": "string",
+              "example": "CUBIX Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "555555555"
+            }
+          },
+          "required": ["bankName", "accountNumber"]
+        },
+        "CUBIXInstructions": {
+          "type": "object",
+          "properties": {
+            "instruction1": {
+              "type": "string",
+              "example": "CUBIX Instruction 1"
+            },
+            "instruction2": {
+              "type": "string",
+              "example": "CUBIX Instruction 2"
+            }
+          }
+        },
+        "PIXAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "pixAccounts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PIXAccount"
+              }
+            }
+          }
+        },
+        "PIXAccount": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "pix_123"
+            },
+            "bankName": {
+              "type": "string",
+              "example": "PIX Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "333333333"
+            },
+            "instructions": {
+              "$ref": "#/components/schemas/PIXInstructions"
+            }
+          }
+        },
+        "CreatePIXAccountRequest": {
+          "type": "object",
+          "properties": {
+            "bankName": {
+              "type": "string",
+              "example": "PIX Bank"
+            },
+            "accountNumber": {
+              "type": "string",
+              "example": "333333333"
+            }
+          },
+          "required": ["bankName", "accountNumber"]
+        },
+        "PIXInstructions": {
+          "type": "object",
+          "properties": {
+            "instruction1": {
+              "type": "string",
+              "example": "PIX Instruction 1"
+            },
+            "instruction2": {
+              "type": "string",
+              "example": "PIX Instruction 2"
+            }
+          }
+        },
+        "TransfersResponse": {
+          "type": "object",
+          "properties": {
+            "transfers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Transfer"
+              }
+            }
+          }
+        },
+        "Transfer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "transfer_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 250.0
+            },
+            "from": {
+              "type": "string",
+              "example": "0xfrom...123"
+            },
+            "to": {
+              "type": "string",
+              "example": "0xto...456"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateTransferRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 250.0
+            },
+            "from": {
+              "type": "string",
+              "example": "0xfrom...123"
+            },
+            "to": {
+              "type": "string",
+              "example": "0xto...456"
+            }
+          },
+          "required": ["amount", "from", "to"]
+        },
+        "DepositAddressesResponse": {
+          "type": "object",
+          "properties": {
+            "depositAddresses": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DepositAddress"
+              }
+            }
+          }
+        },
+        "DepositAddress": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "deposit_123"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xdeposit...abc"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateDepositAddressRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xdeposit...abc"
+            }
+          },
+          "required": ["address"]
+        },
+        "RecipientAddressesResponse": {
+          "type": "object",
+          "properties": {
+            "recipientAddresses": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/RecipientAddress"
+              }
+            }
+          }
+        },
+        "RecipientAddress": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "recipient_123"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xrecipient...def"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateRecipientAddressRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xrecipient...def"
+            }
+          },
+          "required": ["address"]
+        },
+        "DepositsResponse": {
+          "type": "object",
+          "properties": {
+            "deposits": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Deposit"
+              }
+            }
+          }
+        },
+        "Deposit": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "deposit_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            },
+            "address": {
+              "type": "string",
+              "example": "0xdeposit...abc"
+            },
+            "status": {
+              "type": "string",
+              "example": "confirmed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "WalletsResponse": {
+          "type": "object",
+          "properties": {
+            "wallets": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Wallet"
+              }
+            }
+          }
+        },
+        "Wallet": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "wallet_123"
+            },
+            "userId": {
+              "type": "string",
+              "example": "user_456"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateWalletRequest": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string",
+              "example": "user_456"
+            }
+          },
+          "required": ["userId"]
+        },
+        "WalletAddressesResponse": {
+          "type": "object",
+          "properties": {
+            "addresses": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BlockchainAddress"
+              }
+            }
+          }
+        },
+        "BlockchainAddress": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "address_123"
+            },
+            "walletId": {
+              "type": "string",
+              "example": "wallet_123"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xwallet...xyz"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateBlockchainAddressRequest": {
+          "type": "object",
+          "properties": {
+            "walletId": {
+              "type": "string",
+              "example": "wallet_123"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xwallet...xyz"
+            }
+          },
+          "required": ["walletId", "address"]
+        },
+        "PaymentsResponse": {
+          "type": "object",
+          "properties": {
+            "payments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Payment"
+              }
+            }
+          }
+        },
+        "Payment": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "payment_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 300.0
+            },
+            "currency": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "status": {
+              "type": "string",
+              "example": "pending"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreatePaymentRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 300.0
+            },
+            "currency": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xrecipient...456"
+            }
+          },
+          "required": ["amount", "currency", "recipient"]
+        },
+        "ExchangeRateRequest": {
+          "type": "object",
+          "properties": {
+            "base": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "quote": {
+              "type": "string",
+              "example": "USD"
+            }
+          },
+          "required": ["base", "quote"]
+        },
+        "ExchangeRateResponse": {
+          "type": "object",
+          "properties": {
+            "base": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "quote": {
+              "type": "string",
+              "example": "USD"
+            },
+            "rate": {
+              "type": "number",
+              "format": "float",
+              "example": 1.0
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "SigningMessageResponse": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Please sign this message to authorize your crypto payment."
+            }
+          }
+        },
+        "CreateCryptoPaymentRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 0.5
+            },
+            "currency": {
+              "type": "string",
+              "example": "ETH"
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xrecipient...789"
+            },
+            "signature": {
+              "type": "string",
+              "example": "0xsignature..."
+            }
+          },
+          "required": ["amount", "currency", "recipient", "signature"]
+        },
+        "CryptoPayment": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "crypto_payment_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 0.5
+            },
+            "currency": {
+              "type": "string",
+              "example": "ETH"
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xrecipient...789"
+            },
+            "status": {
+              "type": "string",
+              "example": "pending"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "PaymentIntentsResponse": {
+          "type": "object",
+          "properties": {
+            "paymentIntents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PaymentIntent"
+              }
+            }
+          }
+        },
+        "PaymentIntent": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "payment_intent_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            },
+            "status": {
+              "type": "string",
+              "example": "active"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreatePaymentIntentRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            }
+          },
+          "required": ["amount"]
+        },
+        "UpdatePaymentIntentRequest": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "enum": ["expire", "refund"]
+            }
+          },
+          "required": ["action"]
+        },
+        "CardsResponse": {
+          "type": "object",
+          "properties": {
+            "cards": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Card"
+              }
+            }
+          }
+        },
+        "Card": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "card_123"
+            },
+            "userId": {
+              "type": "string",
+              "example": "user_456"
+            },
+            "cardNumber": {
+              "type": "string",
+              "example": "4111111111111111"
+            },
+            "expiryDate": {
+              "type": "string",
+              "example": "12/24"
+            },
+            "cardHolder": {
+              "type": "string",
+              "example": "John Doe"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateCardRequest": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string",
+              "example": "user_456"
+            },
+            "cardNumber": {
+              "type": "string",
+              "example": "4111111111111111"
+            },
+            "expiryDate": {
+              "type": "string",
+              "example": "12/24"
+            },
+            "cardHolder": {
+              "type": "string",
+              "example": "John Doe"
+            }
+          },
+          "required": ["userId", "cardNumber", "expiryDate", "cardHolder"]
+        },
+        "UpdateCardRequest": {
+          "type": "object",
+          "properties": {
+            "expiryDate": {
+              "type": "string",
+              "example": "01/25"
+            },
+            "cardHolder": {
+              "type": "string",
+              "example": "Jane Doe"
+            }
+          }
+        },
+        "PaymentTokensResponse": {
+          "type": "object",
+          "properties": {
+            "paymentTokens": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PaymentToken"
+              }
+            }
+          }
+        },
+        "PaymentToken": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "token_123"
+            },
+            "token": {
+              "type": "string",
+              "example": "tok_visa_4242"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreatePaymentTokenRequest": {
+          "type": "object",
+          "properties": {
+            "cardId": {
+              "type": "string",
+              "example": "card_123"
+            }
+          },
+          "required": ["cardId"]
+        },
+        "SettlementsResponse": {
+          "type": "object",
+          "properties": {
+            "settlements": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Settlement"
+              }
+            }
+          }
+        },
+        "Settlement": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "settlement_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ChargebacksResponse": {
+          "type": "object",
+          "properties": {
+            "chargebacks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Chargeback"
+              }
+            }
+          }
+        },
+        "Chargeback": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "chargeback_123"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 200.0
+            },
+            "reason": {
+              "type": "string",
+              "example": "Fraudulent transaction"
+            },
+            "status": {
+              "type": "string",
+              "example": "resolved"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateMockChargebackRequest": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 200.0
+            },
+            "reason": {
+              "type": "string",
+              "example": "Mock chargeback for testing"
+            }
+          },
+          "required": ["amount", "reason"]
+        },
+        "CheckoutSessionsResponse": {
+          "type": "object",
+          "properties": {
+            "checkoutSessions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CheckoutSession"
+              }
+            }
+          }
+        },
+        "CheckoutSession": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "checkout_session_123"
+            },
+            "status": {
+              "type": "string",
+              "example": "active"
+            },
+            "expiresAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateCheckoutSessionRequest": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string",
+              "example": "user_456"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 150.0
+            }
+          },
+          "required": ["userId", "amount"]
+        },
+        "CheckoutSessionExtendRequest": {
+          "type": "object",
+          "properties": {
+            "additionalTime": {
+              "type": "integer",
+              "example": 30
+            }
+          },
+          "required": ["additionalTime"]
+        },
+        "RecipientsResponse": {
+          "type": "object",
+          "properties": {
+            "recipients": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Recipient"
+              }
+            }
+          }
+        },
+        "Recipient": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "recipient_123"
+            },
+            "name": {
+              "type": "string",
+              "example": "Alice"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xalice...789"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CreateRecipientRequest": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Alice"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xalice...789"
+            }
+          },
+          "required": ["name", "address"]
+        },
+        "ModifyRecipientRequest": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Alice Smith"
+            },
+            "address": {
+              "type": "string",
+              "example": "0xalice...789"
+            }
+          }
+        },
+        "ExchangeRateResponse": {
+          "type": "object",
+          "properties": {
+            "base": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "quote": {
+              "type": "string",
+              "example": "USD"
+            },
+            "rate": {
+              "type": "number",
+              "format": "float",
+              "example": 1.0
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "TotalSupplyResponse": {
+          "type": "object",
+          "properties": {
+            "totalSupply": {
+              "type": "number",
+              "format": "float",
+              "example": 1000000.0
+            }
+          }
+        },
+        "SharesResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0x123...abc"
+            },
+            "shares": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            }
+          }
+        },
+        "MintBurnRequest": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "enum": ["mint", "burn"]
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            },
+            "address": {
+              "type": "string",
+              "example": "0xmint...burn"
+            }
+          },
+          "required": ["action", "amount", "address"]
+        },
+        "ConversionResponse": {
+          "type": "object",
+          "properties": {
+            "convertedAmount": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            }
+          }
+        },
+        "BlockAccountsRequest": {
+          "type": "object",
+          "properties": {
+            "addresses": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "0xblocked...123"
+              }
+            }
+          },
+          "required": ["addresses"]
+        },
+        "BlockAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "blockedAddresses": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "0xblocked...123"
+              }
+            }
+          }
+        },
+        "UnblockAccountsRequest": {
+          "type": "object",
+          "properties": {
+            "addresses": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "0xunblocked...456"
+              }
+            }
+          },
+          "required": ["addresses"]
+        },
+        "UnblockAccountsResponse": {
+          "type": "object",
+          "properties": {
+            "unblockedAddresses": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "0xunblocked...456"
+              }
+            }
+          }
+        },
+        "BlockStatusResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0x123...abc"
+            },
+            "isBlocked": {
+              "type": "boolean",
+              "example": true
+            }
+          }
+        },
+        "GrantRoleRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xgrant...789"
+            },
+            "role": {
+              "type": "string",
+              "example": "MINTER_ROLE"
+            }
+          },
+          "required": ["address", "role"]
+        },
+        "GrantRoleResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xgrant...789"
+            },
+            "role": {
+              "type": "string",
+              "example": "MINTER_ROLE"
+            },
+            "grantedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "RevokeRoleRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xrevoke...012"
+            },
+            "role": {
+              "type": "string",
+              "example": "BURNER_ROLE"
+            }
+          },
+          "required": ["address", "role"]
+        },
+        "RevokeRoleResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xrevoke...012"
+            },
+            "role": {
+              "type": "string",
+              "example": "BURNER_ROLE"
+            },
+            "revokedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ProtocolStatusResponse": {
+          "type": "object",
+          "properties": {
+            "isPaused": {
+              "type": "boolean",
+              "example": true
+            },
+            "pausedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "UpdateRewardMultiplierRequest": {
+          "type": "object",
+          "properties": {
+            "rewardMultiplier": {
+              "type": "number",
+              "format": "float",
+              "example": 1.5
+            }
+          },
+          "required": ["rewardMultiplier"]
+        },
+        "RewardMultiplierResponse": {
+          "type": "object",
+          "properties": {
+            "rewardMultiplier": {
+              "type": "number",
+              "format": "float",
+              "example": 1.5
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "DepositRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xdeposit...abc"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            }
+          },
+          "required": ["address", "amount"]
+        },
+        "DepositResponse": {
+          "type": "object",
+          "properties": {
+            "transactionId": {
+              "type": "string",
+              "example": "txn_123"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "wUSDXReceived": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "WithdrawRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xwithdraw...def"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 50.0
+            }
+          },
+          "required": ["address", "amount"]
+        },
+        "WithdrawResponse": {
+          "type": "object",
+          "properties": {
+            "transactionId": {
+              "type": "string",
+              "example": "txn_456"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "USDXWithdrawn": {
+              "type": "number",
+              "format": "float",
+              "example": 50.0
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "WUSDXBalanceResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xbalance...ghi"
+            },
+            "balance": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            }
+          }
+        },
+        "NonceResponse": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xnonce...jkl"
+            },
+            "nonce": {
+              "type": "integer",
+              "example": 5
+            }
+          }
+        },
+        "PermitApprovalRequest": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string",
+              "example": "0xowner...mno"
+            },
+            "spender": {
+              "type": "string",
+              "example": "0xspender...pqr"
+            },
+            "value": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            },
+            "deadline": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "v": {
+              "type": "integer",
+              "example": 27
+            },
+            "r": {
+              "type": "string",
+              "example": "0xabc...123"
+            },
+            "s": {
+              "type": "string",
+              "example": "0xdef...456"
+            }
+          },
+          "required": ["owner", "spender", "value", "deadline", "v", "r", "s"]
+        },
+        "PermitApprovalResponse": {
+          "type": "object",
+          "properties": {
+            "permitId": {
+              "type": "string",
+              "example": "permit_123"
+            },
+            "status": {
+              "type": "string",
+              "example": "approved"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "RegisterRequest": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "example": "johndoe"
+            },
+            "password": {
+              "type": "string",
+              "format": "password",
+              "example": "SecurePassword123!"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "johndoe@example.com"
+            }
+          },
+          "required": ["username", "password", "email"]
+        },
+        "LoginRequest": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "example": "johndoe"
+            },
+            "password": {
+              "type": "string",
+              "format": "password",
+              "example": "SecurePassword123!"
+            }
+          },
+          "required": ["username", "password"]
+        },
+        "AuthToken": {
+          "type": "object",
+          "properties": {
+            "token": {
+              "type": "string",
+              "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+            },
+            "expiresAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "User": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "user_456"
+            },
+            "username": {
+              "type": "string",
+              "example": "johndoe"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "johndoe@example.com"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "TransactionsResponse": {
+          "type": "object",
+          "properties": {
+            "transactions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            }
+          }
+        },
+        "Transaction": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "txn_789"
+            },
+            "type": {
+              "type": "string",
+              "example": "mint"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 100.0
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "MintRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xmint...burn"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            }
+          },
+          "required": ["address", "amount"]
+        },
+        "MintResponse": {
+          "type": "object",
+          "properties": {
+            "transactionId": {
+              "type": "string",
+              "example": "txn_mint_123"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "mintedAmount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "RedeemRequest": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "example": "0xredeem...ghi"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            }
+          },
+          "required": ["address", "amount"]
+        },
+        "RedeemResponse": {
+          "type": "object",
+          "properties": {
+            "transactionId": {
+              "type": "string",
+              "example": "txn_redeem_456"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "redeemedAmount": {
+              "type": "number",
+              "format": "float",
+              "example": 500.0
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "TreasuryStatsResponse": {
+          "type": "object",
+          "properties": {
+            "totalAssets": {
+              "type": "number",
+              "format": "float",
+              "example": 1000000.0
+            },
+            "totalLiabilities": {
+              "type": "number",
+              "format": "float",
+              "example": 500000.0
+            },
+            "netWorth": {
+              "type": "number",
+              "format": "float",
+              "example": 500000.0
+            },
+            "apy": {
+              "type": "number",
+              "format": "float",
+              "example": 5.0
+            }
+          }
+        },
+        "CrossBorderPaymentRequest": {
+          "type": "object",
+          "properties": {
+            "sender": {
+              "type": "string",
+              "example": "0xsender...123"
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xrecipient...456"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            },
+            "currency": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "destinationCountry": {
+              "type": "string",
+              "example": "US"
+            }
+          },
+          "required": ["sender", "recipient", "amount", "currency", "destinationCountry"]
+        },
+        "CrossBorderPayment": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "cross_border_123"
+            },
+            "sender": {
+              "type": "string",
+              "example": "0xsender...123"
+            },
+            "recipient": {
+              "type": "string",
+              "example": "0xrecipient...456"
+            },
+            "amount": {
+              "type": "number",
+              "format": "float",
+              "example": 1000.0
+            },
+            "currency": {
+              "type": "string",
+              "example": "USDX"
+            },
+            "destinationCountry": {
+              "type": "string",
+              "example": "US"
+            },
+            "status": {
+              "type": "string",
+              "example": "completed"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    }
+  }

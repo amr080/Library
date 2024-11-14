@@ -1,0 +1,44 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Demo Flow</strong><br>
+    Onboarding -> KYC<br>
+    Fiat deposit -> Mint USDX<br>
+    Push payment to wallet<br>
+Show yield accrual<br>
+Demonstrate cash management<br>
+Fiat withdrawal<br><br>
+  </p>
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Onboarding &amp; KYC</strong><br>
+    POST /onboard/register - Register institution<br>
+    POST /onboard/kyc - Submit KYC<br>
+    GET /onboard/status - Check KYC status<br><br>
+  
+    <strong>Fiat Ramps</strong><br>
+    POST /fiat/deposit - Deposit USD<br>
+    POST /fiat/withdraw - Withdraw to bank<br>
+    GET /fiat/status - Check transaction status<br><br>
+  
+    <strong>USDX Core</strong><br>
+    POST /mint - Create USDX<br>
+    POST /burn - Redeem USDX<br>
+    GET /balance - Check balance<br>
+    GET /shares - Check shares amount<br><br>
+  
+    <strong>Transfers &amp; Payments</strong><br>
+    POST /transfer - Basic transfer<br>
+    POST /push - Push to wallet<br>
+    POST /permit - Gasless approval<br>
+    GET /history - Transaction history<br><br>
+  
+    <strong>Yield Management</strong><br>
+    GET /yield/rate - Current yield rate<br>
+    GET /yield/accrued - Earned yield<br>
+    POST /yield/reinvest - Auto-compound<br>
+    GET /yield/forecast - Projected earnings<br><br>
+  
+    <strong>Cash Management</strong><br>
+    POST /treasury/deposit - Institutional deposit<br>
+    POST /treasury/sweep - Auto-sweep yield<br>
+    GET /treasury/positions - View holdings<br><br>
+  </p>
+  

@@ -1,0 +1,61 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Core Business Operations</strong><br>
+    GET /v1/businessAccount/balances<br>
+    GET /v1/businessAccount/deposits<br>
+    GET /v1/businessAccount/transfers/{id}<br>
+    POST /v1/businessAccount/transfers<br>
+    POST /v1/businessAccount/payouts<br><br>
+
+    <strong>Banking &amp; Fiat</strong><br>
+    GET /v1/businessAccount/banks/wires<br>
+    POST /v1/businessAccount/banks/wires<br>
+    GET /v1/businessAccount/banks/wires/{id}/instructions<br><br>
+
+    <strong>USDX Token Operations</strong><br>
+    POST /v1/usdx/mint<br>
+    POST /v1/usdx/burn<br>
+    POST /v1/usdx/wrap<br>
+    POST /v1/usdx/unwrap<br>
+    GET /v1/usdx/totalSupply<br>
+    GET /v1/usdx/shares/{walletId}<br><br>
+
+    <strong>Yield Features</strong><br>
+    GET /v1/usdx/yield/rate<br>
+    GET /v1/usdx/yield/accrued/{walletId}<br>
+    POST /v1/usdx/yield/distribute<br>
+    GET /v1/usdx/yield/history<br><br>
+
+    <strong>NAV &amp; Reporting</strong><br>
+    GET /v1/usdx/nav/current<br>
+    GET /v1/usdx/nav/history<br>
+    GET /v1/usdx/reports/daily<br>
+    GET /v1/usdx/reports/monthly<br><br>
+
+    <strong>Wallet Management</strong><br>
+    GET /v1/wallets<br>
+    GET /v1/wallets/{walletId}<br>
+    POST /v1/wallets<br>
+    GET /v1/wallets/{walletId}/addresses<br><br>
+
+    <strong>Transfers &amp; Payments</strong><br>
+    POST /v1/transfers<br>
+    GET /v1/transfers/{id}<br>
+    POST /v1/payments<br>
+    GET /v1/payments/{id}<br><br>
+
+    <strong>Settlement</strong><br>
+    GET /v1/settlements<br>
+    GET /v1/settlements/{id}<br><br>
+
+    <strong>Compliance &amp; Configuration</strong><br>
+    GET /v1/configuration<br>
+    GET /v1/businessAccount/kyc/status<br>
+    POST /v1/businessAccount/kyc/verify<br><br>
+
+    <strong>Core Differences from Circle</strong><br>
+    - Added yield management<br>
+    - NAV calculation<br>
+    - USDX token operations<br>
+    - Reporting endpoints<br>
+    - Share/supply tracking<br><br>
+</p>

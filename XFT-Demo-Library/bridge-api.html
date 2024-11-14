@@ -1,0 +1,92 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Customers</strong><br>
+    GET /api/customers - Get all customers<br>
+    POST /api/customers - Create a customer<br>
+    GET /api/customers/{id} - Get a single customer object<br>
+    PUT /api/customers/{id} - Update a single customer object<br>
+    DELETE /api/customers/{id} - Delete a single customer object<br>
+    GET /api/customers/{id}/tos - Retrieve a hosted URL for ToS acceptance for an existing customer<br>
+    GET /api/customers/{id}/kyc - Retrieve a hosted KYC Link for an existing customer<br>
+    POST /api/customers/tos - Request a hosted URL for ToS acceptance for new customer creation<br><br>
+
+    <strong>External Accounts</strong><br>
+    GET /api/external_accounts - Get all External Accounts<br>
+    POST /api/external_accounts - Create a new External Account<br>
+    GET /api/external_accounts/{id} - Retrieve an External Account object<br>
+    PUT /api/external_accounts/{id} - Update an External Account<br>
+    DELETE /api/external_accounts/{id} - Delete a single External Account object<br><br>
+
+    <strong>Transfers</strong><br>
+    GET /api/transfers - Get all transfers<br>
+    POST /api/transfers - Create a transfer<br>
+    GET /api/transfers/{id} - Get a transfer<br>
+    PUT /api/transfers/{id} - Update a transfer<br>
+    DELETE /api/transfers/{id} - Delete a transfer<br><br>
+
+    <strong>Prefunded Accounts</strong><br>
+    GET /api/prefunded_accounts - Get a list of all Prefunded Accounts<br>
+    GET /api/prefunded_accounts/{id} - Get details for a specific Prefunded Account<br>
+    GET /api/prefunded_accounts/{id}/funding_history - Get funding history of a Prefunded Account<br><br>
+
+    <strong>Liquidation Addresses</strong><br>
+    POST /api/liquidation_addresses - Create a Liquidation Address<br>
+    GET /api/customers/{customerId}/liquidation_addresses - Get all Liquidation Addresses for a customer<br>
+    GET /api/liquidation_addresses/{id} - Get a Liquidation Address<br>
+    PUT /api/liquidation_addresses/{id} - Update a Liquidation Address<br>
+    GET /api/liquidation_addresses/{id}/drain_history - Get drain history of a Liquidation Address<br>
+    GET /api/liquidation_addresses/{id}/balance - Get the balance of a Liquidation Address<br><br>
+
+    <strong>Developers</strong><br>
+    GET /api/configuration/fees - Get the configured fees<br>
+    POST /api/configuration/fees - Update the configured fees<br>
+    GET /api/configuration/fees/external_account - Get the configured fee External Account<br>
+    POST /api/configuration/fees/external_account - Configure a fee External Account<br><br>
+
+    <strong>Plaid</strong><br>
+    POST /api/plaid/link_token - Generate a Plaid Link token for a customer<br>
+    POST /api/plaid/exchange_token - Exchange Plaid public token for an access token<br><br>
+
+    <strong>Virtual Accounts</strong><br>
+    POST /api/virtual_accounts - Create a Virtual Account<br>
+    GET /api/virtual_accounts - List Virtual Accounts<br>
+    GET /api/virtual_accounts/{id} - Get a Virtual Account<br>
+    PUT /api/virtual_accounts/{id} - Update a Virtual Account<br>
+    POST /api/virtual_accounts/{id}/deactivate - Deactivate a Virtual Account<br>
+    POST /api/virtual_accounts/{id}/reactivate - Reactivate a Virtual Account<br>
+    GET /api/virtual_accounts/{id}/activity - Virtual Account Activity<br>
+    GET /api/virtual_accounts/activity - Virtual Account Activity Across All Customers<br><br>
+
+    <strong>Static Memos</strong><br>
+    POST /api/static_memos - Create a Static Memo<br>
+    GET /api/static_memos - List Static Memos<br>
+    GET /api/static_memos/{id} - Get a Static Memo<br>
+    PUT /api/static_memos/{id} - Update a Static Memo<br>
+    GET /api/static_memos/{id}/activity - Static Memo Activity<br>
+    GET /api/static_memos/activity - Static Memo Activity Across All Customers<br><br>
+
+    <strong>Webhooks</strong><br>
+    GET /api/webhooks - Get all webhook endpoints<br>
+    POST /api/webhooks - Create a webhook endpoint<br>
+    PUT /api/webhooks/{id} - Update a webhook<br>
+    DELETE /api/webhooks/{id} - Delete a webhook<br>
+    GET /api/webhooks/events/upcoming - List upcoming events<br>
+    GET /api/webhooks/logs - View logs<br>
+    POST /api/webhooks/events/send - Send event<br><br>
+
+    <strong>Lists</strong><br>
+    GET /api/lists/occupation_codes - Get occupation codes<br>
+    GET /api/lists/countries - Get countries<br><br>
+
+    <strong>Bridge Wallets</strong><br>
+    GET /api/bridge_wallets/balances - Get total balances of all Bridge Wallets<br>
+    POST /api/bridge_wallets - Create a Bridge Wallet<br>
+    GET /api/bridge_wallets/{id} - Get a Bridge Wallet<br><br>
+
+    <strong>KYC Links</strong><br>
+    POST /api/kyc_links - Generate KYC Links for an individual or business<br>
+    GET /api/kyc_links - Get all KYC links<br>
+    GET /api/kyc_links/{id}/status - Check the status of a KYC link<br><br>
+
+    <strong>Exchange Rates</strong><br>
+    GET /api/exchange_rates - Get current exchange rate between two currencies<br><br>
+</p>

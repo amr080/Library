@@ -1,0 +1,26 @@
+<p style="font-family: Arial, sans-serif; font-size: 14px">
+    <strong>Additional Endpoints - Yield Management</strong><br>
+    GET /v1/usdx/yield/rate - Current yield rate<br>
+    GET /v1/usdx/yield/accrued/{walletId} - Accrued yield for wallet<br>
+    POST /v1/usdx/yield/distribute - Distribute yield<br>
+    GET /v1/usdx/nav - Net Asset Value calculation<br><br>
+
+    <strong>Token Operations</strong><br>
+    POST /v1/usdx/wrap - Wrap USDX to wUSDX<br>
+    POST /v1/usdx/unwrap - Unwrap wUSDX to USDX<br><br>
+
+    <strong>New Schemas</strong><br>
+    YieldRate<br>
+    YieldAccrual<br>
+    YieldDistribution<br>
+    NavCalculation<br>
+    USDXWrap<br>
+    USDXUnwrap<br><br>
+
+    <strong>Use existing Circle endpoints for</strong>:<br>
+    - Transfers<br>
+    - Payments<br>
+    - Wallets<br>
+    - Business accounts<br>
+    - Fiat on/off ramps<br><br>
+</p>
