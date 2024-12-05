@@ -17,3 +17,5 @@ Fork needs synced. Main repo located on XFT organization account. See below for 
 Add
 https://www.rlnuspoc.org/home#subpage/press-release
 https://nvca.org/model-legal-documents/
+https://arxiv.org/html/2402.17219v1
+
