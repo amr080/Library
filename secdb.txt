@@ -1,0 +1,60 @@
+GOLDMAN SACHS 
+SLANG / SECDB
+
+
+
+
+
+Securities DataBase
+Securities LANGuage
+SecServ
+
+
+Quartz [BofA]
+
+
+
+
+
+People
+Michael Dubno
+R. Martin Chavez
+
+
+
+
+
+
+
+
+
+SECURE COMMUNICATION SYSTEM  
+US2022232000 (A1) ― 2022-07-21
+US11856027 (B2) ― 2023-12-26
+
+
+https://patents.google.com/patent/US20220232000A1/en?oq=US2022232000
+
+
+
+
+
+RESOURCES
+https://news.ycombinator.com/item?id=37287523
+https://github.com/amr080/secdb
+https://developer.gs.com/blog/posts/secdb-observability-journey
+https://www.goldmansachs.com/our-firm/history/moments/1993-secdb
+https://www.rmartinchavez.com/
+https://en.wikipedia.org/wiki/Michael_Dubno
+https://worldwide.espacenet.com/publicationDetails/biblio?CC=US&NR=2021058369&KC=&FT=E&locale=en_EP
+
+
+
+
+
+
+
+
+
+
+fin
