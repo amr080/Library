@@ -7,17 +7,10 @@ Repo of blockchain-related research and demos.
 
 Fork needs synced. Main repo located on XFT organization account. See below for website. 
 
-- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
-- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
-- [https://xft-library.up.railway.app/](https://xft-library.up.railway.app/)
-
-
-
-
 Add
-https://www.rlnuspoc.org/home#subpage/press-release
-https://nvca.org/model-legal-documents/
-https://arxiv.org/html/2402.17219v1
-
-https://engineering.blackrock.com/the-blackrock-messaging-system-aeae461e4211
-https://engineering.blackrock.com/i-feel-the-need-the-need-for-speed-92afe9e64452
+- [https://www.rlnuspoc.org/home#subpage/press-release](https://www.rlnuspoc.org/home#subpage/press-release)
+- [https://nvca.org/model-legal-documents/](https://nvca.org/model-legal-documents/)
+- [https://arxiv.org/html/2402.17219v1](https://arxiv.org/html/2402.17219v1)
+- [https://engineering.blackrock.com/the-blackrock-messaging-system-aeae461e4211](https://engineering.blackrock.com/the-blackrock-messaging-system-aeae461e4211)
+- [https://engineering.blackrock.com/i-feel-the-need-the-need-for-speed-92afe9e64452](https://engineering.blackrock.com/i-feel-the-need-the-need-for-speed-92afe9e64452)
+- [https://www.actuary.org/node/13461](https://www.actuary.org/node/13461)
