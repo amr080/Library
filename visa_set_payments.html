@@ -1,0 +1,161 @@
+
+<HTML>
+<HEAD>
+<TITLE>Internet Payment Systems</TITLE>
+</HEAD>
+<body bgcolor="#ffffff">
+<font size=3>
+<center>
+<h1>
+Internet Payment Systems:<br>
+Status and Update on SSL/TLS, SET, and IOTP</h1>
+<h3>
+<i>
+<a href="mailto:kumquat@sover.net">Gary C. Kessler</a><br>
+<a href="mailto:todd@hill.com">N. Todd Pritsky</a><br>
+</i>
+August 2000
+</h3>
+<br>
+<blockquote>
+<h4>
+An edited version of this paper with the title "Cache on Demand" originally appeared in the October 2000 issue of <i>Information Security Magazine</i> (<a href="http://www.infosecuritymag.com">www.infosecuritymag.com</a>). Copyright (c) 2000. All rights reserved.
+</h4>
+</blockquote>
+</center>
+<br>
+
+<p>
+The Word Wide Web (WWW) has been a boon for sellers trying to reach a world market as well as buyers trying to buy almost anything from anywhere in the world. But, as the old New Yorker cartoon suggested, no one knows that you're a dog on the Internet. In fact, no one knows who you are <i>at all</i> on the Internet. And that creates problems when making purchases. In the real world, you build relationships with vendors with whom you do business in person. Corporations built bilateral agreements as they carry out business. But on the Internet, both the buyer and seller have a certain anonymity and thus have to prove who they are every time a transaction occurs.</p>
+<p>
+There are many protocols that are currently employed to allow money to change hands in cyberspace. In this article, we are going to examine just three of the open protocols used for payments on the Web &#151; namely, SSL/TLS, SET, and IOTP &#151; that are most likely to find future or continued widespread use and implementation.</p>
+<p>
+
+<p><b><font color="blue" face="Arial">SSL and TLS</font></b></p>
+<p>
+The Secure Sockets Layer (SSL) protocol was designed by Netscape as a method for secure client-server communications over the Internet. Using public key cryptography and certificates, SSL offers a mechanism so that clients and servers can authenticate each other and then engage in secure communication. During an initial handshaking phase, the client and server select a secret key crypto scheme to use and then the client sends the secret key to the server using the server's public key from the server's certificate. From that point on, the information exchanged between the client and server is encrypted.</p>
+<p>
+The <a href="http://www.ietf.org/html.charters/tls-charter.html"> Transaction Layer Security (tls) Working Group (WG)</a> was formed by the Internet Engineering Task Force (IETF) in 1996 to create an Internet Standard protocol to provide privacy, authentication, and integrity services for applications above the transport layer, primarily using the reliable services of the Transmission Control Protocol (TCP). To avoid reinventing the wheel, the tls WG chose to use existing Internet drafts as the basis for the new protocol and, as a result, the Transaction Layer Security (TLS) protocol, V1.0 is very similar to <a href="http://home.netscape.com/eng/ssl3/ssl-toc.html">SSL V3.0</a>. Browsers today routinely support SSL V2.0 and V3.0, and TLS V1.0; from a protocol perspective, TLS V1.0 is equivalent to "SSL v3.1". TLS is published as <a href="ftp://ftp.isi.edu/in-notes/rfc2246.txt"> Request for Comments (RFC) 2246</a>.</p>
+<p>
+SSL/TLS is an intermediate protocol layer that sits between TCP and a higher-layer application. SSL/TLS can be employed by any application layer protocol running over the Transmission Control Protocol (TCP), including Hypertext Transfer Protocol (HTTP), File Transfer Protocol (FTP), Telnet, and the e-mail protocols (Simple Mail Transfer Protocol &#151; SMTP, Post Office Protocol &#151; POP3, and Internet Message Access Protocol &#151; IMAP4). Indeed, the most widely known and widely used application of SSL/TLS is for securing HTTP communication, denoted by the <i>https://</i> in URLs and use of TCP port 443.</p>
+<p>
+At its heart, SSL/TLS is not a payment protocol at all. SSL's goal is to provide a secure connection between two parties and its application for electronic commerce is to provide a secure communications channel over which a customer and business can exchange private information. In fact, the processing of payments &#151; such as the seller obtaining credit card approval &#151; continues to use the same mechanisms that are employed today by businesses, such as the use of a private business-to-bank network or use of card swipe machines at the business.</p>
+<p>
+Secure communications in SSL/TLS relies on secret key cryptography (SKC) to ensure privacy and public key cryptography (PKC) for key exchange and authentication. The exact SKC and PKC algorithms, as well as key sizes, are negotiated on a per-session basis between the client and server. In general, the client tells the server what crypto algorithms it can support and lists them in preference order; the server selects the crypto scheme that it supports that is highest on the client's list. The client then creates an SKC session key and sends it to the server. Verification of public keys is performed using X.509 certificates.</p>
+
+<br>
+<center>
+<table border=1 width=700>
+<tr><td>
+<img src="images/crypto_ssl.gif">
+<br>
+<font size=2><b>
+FIGURE 1: This diagram shows the SSL/TLS messages exchanged between client and server. Included here is the negotiation to select the crypto schemes to be employed and the exchange of certificates.</b>
+</table>
+</center>
+<br><br>
+
+<p>
+One of the criticisms and concerns about SSL/TLS is that only the server provides a certificate for authentication prior to securing the communication channel. The buyer is authenticated when the seller checks the buyer's credit card and determines that it is valid, but this takes place after the communication channel is secured. The risk, of course, is that the credit card could be stolen and then used by the thief to make on-line purchases. Use of a client-side certificate would make this much more difficult.</p>
+<p>
+As the SSL/TLS protocol handshaking in Figure 1 shows, however, the protocol provides the messages and procedures so that a certificate could be provided by both client and server. This feature is not widely used today largely because the market hasn't demanded it. Recall that prior to the introduction of SSL in the mid-1990s, many people were actually conducting business by sending credit card information in unencrypted e-mails. To require users to obtain certificates for secure transactions would have been a serious impediment to e-commerce due to the relative lack of sophistication of most users and the lack of a user-oriented certificate mechanism. In any case, users today either appear to be willing to accept the risks associated with not having a client certificate in exchange for the convenience, or they are unaware of the risks and have not demanded something different.</p>
+<p>
+TLS continues the evolution started by SSL. Market acceptance and user confidence in the protocol is extremely high and its use will clearly continue. It is worth noting that SSL/TLS is sufficiently secure for the vast majority of consumers who use it today to guard everything from credit card transactions and electronic banking to voting their proxy shares and applying to college. Furthermore, we don't hear about attackers stealing users' credit card numbers by grabbing packets off of the Internet and breaking the encryption; the attackers instead break into the server and grab tens of thousands of unencrypted credit card numbers!</p>
+<p>
+TLS is also the basis for the <a href="http://www.wapforum.org">Wireless Application Protocol (WAP) Forum</a>'s <a href="http://www1.wapforum.org/tech/terms.asp?doc=SPEC-WTLS-19991105.pdf"> Wireless TLS (WTLS) specification</a>. WTLS is functionally similar to TLS 1.0 and provides authentication, privacy, and data integrity between two applications communicating over a wireless network. WTLS is optimized for the relatively low bandwidth and high latency characteristics of this environment by incorporating such additional features as datagram support, streamlined protocol handshaking, and dynamic key refreshing.</p>
+
+<p><b><font color="blue" face="Arial">SET</font></b></p>
+<p>
+Despite SSL's popularity, MasterCard, Visa, and several other companies developed the Secure Electronic Transaction (SET) protocol specifically to handle electronic payments. SET version 1.0 was released in May 1997. Message formats, protocol handshaking, and encryption mechanisms are described in three separate books which are available at <a href="http://www.setco.org/set_specifications.html"> SETCo</a>. Today, interoperability testing is in full swing-many products, such as Cybercash's popular merchant software, are already SET compliant.</p>
+<p>
+Fraud prevention is a primary motivator behind SET. Visa and Mastercard claim that online credit card fraud closely track offline rates, which they estimate to be less than one-tenth of one percent. That would seem to indicate that the current model of using SSL to protect transactions is adequate. However, some recent studies have suggested that merchants are experiencing fraud rates as high as 40% in certain segments of the electronic marketplace-items such as airline tickets, computers, and downloadable software carry the greatest risk. SET has the potential to reduce the chance of fraud by providing rigorous authentication measures in addition to encrypting transactions.</p>
+<p>
+The SET approach to cryptography is similar to SSL's, employing a combination of of the DES secret key and RSA public key schemes. A unique facet of SET's RSA implementation is that participants use two public/private key pairs: one for key exchange and another for digital signatures. Digital certificates form the basis of SET security. In addition to merchants possessing server-side certificates, customers are required to obtain certificates so that their identities as legitimate cardholders can be verified. Payment gateways interfacing between the Internet merchant and the traditional payment network are also required to have certificates.</p>
+<p>
+One of the biggest differences between SET and SSL is in scope. SET has several components which communicate securely end-to-end across the Internet. Cardholders interact with merchants who process order information and pass payment information to payment gateways. In contrast, SSL is essentially point-to-point between buyer and seller, and makes no explicit provisions for involving financial institutions.</p>
+<p>
+SET only appears on the scene at the end of a purchase. All cryptographic schemes add processing delay, so product selections are generally made without encryption to improve performance, while registration, ordering, and other interactions involving personal information take place using another secure protocol such as SSL.</p>
+<p>
+After completing the order process, the customer clicks a button on the website's payment page to activate a wallet application. A reference number is generated by the merchant software and sent to the customer software along with a summary of the order. The cardholder selects the appropriate credit card in the digital wallet and clicks on a payment button, invoking SET and beginning the payment process. An exchange of SET messages over the Internet-between the cardholder and the merchant, and between the merchant and the payment gateway-completes the transaction. Connections between the payment gateway and banks use the existing payment network, and are thus are not part of the SET specification.</p>
+
+<br>
+<center>
+<table border=1>
+<tr><td>
+<img src="images/set_dual_signatures.gif">
+<br>
+<font size=2><b>
+FIGURE 2: SET Purchase Request.
+</b>
+</table>
+</center>
+<br><br>
+
+<p>
+SET provides a high degree of privacy for customers by encrypting payment information so that only the bank can see it. Customer software sends a purchase request to the merchant containing the following (Figure 2): unencrypted order information and a dual signature, intended for the merchant; payment instructions and a dual signature, both encrypted and intended for the payment gateway; and the cardholder's digital certificate to be used by the merchant and the payment gateway for authentication. Lacking the payment gateway's private key, the e-commerce site can only read the order information. The merchant passes payment instructions in an authorization request to the gateway. SET, then, eliminates the merchant as a vulnerability in the credit card chain; because the merchant does not require access to the credit card account information, it is neither processed nor stored it in their databases!</p>
+<p>
+The order details and the account information are unequivocally associated through a "dual signature" mechanism. The SET client software first combines a hash of the order information with a hash of the payment instructions. The result is then hashed, thus linking the order and payment together such that nobody can deny the bond. This second hash value is signed by encrypting it with the customer's secret key, tying the customer to the purchase.</p>
+<p>
+SET is not currently popular in the United States, though examples of SET merchants are legion elsewhere. To see the latest list of e-commerce sites using SET, visit MasterCard's site at <a href="http://www.mastercard.com/shoponline/set/bycountry.html"> http://www.mastercard.com/shoponline/set/bycountry.html</a> or Visa's merchant list at <a href="http://www.visa.com/nt/ecomm/shopping/set_merchants.html"> http://www.visa.com/nt/ecomm/shopping/set_merchants.html</a>.</p>
+<p>
+Perception appears to be holding back SET implementation; it is viewed by many as too complex to implement. While not rocket science, the very "end to end" nature of SET, involving many participants who need to be authenticated, does mean it is inherently more complex than SSL. With SSL already prevalent in the United States, there is little incentive to change processes to include a new, more complicated protocol.</p>
+<p>
+The greatest weakness is on the consumer side. For SET to be of any real security benefit, end user authentication has to be a part of the transaction. However, requiring the average surfer to obtain a certificate is a dicey proposition, partially proven by the continued use of SSL and server-only authentication. To promote migration, there are provisions to allow for optional customer certificates in the short-term. Generating certificates involves new user behavior, potentially complicating the customer's shopping experience and thereby discouraging purchases. To promote adoption of SET, the specification allows for optional customer certificates-whether to require them is at the card issuer's discretion.</p>
+<p>
+Extensions to SET may aid in its eventual acceptance. They include the ability to transmit personal identification numbers as well as information stored on smart cards, debit cards, and other tokens. Other developments might include moving to more sophisticated encryption methods, such as elliptic curve cryptography, to improve performance while retaining the rigorous security required for online transactions.</p>
+<p>
+On June 19th of this year, Visa announced a global e-commerce transaction security initiative, indicating their continued support for SET deployment in their European and Latin American/Caribbean regions, areas with a smaller installed base of products not already SET-compliant. What's instructive is the tacit admission that, in Visa's view, SET appears not to be viable in the United States. This press release certainly was a red flag about the protocol's future; SET may not offer enough incentive for sites and users to adopt new software and user behavior in the United States. However, the inclusion of SET wallet software in popular products such as Microsoft's Internet Explorer supporting SET wallet software could bode well for the technology. Regardless, SET will augment SSL rather than supplant it. Each protocol has its niche and can be used together: SSL as a generic protection scheme and SET as a payment-specific mechanism.</p>
+
+<p><b><font color="blue" face="Arial">IOTP</font></b></p>
+<p>
+Whereas SSL is a secure communications protocol that can be used by a consumer to forward payment information and SET is a protocol specifically designed for credit card transactions, the Internet Open Trading Protocol (IOTP) provides an interoperable framework for consumer-to-business Internet-based electronic commerce. As a commerce framework specification, IOTP is designed to replicate the "real" world of transactions where consumers choose their product, choose their vendor, choose their form of payment (in conjunction with their vendor), arrange delivery, and, periodically, even return products. The designers of IOTP intend that this protocol will be the <i>lingua franca</i> of Internet commerce just as EDI has become the standard document language for "real" commerce; any two parties conducting Internet-based e-commerce in a way that conforms to the IOTP specifications will be able to complete their transactions securely.</p>
+
+<br>
+<center>
+<table border=1 width=700>
+<tr><td>
+<img src="images/iotp_message_flow.gif">
+<br>
+<font size=2><b>
+FIGURE 3: The flow of IOTP messages clearly indicates that the protocol can support the entire shopping process and all parties to buying, selling, paying, and delivering products and goods.</b>
+</table>
+</center>
+<br><br>
+
+<p>
+Figure 3 shows the general flow of an IOTP-based purchase. Note that it might be more proper to refer to IOTP as a <i>shopping protocol</i> rather than a <i>payment protocol</i> since it attempts to capture the entire online shopping cycle and shopping is more than merely paying for stuff. And just as you might wander through the stores of a new mall in the real world, IOTP is optimized for those cases where the buyer and merchant do not have an <i>a priori</i> relationship.</p>
+<p>
+The Selection and Offer step is a particularly good example of mapping e-commerce to realspace. In this step, the user selects amongst payment mechanisms the way they might in a "real" store. I might select a credit card, for example, because of an award that I may get for using the card or perhaps because of a discount offer made by the store. Alternatively, I may use one currency over another for some other perceived benefits. IOTP maintains payment-system independence and can be used to encapsulate and support payment systems such as CyberCoin, e-cash, GeldKarte, MilliCent, Mondex, SET, and others. Note also that IOTP procedures can be employed by the customer for communication with the merchant, payment handler, and shipper which may be one, two, or three different entities.</p>
+<p>
+But while IOTP will support the familiar models of business that we have today, it also has to support the new models that only the Internet has made viable. Individual very low-value transactions (e.g., where someone purchases pages of a document rather than an entire book at a rate of fractions of pennies per page) don't even exist in the real world because they use currency that doesn't "exist"! New product delivery models will also appear. Consider today's Internet market where the value of a product might be is irretrievably transferred to the customer upon downloading a file; in this case, an item must be proved delivered before payment is rendered but payment must be forthcoming upon delivery and nonrefundable.</p>
+<p>
+Clearly, cryptography is an important part of the security associated with IOTP. Although IOTP does not call out for specific algorithms, it does provide the flexibility that any given transaction may employ symmetric (secret key), asymmetric (public key), or both types of crypto schemes. Furthermore, depending upon transaction type, digital certificates may or may not be employed. Again, the overhead and cost of the security must be balanced with the needs of the buyer and the seller on a per-transaction basis. Use of XML (eXtensible Markup Language) as the data representation language provides flexibility and extensibility, and facilitates the development of a broad range of IOTP-aware applications.</p>
+<p>
+IOTP is a relatively new protocol, V1.0 (<a href="ftp://ftp.isi.edu/in-notes/rfc2801.txt">RFC 2801</a>) being dated in only April of this year. More information may be obtained from the IETF's <a href="http://www.ietf.org/html.charters/trade-charter.html"> Internet Open Trading Protocol (trade) Working Group</a>. Hitachi, a major IOTP supporter, also maintains an <a href="http://www.sdl.hitachi.co.jp/english/topics/t_iotp/iotp.htm"> IOTP Web page</a>).</p>
+
+<p><b><font color="blue" face="Arial">SUMMARY</font></b></p>
+<p>
+E-payment security and privacy are clearly requirements for the burgeoning Internet-based economy. And it is equally clear that SSL/TLS, SET, and IOTP will each have a role to play going forward. There will be no single solution just as in everything else in the security space &#151; it is a matter of balancing risk with exposure except in this case it is balancing convenience with threat of credit card theft. While most users will sacrifice some convenience for protection &#151; even the authors have been known to have sent credit card information in unencrypted e-mails in 1995, how many continue to do so today? &#151; there is a limit. Once users think that they are safe enough, they will not tolerate tools that make their shopping less productive. If e-commerce security mechanisms become too onerous, users will work around the precautions totally obviating any good. Developers of secure protocols, then, have to provide options so that users can find their own balance of security and exposure.</p>
+<p>
+IOTP provides an important framework so that current and future payment mechanisms and even purchase-payment models can be supported and coexist. This seamless integration is the most important thing for consumers and sellers, alike. And since this is software, we will always have the same vulnerability that we have always had; namely, the imperfection of software and the fact that implementation flaws will always weaken any scheme regardless of the design (consider the SSL flaws found in many versions of Navigator and Internet Explorer).</p>
+
+<hr width=50%>
+<blockquote>
+<blockquote>
+<center>
+<p><b><font color="blue" face="Arial">SIDEBAR: Key Points</font></b></p>
+</center>
+<ul>
+<li>SSL/TLS: A client-server protocol. Commonly implemented today so that only the server (seller) is authenticated using a certificate; the client (buyer) is "authenticated" by providing a valid credit card number. Bidirectional certificate exchange is possible although not common.
+<li>SET: An end-to-end protocol so that a buyer's credit card information is exchanged between the buyer and the credit card authenticator, with a purchase authorization sent to the seller. In this way, the seller never sees the buyer's information.
+<li>IOTP: An e-commerce trading framework that is payment system independent. IOTP is designed to accommodate today's protocols and trading models and potentially extendable to new Internet-specific trading models.
+</ul>
+</blockquote>
+</blockquote>
+
+<hr width=50%>
+<p>
+<b>About the Authors:</b> <a href="http://www.garykessler.net">Gary C. Kessler</a> is an independent network security consultant and faculty member at <a href="http://www.champlain.edu">Champlain College</a> in Burlington, Vermont. His e-mail address is <a href="mailto:kumquat@sover.net">kumquat@sover.net</a>. N. Todd Pritsky is a senior member of technical staff at <a href="http://www.hill.com">Hill Associates</a>, a telecommunications training company in Colchester, VT. His e-mail address is <a href="mailto:todd@hill.com">todd@hill.com</a>.</p>
+</body>
+</html>
+
