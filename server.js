@@ -11,7 +11,7 @@ app.use(express.static('.'));
 
 const excludedRootItems = [
   'server.js',
-  'script.js', 
+  // 'script.js', 
   'index.html', // Only exclude from root
   'node_modules',
   '.git',
