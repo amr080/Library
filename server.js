@@ -50,6 +50,7 @@ app.get('/api/files/*', (req, res) => {
 });
 
 
+/*
 app.use('/:folder', (req, res, next) => {
     const folderPath = req.params.folder;
     if (fs.existsSync(`./${folderPath}/index.js`)) {
@@ -69,7 +70,7 @@ app.use('/:folder', (req, res, next) => {
     }
     next();
 });
-
+*/
 
 // app.listen(3000);
 
