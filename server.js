@@ -4,11 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const app = express();
+
+app.use(express.static('.'));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.use(express.static('.'));
-
 const excludedRootItems = [
   'server.js',
   // 'script.js', 
